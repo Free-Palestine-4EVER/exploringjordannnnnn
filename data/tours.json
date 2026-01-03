@@ -1,0 +1,3032 @@
+[
+  {
+    "id": "jordan-highlights-6d5n",
+    "slug": "jordan-highlights-6d5n",
+    "title": "Jordan Highlights",
+    "tagline": "6 Days / 5 Nights",
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "heroImage": "/images/tours/jordan-highlights-6d5n/main.png",
+    "images": [
+      "/images/tours/jordan-highlights-6d5n/petra.png",
+      "/images/tours/jordan-highlights-6d5n/wadi-rum.png",
+      "/images/tours/jordan-highlights-6d5n/dead-sea.png",
+      "/images/tours/jordan-highlights-6d5n/amman.png",
+      "/images/tours/jordan-highlights-6d5n/jerash.png",
+      "/images/tours/jordan-highlights-6d5n/madaba.png",
+      "/images/tours/jordan-highlights-6d5n/mount-nebo.png",
+      "/images/tours/jordan-highlights-6d5n/shobak.png"
+    ],
+    "highlights": [
+      "Amman City Tour",
+      "Jerash - Pompeii of the East",
+      "Madaba Mosaic Map",
+      "Mount Nebo panoramic views",
+      "Shobak Castle",
+      "Full day at Petra",
+      "Wadi Rum 4x4 jeep tour (2 hours)",
+      "Dead Sea float experience"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Madaba",
+      "Mount Nebo",
+      "Shobak",
+      "Petra",
+      "Wadi Rum",
+      "Dead Sea"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Amman Airport – Amman",
+        "body": "Meet & assist at Amman Airport, transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman City Tour – Jerash – Amman",
+        "body": "Visit Amman (markets, history) and Jerash, the Greco-Roman city known as the 'Pompeii of the East.' Dinner & overnight in Amman.",
+        "activities": [
+          "Amman markets and historical sites",
+          "Jerash Greco-Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Amman – Madaba – Mount Nebo – Shobak – Petra",
+        "body": "Visit St. George's Church in Madaba (mosaic map), Mount Nebo (panoramic views), Shobak Castle. Continue to Petra. Dinner & overnight.",
+        "activities": [
+          "Madaba mosaic map",
+          "Mount Nebo",
+          "Shobak Castle"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Visit",
+        "body": "Full day at Petra, including Siq and Treasury. Dinner & overnight in Petra.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Petra – Wadi Rum (Jeep 4x4, 2 hrs) – Dead Sea",
+        "body": "Drive to Wadi Rum desert, jeep excursion, then transfer to Dead Sea (lowest point on earth). Free time. Dinner & overnight.",
+        "activities": [
+          "Wadi Rum 4x4 jeep tour",
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Dead Sea – Amman Airport",
+        "body": "Breakfast. Transfer to Amman Airport.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Transport in AC private minivan with English driver",
+      "English guide (4 days)",
+      "HB accommodation as listed",
+      "Entrance fees to listed sites",
+      "2 hrs jeep tour in Wadi Rum"
+    ],
+    "exclusions": [
+      "Visa",
+      "Personal expenses",
+      "Portage",
+      "Lunches",
+      "Drinks",
+      "Tips",
+      "Insurance",
+      "Items not listed"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "wr": [],
+        "ds": [
+          "Holiday Inn Dead Sea"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "wr": [],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "wr": [],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2025-01-01..2025-02-28",
+          "2025-07-01..2025-08-31",
+          "2025-11-01..2025-12-19"
+        ],
+        "ppUsd": {
+          "2pax": 950,
+          "3to5": 777,
+          "6to7": 685,
+          "8to9": 645,
+          "10to14": 605,
+          "singleSupp": 190
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2025-03-01..2025-06-30",
+          "2025-09-01..2025-10-31",
+          "2025-12-20..2025-12-31"
+        ],
+        "ppUsd": {
+          "2pax": 1000,
+          "3to5": 827,
+          "6to7": 735,
+          "8to9": 695,
+          "10to14": 655,
+          "singleSupp": 230
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (5GB for 7 days)",
+        "priceUsd": 25
+      }
+    ]
+  },
+  {
+    "id": "classic-jordan-7d6n",
+    "slug": "classic-jordan-7d6n",
+    "title": "Classic Jordan",
+    "tagline": "7 Days / 6 Nights",
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "heroImage": "/images/tours/classic-jordan-7d6n/main.png",
+    "images": [
+      "/images/tours/classic-jordan-7d6n/petra.webp",
+      "/images/tours/classic-jordan-7d6n/wadi-rum.png",
+      "/images/tours/classic-jordan-7d6n/dead-sea.jpg",
+      "/images/tours/classic-jordan-7d6n/amman.png",
+      "/images/tours/classic-jordan-7d6n/jerash.png",
+      "/images/tours/classic-jordan-7d6n/madaba.jpeg",
+      "/images/tours/classic-jordan-7d6n/mount-nebo.jpg",
+      "/images/tours/classic-jordan-7d6n/shobak.jpg"
+    ],
+    "highlights": [
+      "Amman City Tour",
+      "Jerash - Hadrian's Gate, Cardo, Temples",
+      "Madaba Mosaic Map",
+      "Mount Nebo",
+      "Shobak Castle",
+      "Full day at Petra",
+      "Wadi Rum 4x4 jeep tour (2 hours)",
+      "Overnight in Wadi Rum camp",
+      "Dead Sea relaxation"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Madaba",
+      "Mount Nebo",
+      "Shobak",
+      "Petra",
+      "Wadi Rum",
+      "Dead Sea"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Amman Airport – Amman",
+        "body": "Meet & assist, transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman City Tour – Jerash – Amman",
+        "body": "Explore Amman & Jerash (Hadrian's Gate, Cardo, Temples). Dinner & overnight in Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash - Hadrian's Gate",
+          "Cardo Maximus",
+          "Roman Temples"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Amman – Madaba – Mount Nebo – Shobak – Petra",
+        "body": "Visit Madaba (mosaic map), Mount Nebo, Shobak Castle. Continue to Petra. Dinner & overnight.",
+        "activities": [
+          "Madaba mosaic map",
+          "Mount Nebo",
+          "Shobak Castle"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Visit",
+        "body": "Full day in Petra. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs",
+          "Monastery"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Petra – Wadi Rum (Jeep 4x4, 2 hrs)",
+        "body": "Drive to Wadi Rum for jeep desert experience. Dinner & overnight in camp.",
+        "activities": [
+          "Wadi Rum 4x4 jeep tour",
+          "Bedouin camp experience"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Wadi Rum – Dead Sea",
+        "body": "Transfer to Dead Sea, free time to float and relax. Dinner & overnight.",
+        "activities": [
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Dead Sea – Amman Airport",
+        "body": "Breakfast. Transfer to Amman Airport.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Transport in AC private minivan with English driver",
+      "English guide (5 days)",
+      "HB accommodation as listed",
+      "Entrance fees to listed sites",
+      "2 hrs jeep tour in Wadi Rum"
+    ],
+    "exclusions": [
+      "Visa",
+      "Personal expenses",
+      "Portage",
+      "Lunches",
+      "Drinks",
+      "Tips",
+      "Insurance",
+      "Items not listed"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "wr": [
+          "Mazayen Camp Wadi Rum"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "wr": [
+          "Rumoasis Camp Wadi Rum"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "wr": [
+          "Magic Luxury Camp Wadi Rum"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2025-01-01..2025-02-28",
+          "2025-07-01..2025-08-31",
+          "2025-11-01..2025-12-19"
+        ],
+        "ppUsd": {
+          "2pax": 1140,
+          "3to5": 920,
+          "6to7": 800,
+          "8to9": 750,
+          "10to14": 700,
+          "singleSupp": 245
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2025-03-01..2025-06-30",
+          "2025-09-01..2025-10-31",
+          "2025-12-20..2025-12-31"
+        ],
+        "ppUsd": {
+          "2pax": 1190,
+          "3to5": 970,
+          "6to7": 850,
+          "8to9": 800,
+          "10to14": 750,
+          "singleSupp": 285
+        }
+      }
+    ],
+    "addons": []
+  },
+  {
+    "id": "grand-jordan-8d7n",
+    "slug": "grand-jordan-8d7n",
+    "title": "Grand Jordan",
+    "tagline": "8 Days / 7 Nights",
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "heroImage": "/images/tours/grand-jordan-8d7n/main.png",
+    "images": [
+      "/images/tours/grand-jordan-8d7n/petra.png",
+      "/images/tours/grand-jordan-8d7n/wadi-rum.png",
+      "/images/tours/grand-jordan-8d7n/dead-sea.png",
+      "/images/tours/grand-jordan-8d7n/amman.png",
+      "/images/tours/grand-jordan-8d7n/jerash.png",
+      "/images/tours/grand-jordan-8d7n/madaba.jpg",
+      "/images/tours/grand-jordan-8d7n/mount-nebo.jpg"
+    ],
+    "highlights": [
+      "Amman City Tour",
+      "Jerash - Hadrian's Gate, Cardo, Theater",
+      "Madaba Mosaic Map",
+      "Mount Nebo - Moses site",
+      "Shobak Castle",
+      "Full day at Petra",
+      "Wadi Rum 4x4 jeep tour (2 hours)",
+      "Overnight in Bedouin camp",
+      "Free day in Amman",
+      "Dead Sea relaxation"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Madaba",
+      "Mount Nebo",
+      "Shobak",
+      "Petra",
+      "Wadi Rum",
+      "Amman",
+      "Dead Sea"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Amman Airport – Amman",
+        "body": "Meet & assist, transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman City Tour – Jerash – Amman",
+        "body": "Tour Amman & Jerash (Hadrian's Gate, Cardo, Theater). Dinner & overnight in Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash - Hadrian's Gate",
+          "Cardo Maximus",
+          "Roman Theater"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Amman – Madaba – Mount Nebo – Shobak – Petra",
+        "body": "Visit Madaba (mosaic map), Mount Nebo (Moses site), Shobak Castle. Dinner & overnight in Petra.",
+        "activities": [
+          "Madaba mosaic map",
+          "Mount Nebo",
+          "Shobak Castle"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Visit",
+        "body": "Full day exploring Petra (Siq, Treasury, tombs). Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs",
+          "Monastery"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Petra – Wadi Rum (Jeep 4x4, 2 hrs)",
+        "body": "Drive to Wadi Rum desert for jeep excursion. Dinner & overnight in Bedouin camp.",
+        "activities": [
+          "Wadi Rum 4x4 jeep tour",
+          "Bedouin camp experience"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Wadi Rum – Amman",
+        "body": "Return to Amman. Free day. Dinner & overnight.",
+        "activities": [
+          "Free time in Amman"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Amman – Dead Sea",
+        "body": "Transfer to Dead Sea, enjoy floating. Dinner & overnight.",
+        "activities": [
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Dead Sea – Amman Airport",
+        "body": "Breakfast. Transfer to Amman Airport.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Transport in AC private minivan with English driver",
+      "English guide (5 days)",
+      "HB accommodation as listed",
+      "Entrance fees to listed sites",
+      "2 hrs jeep tour in Wadi Rum"
+    ],
+    "exclusions": [
+      "Visa",
+      "Personal expenses",
+      "Portage",
+      "Lunches",
+      "Drinks",
+      "Tips",
+      "Insurance",
+      "Items not listed"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "wr": [
+          "Mazayen Camp Wadi Rum"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "wr": [
+          "Rum Oasis Camp Wadi Rum"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "wr": [
+          "Magic Luxury Camp Wadi Rum"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2025-01-01..2025-02-28",
+          "2025-07-01..2025-08-31",
+          "2025-11-01..2025-12-19"
+        ],
+        "ppUsd": {
+          "2pax": 1200,
+          "3to5": 977,
+          "6to7": 855,
+          "8to9": 805,
+          "10to14": 755,
+          "singleSupp": 275
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2025-03-01..2025-06-30",
+          "2025-09-01..2025-10-31",
+          "2025-12-20..2025-12-31"
+        ],
+        "ppUsd": {
+          "2pax": 1250,
+          "3to5": 1027,
+          "6to7": 905,
+          "8to9": 855,
+          "10to14": 805,
+          "singleSupp": 310
+        }
+      }
+    ],
+    "addons": []
+  },
+  {
+    "id": "jordan-highlights-5d4n",
+    "slug": "jordan-highlights-5d4n",
+    "title": "Jordan Highlights",
+    "tagline": "5 Days / 4 Nights",
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "heroImage": "/images/tours/jordan-highlights-5d4n/main.png",
+    "images": [
+      "/images/tours/jordan-highlights-5d4n/petra.png",
+      "/images/tours/jordan-highlights-5d4n/dead-sea.png",
+      "/images/tours/jordan-highlights-5d4n/amman.png",
+      "/images/tours/jordan-highlights-5d4n/jerash.png"
+    ],
+    "highlights": [
+      "Amman City Tour & Jerash",
+      "Madaba Mosaic Map",
+      "Mount Nebo panoramic views",
+      "Full day at Petra",
+      "Dead Sea float experience",
+      "Best for first-timers with limited time"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Madaba",
+      "Mount Nebo",
+      "Petra",
+      "Dead Sea"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Amman Arrival",
+        "body": "Meet & assist at Queen Alia International Airport (QAIA). Transfer to hotel. Dinner & overnight in Amman.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman City Tour & Jerash",
+        "body": "Citadel, Roman Theater, downtown souks & Rainbow Street photo stop. Drive to Jerash: Hadrian's Arch, Oval Plaza, Cardo, theaters, Artemis Temple. Back to Amman. Dinner & overnight.",
+        "activities": [
+          "Amman Citadel",
+          "Roman Theater",
+          "Rainbow Street",
+          "Jerash - Hadrian's Arch",
+          "Oval Plaza",
+          "Artemis Temple"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Madaba & Mount Nebo → Petra",
+        "body": "St. George's Church (mosaic map), Mount Nebo panorama. Continue via Desert/King's Highway photo stops. Check in at Petra. Optional Petra by Night (on operating days, supplement). Dinner & overnight in Petra.",
+        "activities": [
+          "Madaba mosaic map",
+          "Mount Nebo",
+          "King's Highway",
+          "Optional Petra by Night"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Full Visit → Dead Sea",
+        "body": "Siq, Treasury, Street of Facades, Theater, Royal Tombs. (Optional Monastery/High Place of Sacrifice for fit guests). Afternoon transfer to Dead Sea. Floating time, resort facilities. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Street of Facades",
+          "Royal Tombs",
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Dead Sea → Airport",
+        "body": "Free morning; transfer to QAIA.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides: Amman & Jerash (Day 2) + Petra (Day 4)",
+      "Hotels on HB (Half Board)",
+      "Entrance fees to listed sites",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "Visa (if applicable)",
+      "Lunches",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Optional tours (e.g., Petra by Night)",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 885,
+          "3to5": 790,
+          "6to7": 680,
+          "8to9": 630,
+          "10to14": 585,
+          "singleSupp": 260
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 980,
+          "3to5": 880,
+          "6to7": 770,
+          "8to9": 715,
+          "10to14": 670,
+          "singleSupp": 360
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (5GB for 7 days)",
+        "priceUsd": 25
+      },
+      "Add Wadi Rum half-day (with 2-hr 4×4) by extending one night (turn into 6D/5N)",
+      "Turkish bath in Amman",
+      "Cooking class in Petra"
+    ]
+  },
+  {
+    "id": "jordan-in-depth-9d8n",
+    "slug": "jordan-in-depth-9d8n",
+    "title": "Jordan In-Depth",
+    "tagline": "9 Days / 8 Nights",
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "heroImage": "/images/tours/jordan-in-depth-9d8n/main.jpg",
+    "images": [
+      "/images/tours/jordan-in-depth-9d8n/petra.png",
+      "/images/tours/jordan-in-depth-9d8n/wadi-rum.png",
+      "/images/tours/jordan-in-depth-9d8n/aqaba.png",
+      "/images/tours/jordan-in-depth-9d8n/amman.png",
+      "/images/tours/jordan-in-depth-9d8n/jerash.png",
+      "/images/tours/jordan-in-depth-9d8n/ajloun.avif",
+      "/images/tours/jordan-in-depth-9d8n/umm-qais.jpg",
+      "/images/tours/jordan-in-depth-9d8n/kerak.jpg",
+      "/images/tours/jordan-in-depth-9d8n/mount-nebo.png"
+    ],
+    "highlights": [
+      "Amman & Jerash full tour",
+      "Ajloun Castle & Umm Qais",
+      "Madaba, Mount Nebo & Kerak Castle",
+      "Full day at Petra",
+      "Little Petra visit",
+      "Wadi Rum 4x4 desert experience",
+      "Overnight in Bedouin camp",
+      "Aqaba Red Sea beach time",
+      "Dead Sea relaxation"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Ajloun",
+      "Umm Qais",
+      "Madaba",
+      "Mount Nebo",
+      "Kerak",
+      "Petra",
+      "Little Petra",
+      "Wadi Rum",
+      "Aqaba",
+      "Dead Sea"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Amman Arrival",
+        "body": "Meet & assist at airport. Transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman & Jerash",
+        "body": "Full tour of Amman and Jerash. Dinner & overnight Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Ajloun & Umm Qais",
+        "body": "Ajloun Castle; continue to Umm Qais (Decapolis vistas). Back to Amman. Dinner & overnight.",
+        "activities": [
+          "Ajloun Castle",
+          "Umm Qais Decapolis ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Madaba, Mount Nebo, Kerak → Petra",
+        "body": "Mosaic map, Nebo panorama, Kerak Crusader Castle photo stop. Dinner & overnight Petra.",
+        "activities": [
+          "Madaba mosaic map",
+          "Mount Nebo",
+          "Kerak Castle"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Petra Full Visit",
+        "body": "Treasury, Royal Tombs, optional Monastery. Dinner & overnight Petra.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs",
+          "Optional Monastery"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Little Petra → Wadi Rum",
+        "body": "Siq al-Barid (Little Petra). Wadi Rum 4×4 (2 hrs): dunes, canyons, rock bridges. Bedouin dinner under stars. Overnight in desert camp.",
+        "activities": [
+          "Little Petra",
+          "Wadi Rum 4x4 tour",
+          "Bedouin dinner"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Wadi Rum → Aqaba",
+        "body": "Morning at leisure; transfer to Aqaba. Free beach time / optional snorkeling/boat. Overnight Aqaba.",
+        "activities": [
+          "Aqaba beach",
+          "Optional snorkeling"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Aqaba → Dead Sea",
+        "body": "Transfer along Wadi Araba. Floating at Dead Sea. Dinner & overnight Dead Sea.",
+        "activities": [
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Dead Sea → Airport",
+        "body": "Transfer to QAIA.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides at major sites",
+      "Hotels on HB (Half Board)",
+      "1 night desert camp with dinner",
+      "Entrance fees to listed sites",
+      "Little Petra visit",
+      "Wadi Rum 4x4 (2 hours)",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "Visa (if applicable)",
+      "Lunches",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Optional activities (snorkeling, boat trips)",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "wr": [
+          "Mazayen Luxury Camp"
+        ],
+        "aq": [
+          "Kempinski Aqaba",
+          "Hyatt Regency Aqaba"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "wr": [
+          "Rum Oasis Camp"
+        ],
+        "aq": [
+          "City Tower Aqaba",
+          "DoubleTree Aqaba"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "wr": [
+          "Magic Luxury Camp"
+        ],
+        "aq": [
+          "Dweik Hotel Aqaba"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 1520,
+          "3to5": 1380,
+          "6to7": 1180,
+          "8to9": 1095,
+          "10to14": 1030,
+          "singleSupp": 520
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 1650,
+          "3to5": 1510,
+          "6to7": 1300,
+          "8to9": 1210,
+          "10to14": 1145,
+          "singleSupp": 620
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (10GB for 10 days)",
+        "priceUsd": 35
+      }
+    ]
+  },
+  {
+    "id": "jordan-egypt-express-10d9n",
+    "slug": "jordan-egypt-express-10d9n",
+    "title": "Jordan & Egypt Express",
+    "tagline": "10 Days / 9 Nights",
+    "duration": {
+      "days": 10,
+      "nights": 9
+    },
+    "heroImage": "/tour-jordan-egypt-express-10d9n.jpg",
+    "highlights": [
+      "Amman & Jerash",
+      "Madaba & Mount Nebo",
+      "Full day at Petra",
+      "Wadi Rum 4x4 desert tour",
+      "Dead Sea floating",
+      "Giza Pyramids & Sphinx",
+      "Egyptian Museum & Old Cairo",
+      "Karnak & Luxor Temples",
+      "Valley of the Kings",
+      "Hatshepsut Temple"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Madaba",
+      "Mount Nebo",
+      "Petra",
+      "Wadi Rum",
+      "Dead Sea",
+      "Cairo",
+      "Luxor"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Arrive Amman",
+        "body": "Meet & assist at airport. Transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman & Jerash",
+        "body": "Full tour of Amman and Jerash. Dinner & overnight Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Madaba & Mount Nebo → Petra",
+        "body": "Visit Madaba (mosaic map), Mount Nebo. Continue to Petra. Dinner & overnight.",
+        "activities": [
+          "Madaba mosaic map",
+          "Mount Nebo"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Full Visit",
+        "body": "Full day exploring Petra. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Wadi Rum 4x4 → Dead Sea → Amman",
+        "body": "Wadi Rum 4×4 (2 hrs), transfer to Dead Sea for floating, then to Amman. Dinner & overnight.",
+        "activities": [
+          "Wadi Rum 4x4 tour",
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Fly Amman → Cairo",
+        "body": "Afternoon Giza Pyramids & Sphinx photo tour. Cairo overnight.",
+        "activities": [
+          "Giza Pyramids",
+          "Great Sphinx"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Egyptian Museum & Old Cairo",
+        "body": "Egyptian Museum & Old Cairo (Coptic & Khan el-Khalili). Overnight Cairo.",
+        "activities": [
+          "Egyptian Museum",
+          "Coptic Cairo",
+          "Khan el-Khalili bazaar"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Flight Cairo → Luxor",
+        "body": "Karnak & Luxor Temples. Overnight Luxor.",
+        "activities": [
+          "Karnak Temple",
+          "Luxor Temple"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Luxor West Bank",
+        "body": "Valley of the Kings (3 tombs), Hatshepsut Temple, Colossi of Memnon. Overnight Luxor.",
+        "activities": [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Departure",
+        "body": "Departure from Luxor or return to Cairo (per flight plan).",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides at major sites",
+      "Hotels on HB (Half Board)",
+      "Entrance fees to listed sites",
+      "Wadi Rum 4x4 (2 hours)",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "International flights",
+      "Regional flights (AMM→CAI, CAI→LXR)",
+      "Visa fees",
+      "Lunches",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ],
+        "eg": [
+          "Kempinski Nile Cairo",
+          "Four Seasons Cairo",
+          "Steigenberger Luxor",
+          "Hilton Luxor"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "eg": [
+          "Steigenberger Pyramids",
+          "Sonesta St. George Luxor"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "eg": [
+          "Barcelo Cairo",
+          "Pyramids Park",
+          "Iberotel Luxor"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 2450,
+          "3to5": 2280,
+          "6to7": 2040,
+          "8to9": 1930,
+          "10to14": 1850,
+          "singleSupp": 760
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 2650,
+          "3to5": 2470,
+          "6to7": 2220,
+          "8to9": 2105,
+          "10to14": 2020,
+          "singleSupp": 900
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (15GB for 14 days - Jordan & Egypt)",
+        "priceUsd": 45
+      },
+      "Substitute Luxor with 3-night Nile cruise (Aswan→Luxor)"
+    ]
+  },
+  {
+    "id": "classic-jordan-nile-cruise-12d11n",
+    "slug": "classic-jordan-nile-cruise-12d11n",
+    "title": "Classic Jordan & Nile Cruise",
+    "tagline": "12 Days / 11 Nights",
+    "duration": {
+      "days": 12,
+      "nights": 11
+    },
+    "heroImage": "/tour-classic-jordan-nile-cruise-12d11n.jpg",
+    "highlights": [
+      "Amman & Jerash",
+      "Full day at Petra",
+      "Wadi Rum overnight camp",
+      "Aqaba Red Sea",
+      "Dead Sea floating",
+      "Cairo Museum & Old Cairo",
+      "3-night Nile Cruise Aswan→Luxor",
+      "Philae Temple & High Dam",
+      "Kom Ombo & Edfu Temples",
+      "Karnak & Luxor Temples",
+      "Valley of the Kings"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Petra",
+      "Wadi Rum",
+      "Aqaba",
+      "Dead Sea",
+      "Cairo",
+      "Aswan",
+      "Nile Cruise",
+      "Luxor"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Arrive Amman",
+        "body": "Meet & assist. Transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman & Jerash",
+        "body": "Full tour. Dinner & overnight Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Petra via Madaba & Nebo",
+        "body": "Visit Madaba & Mount Nebo. Continue to Petra. Dinner & overnight.",
+        "activities": [
+          "Madaba mosaic map",
+          "Mount Nebo"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Full Visit",
+        "body": "Full day in Petra. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Wadi Rum 4x4 → Aqaba",
+        "body": "Wadi Rum 4×4 tour, transfer to Aqaba. Dinner & overnight.",
+        "activities": [
+          "Wadi Rum 4x4 tour"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Dead Sea → Amman Airport → Cairo",
+        "body": "Transfer to Dead Sea for floating, then evening flight to Cairo. Overnight Cairo.",
+        "activities": [
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Cairo City Tour",
+        "body": "Museum, Old Cairo, Khan el-Khalili. Overnight Cairo.",
+        "activities": [
+          "Egyptian Museum",
+          "Coptic Cairo",
+          "Khan el-Khalili"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Fly Cairo → Aswan",
+        "body": "Embark cruise. Philae Temple & High Dam. Overnight on cruise.",
+        "activities": [
+          "Philae Temple",
+          "Aswan High Dam"
+        ],
+        "meals": [
+          "Breakfast",
+          "Lunch",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Nile Cruise",
+        "body": "Kom Ombo & Edfu (cruise calls). Overnight on cruise.",
+        "activities": [
+          "Kom Ombo Temple",
+          "Edfu Temple"
+        ],
+        "meals": [
+          "Breakfast",
+          "Lunch",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Luxor East Bank",
+        "body": "Karnak & Luxor Temples. Overnight on cruise.",
+        "activities": [
+          "Karnak Temple",
+          "Luxor Temple"
+        ],
+        "meals": [
+          "Breakfast",
+          "Lunch",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 11,
+        "title": "Luxor West Bank",
+        "body": "Valley of the Kings (3 tombs), Hatshepsut, Colossi. Disembark. Overnight Luxor hotel.",
+        "activities": [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 12,
+        "title": "Departure",
+        "body": "Departure from Luxor or fly back to Cairo.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides at major sites",
+      "Hotels on HB in Jordan",
+      "3-night Nile cruise with full board",
+      "Entrance fees to listed sites",
+      "Wadi Rum 4x4 (2 hours)",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "International flights",
+      "Regional flights (AMM→CAI, CAI→ASW)",
+      "Visa fees",
+      "Lunches (except on cruise)",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Optional Abu Simbel tour",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "aq": [
+          "Kempinski Aqaba",
+          "Hyatt Regency Aqaba"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ],
+        "eg": [
+          "Four Seasons Cairo",
+          "Sonesta St. George Nile Cruise (5★ Deluxe)"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "aq": [
+          "City Tower Aqaba"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "eg": [
+          "Steigenberger Cairo",
+          "5★ Standard Nile Cruise"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "aq": [
+          "Dweik Hotel Aqaba"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "eg": [
+          "Barcelo Cairo",
+          "4★ Superior Nile Cruise"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 3150,
+          "3to5": 2940,
+          "6to7": 2650,
+          "8to9": 2520,
+          "10to14": 2420,
+          "singleSupp": 1020
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 3450,
+          "3to5": 3230,
+          "6to7": 2920,
+          "8to9": 2780,
+          "10to14": 2670,
+          "singleSupp": 1180
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (15GB for 14 days - Jordan & Egypt)",
+        "priceUsd": 45
+      },
+      "Abu Simbel by air from Aswan"
+    ]
+  },
+  {
+    "id": "cultural-grand-tour-14d13n",
+    "slug": "cultural-grand-tour-14d13n",
+    "title": "Cultural Grand Tour – Jordan & Egypt",
+    "tagline": "14 Days / 13 Nights",
+    "duration": {
+      "days": 14,
+      "nights": 13
+    },
+    "heroImage": "/tour-cultural-grand-tour-14d13n.jpg",
+    "highlights": [
+      "Jerash & North Jordan (Ajloun/Umm Qais)",
+      "Full day at Petra",
+      "Wadi Rum desert experience",
+      "Dead Sea floating",
+      "Giza Plateau & Pyramids",
+      "Alexandria day trip",
+      "Cairo Museum & Old Cairo",
+      "Luxor West & East Banks",
+      "Valley of the Kings",
+      "Comprehensive cultural immersion"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Ajloun",
+      "Umm Qais",
+      "Petra",
+      "Wadi Rum",
+      "Dead Sea",
+      "Cairo",
+      "Alexandria",
+      "Luxor"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Arrive Amman",
+        "body": "Meet & assist. Transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman & Jerash",
+        "body": "Full tour. Dinner & overnight Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Ajloun & Umm Qais",
+        "body": "Ajloun Castle, Umm Qais Decapolis. Return Amman. Dinner & overnight.",
+        "activities": [
+          "Ajloun Castle",
+          "Umm Qais"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Madaba, Nebo, Kerak → Petra",
+        "body": "Mosaic map, Mount Nebo, Kerak Castle. Dinner & overnight Petra.",
+        "activities": [
+          "Madaba",
+          "Mount Nebo",
+          "Kerak Castle"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Petra Full Visit",
+        "body": "Full day in Petra. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs",
+          "Monastery"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Little Petra → Wadi Rum",
+        "body": "Little Petra, Wadi Rum 4×4. Overnight desert camp.",
+        "activities": [
+          "Little Petra",
+          "Wadi Rum 4x4 tour"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Wadi Rum → Dead Sea",
+        "body": "Transfer to Dead Sea. Floating. Dinner & overnight.",
+        "activities": [
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Fly to Cairo",
+        "body": "Transfer to airport, fly to Cairo. Giza Pyramids & Sphinx. Overnight Cairo.",
+        "activities": [
+          "Giza Pyramids",
+          "Great Sphinx"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Cairo Museum & Old Cairo",
+        "body": "Egyptian Museum, Coptic Cairo, Khan el-Khalili. Overnight Cairo.",
+        "activities": [
+          "Egyptian Museum",
+          "Coptic Cairo",
+          "Khan el-Khalili"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Alexandria Day Trip",
+        "body": "Bibliotheca Alexandrina, Qaitbay Citadel, Corniche. Return Cairo. Overnight.",
+        "activities": [
+          "Bibliotheca Alexandrina",
+          "Qaitbay Citadel",
+          "Alexandria Corniche"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 11,
+        "title": "Fly Cairo → Luxor",
+        "body": "Karnak & Luxor Temples. Overnight Luxor.",
+        "activities": [
+          "Karnak Temple",
+          "Luxor Temple"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 12,
+        "title": "Luxor West Bank",
+        "body": "Valley of the Kings (3 tombs), Hatshepsut Temple, Colossi of Memnon. Overnight Luxor.",
+        "activities": [
+          "Valley of the Kings",
+          "Hatshepsut Temple",
+          "Colossi of Memnon"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 13,
+        "title": "Luxor Free Day",
+        "body": "Optional hot air balloon or leisure. Overnight Luxor.",
+        "activities": [
+          "Optional hot air balloon",
+          "Free time"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 14,
+        "title": "Departure",
+        "body": "Transfer to airport for departure.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides at major sites",
+      "Hotels on HB (Half Board)",
+      "1 night desert camp",
+      "Entrance fees to listed sites",
+      "Wadi Rum 4x4 (2 hours)",
+      "Alexandria day trip",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "International flights",
+      "Regional flights (AMM→CAI, CAI→LXR)",
+      "Visa fees",
+      "Lunches",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Optional activities (hot air balloon)",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "wr": [
+          "Mazayen Luxury Camp"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ],
+        "eg": [
+          "Four Seasons Cairo",
+          "Steigenberger Luxor",
+          "Hilton Luxor"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "wr": [
+          "Rum Oasis Camp"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "eg": [
+          "Steigenberger Pyramids",
+          "Sonesta St. George Luxor"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "wr": [
+          "Magic Luxury Camp"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "eg": [
+          "Barcelo Cairo",
+          "Pyramids Park",
+          "Iberotel Luxor"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 3650,
+          "3to5": 3380,
+          "6to7": 3040,
+          "8to9": 2900,
+          "10to14": 2790,
+          "singleSupp": 1180
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 3980,
+          "3to5": 3690,
+          "6to7": 3320,
+          "8to9": 3170,
+          "10to14": 3050,
+          "singleSupp": 1360
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (20GB for 14 days - Jordan & Egypt)",
+        "priceUsd": 55
+      },
+      "Alexandria train upgrade to 1st class",
+      "Cairo food tour",
+      "Hot air balloon in Luxor",
+      "Boutique hotel upgrades"
+    ]
+  },
+  {
+    "id": "jordan-alula-discovery-9d8n",
+    "slug": "jordan-alula-discovery-9d8n",
+    "title": "Jordan + AlUla Discovery",
+    "tagline": "9 Days / 8 Nights",
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "heroImage": "/tour-jordan-alula-discovery-9d8n.jpg",
+    "highlights": [
+      "Amman & Jerash",
+      "Full day at Petra",
+      "Wadi Rum 4x4 desert tour",
+      "Dead Sea floating",
+      "AlUla Old Town",
+      "Hegra (Madain Salih) UNESCO site",
+      "Dadan & Jabal Ikmah",
+      "Maraya concert hall",
+      "Elephant Rock sunset"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Petra",
+      "Wadi Rum",
+      "Dead Sea",
+      "AlUla"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Arrive Amman",
+        "body": "Meet & assist. Transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman & Jerash",
+        "body": "Full tour. Dinner & overnight Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Madaba & Nebo → Petra",
+        "body": "Mosaic map, Mount Nebo. Continue to Petra. Dinner & overnight.",
+        "activities": [
+          "Madaba",
+          "Mount Nebo"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Full Visit",
+        "body": "Full day in Petra. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Wadi Rum 4x4 → Dead Sea → Amman",
+        "body": "Wadi Rum 4×4 (2 hrs), Dead Sea floating, return Amman. Dinner & overnight.",
+        "activities": [
+          "Wadi Rum 4x4 tour",
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Fly Amman → AlUla",
+        "body": "Old Town by evening; stargazing talk optional. Overnight AlUla.",
+        "activities": [
+          "AlUla Old Town",
+          "Optional stargazing"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Hegra (Madain Salih)",
+        "body": "UNESCO site tour. Dadan & Jabal Ikmah. Overnight AlUla.",
+        "activities": [
+          "Hegra UNESCO site",
+          "Dadan",
+          "Jabal Ikmah"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Maraya & Elephant Rock",
+        "body": "Maraya photo stop; Elephant Rock sunset. Overnight AlUla.",
+        "activities": [
+          "Maraya concert hall",
+          "Elephant Rock sunset"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Departure AlUla",
+        "body": "Transfer to airport for onward journey.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides at major sites",
+      "Hotels on HB (Half Board)",
+      "Saudi guiding & permits included",
+      "Entrance fees to listed sites",
+      "Wadi Rum 4x4 (2 hours)",
+      "Hegra timed entry tickets",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "International flights",
+      "Regional flights (AMM→ULH)",
+      "Visa fees",
+      "Lunches",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Optional activities",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ],
+        "sa": [
+          "Habitas AlUla",
+          "Banyan Tree AlUla"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "sa": [
+          "Shaden Resort",
+          "Sahary AlUla"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "sa": [
+          "Caravan by Habitas",
+          "AlUla 3★ Lodge"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 2980,
+          "3to5": 2760,
+          "6to7": 2480,
+          "8to9": 2350,
+          "10to14": 2250,
+          "singleSupp": 1020
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 3240,
+          "3to5": 2990,
+          "6to7": 2680,
+          "8to9": 2540,
+          "10to14": 2430,
+          "singleSupp": 1220
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (10GB for 10 days - Jordan & Saudi Arabia)",
+        "priceUsd": 40
+      },
+      "Hegra sunrise experience",
+      "Maraya event tickets (when available)",
+      "AlUla zipline adventure"
+    ]
+  },
+  {
+    "id": "jordan-saudi-highlights-12d11n",
+    "slug": "jordan-saudi-highlights-12d11n",
+    "title": "Jordan & Saudi Arabia Highlights",
+    "tagline": "12 Days / 11 Nights",
+    "duration": {
+      "days": 12,
+      "nights": 11
+    },
+    "heroImage": "/tour-jordan-saudi-highlights-12d11n.jpg",
+    "highlights": [
+      "Amman & Jerash",
+      "Full day at Petra",
+      "Wadi Rum overnight camp",
+      "Dead Sea floating",
+      "Jeddah Al-Balad UNESCO",
+      "Medina Islamic Museum",
+      "AlUla Hegra & Dadan",
+      "Maraya & Elephant Rock",
+      "Riyadh National Museum",
+      "Diriyah heritage site"
+    ],
+    "route": [
+      "Amman",
+      "Jerash",
+      "Petra",
+      "Wadi Rum",
+      "Dead Sea",
+      "Jeddah",
+      "Medina",
+      "AlUla",
+      "Riyadh"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Arrive Amman",
+        "body": "Meet & assist. Transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman & Jerash",
+        "body": "Full tour. Dinner & overnight Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Madaba & Nebo → Petra",
+        "body": "Mosaic map, Mount Nebo. Continue to Petra. Dinner & overnight.",
+        "activities": [
+          "Madaba",
+          "Mount Nebo"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Petra Full Visit",
+        "body": "Full day in Petra. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Wadi Rum 4x4",
+        "body": "Wadi Rum desert experience. Overnight camp.",
+        "activities": [
+          "Wadi Rum 4x4 tour",
+          "Bedouin camp"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Wadi Rum → Dead Sea → Amman",
+        "body": "Dead Sea floating, return Amman. Dinner & overnight.",
+        "activities": [
+          "Dead Sea floating"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Fly to Jeddah",
+        "body": "Al-Balad UNESCO, Corniche. Overnight Jeddah.",
+        "activities": [
+          "Al-Balad historic district",
+          "Jeddah Corniche"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Jeddah → Medina",
+        "body": "Drive to Medina. Viewpoints & Islamic Museum (outer areas for non-Muslims). Overnight Medina.",
+        "activities": [
+          "Medina viewpoints",
+          "Islamic Museum"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Medina → AlUla",
+        "body": "Fly to AlUla. Hegra, Dadan, Jabal Ikmah. Overnight AlUla.",
+        "activities": [
+          "Hegra UNESCO site",
+          "Dadan",
+          "Jabal Ikmah"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "AlUla → Riyadh",
+        "body": "Maraya photo stop. Fly to Riyadh. Overnight Riyadh.",
+        "activities": [
+          "Maraya concert hall"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 11,
+        "title": "Riyadh City Tour",
+        "body": "National Museum, Diriyah (if open), Boulevard by night. Overnight Riyadh.",
+        "activities": [
+          "National Museum",
+          "Diriyah",
+          "Boulevard Riyadh"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 12,
+        "title": "Departure Riyadh",
+        "body": "Transfer to airport for departure.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides at major sites",
+      "Hotels on HB (Half Board)",
+      "1 night desert camp",
+      "Saudi guiding & permits included",
+      "Entrance fees to listed sites",
+      "Wadi Rum 4x4 (2 hours)",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "International flights",
+      "Domestic Saudi flights (JED→MED→ULH→RUH)",
+      "Visa fees",
+      "Lunches",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Diriyah ticketed entry (if applicable)",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "wr": [
+          "Mazayen Luxury Camp"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ],
+        "sa": [
+          "Habitas AlUla",
+          "Ritz-Carlton Riyadh",
+          "Hilton Jeddah"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "wr": [
+          "Rum Oasis Camp"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "sa": [
+          "Shaden Resort AlUla",
+          "Narcissus Riyadh",
+          "Radisson Blu Jeddah"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "wr": [
+          "Magic Luxury Camp"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "sa": [
+          "Caravan by Habitas",
+          "Ibis Riyadh",
+          "Holiday Inn Jeddah"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 3980,
+          "3to5": 3670,
+          "6to7": 3280,
+          "8to9": 3120,
+          "10to14": 2990,
+          "singleSupp": 1420
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 4350,
+          "3to5": 4020,
+          "6to7": 3600,
+          "8to9": 3430,
+          "10to14": 3290,
+          "singleSupp": 1640
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (15GB for 14 days - Jordan & Saudi Arabia)",
+        "priceUsd": 50
+      },
+      "Medina restrictions apply for non-Muslims",
+      "Diriyah by Night experience",
+      "Boulevard Riyadh entertainment"
+    ]
+  },
+  {
+    "id": "arabia-grand-journey-14d13n",
+    "slug": "arabia-grand-journey-14d13n",
+    "title": "Arabia Grand Journey – Jordan & KSA",
+    "tagline": "14 Days / 13 Nights",
+    "duration": {
+      "days": 14,
+      "nights": 13
+    },
+    "heroImage": "/tour-arabia-grand-journey-14d13n.jpg",
+    "highlights": [
+      "Ajloun & Umm Qais",
+      "Full day at Petra",
+      "Wadi Rum stargazing",
+      "Aqaba Red Sea",
+      "Dead Sea floating",
+      "Jeddah & Taif (seasonal roses)",
+      "Medina Islamic sites",
+      "AlUla Hegra sunrise",
+      "Wadi Disah canyon 4x4",
+      "Elephant Rock sunset",
+      "Riyadh modern Arabia",
+      "Amman street-food walk"
+    ],
+    "route": [
+      "Amman",
+      "Ajloun",
+      "Umm Qais",
+      "Petra",
+      "Wadi Rum",
+      "Aqaba",
+      "Dead Sea",
+      "Jeddah",
+      "Taif",
+      "Medina",
+      "AlUla",
+      "Tabuk",
+      "Wadi Disah",
+      "Riyadh"
+    ],
+    "dailyPlan": [
+      {
+        "day": 1,
+        "title": "Arrive Amman",
+        "body": "Meet & assist. Transfer to hotel. Dinner & overnight.",
+        "meals": [
+          "Dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Amman & Jerash",
+        "body": "Full tour. Dinner & overnight Amman.",
+        "activities": [
+          "Amman city tour",
+          "Jerash Roman ruins"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Ajloun & Umm Qais",
+        "body": "Ajloun Castle, Umm Qais Decapolis. Return Amman. Dinner & overnight.",
+        "activities": [
+          "Ajloun Castle",
+          "Umm Qais"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Madaba, Nebo, Kerak → Petra",
+        "body": "Mosaic map, Mount Nebo, Kerak Castle. Dinner & overnight Petra.",
+        "activities": [
+          "Madaba",
+          "Mount Nebo",
+          "Kerak Castle"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Petra Full Visit",
+        "body": "Full day in Petra. Dinner & overnight.",
+        "activities": [
+          "Petra Siq",
+          "Treasury",
+          "Royal Tombs",
+          "Monastery"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Wadi Rum Stargazing",
+        "body": "Wadi Rum 4×4, stargazing with Bedouin. Overnight camp.",
+        "activities": [
+          "Wadi Rum 4x4 tour",
+          "Stargazing experience"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Wadi Rum → Aqaba",
+        "body": "Transfer to Aqaba. Beach time. Overnight Aqaba.",
+        "activities": [
+          "Aqaba beach",
+          "Red Sea"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Aqaba → Dead Sea → Amman",
+        "body": "Dead Sea floating, Amman street-food walk. Overnight Amman.",
+        "activities": [
+          "Dead Sea floating",
+          "Amman street food"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Fly to Jeddah",
+        "body": "Al-Balad UNESCO, Corniche. Overnight Jeddah.",
+        "activities": [
+          "Al-Balad",
+          "Jeddah Corniche"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Jeddah → Taif → Medina",
+        "body": "Taif rose farms (seasonal Mar-Apr). Continue to Medina. Overnight Medina.",
+        "activities": [
+          "Taif rose farms",
+          "Medina viewpoints"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 11,
+        "title": "Medina → AlUla",
+        "body": "Fly to AlUla. Hegra sunrise, Dadan, Jabal Ikmah. Overnight AlUla.",
+        "activities": [
+          "Hegra sunrise",
+          "Dadan",
+          "Jabal Ikmah"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 12,
+        "title": "AlUla → Tabuk/Wadi Disah",
+        "body": "Wadi Disah canyon 4×4 (permits required). Elephant Rock sunset. Overnight Tabuk area.",
+        "activities": [
+          "Wadi Disah 4x4",
+          "Elephant Rock sunset"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 13,
+        "title": "Tabuk → Riyadh",
+        "body": "Fly to Riyadh. National Museum, Boulevard by night. Overnight Riyadh.",
+        "activities": [
+          "National Museum",
+          "Boulevard Riyadh"
+        ],
+        "meals": [
+          "Breakfast",
+          "Dinner"
+        ]
+      },
+      {
+        "day": 14,
+        "title": "Departure Riyadh",
+        "body": "Transfer to airport for departure.",
+        "meals": [
+          "Breakfast"
+        ]
+      }
+    ],
+    "inclusions": [
+      "Meet & assist on arrival and departure",
+      "Private A/C transport with English-speaking driver",
+      "Licensed local guides at major sites",
+      "Hotels on HB (Half Board)",
+      "1 night desert camp",
+      "Saudi guiding & permits included",
+      "Entrance fees to listed sites",
+      "Wadi Rum 4x4 (2 hours)",
+      "Wadi Disah 4x4 experience",
+      "Stargazing with Bedouin",
+      "Bottled water on touring days"
+    ],
+    "exclusions": [
+      "International flights",
+      "Domestic Saudi flights (JED→MED→ULH→TUU/NEOM→RUH)",
+      "Visa fees",
+      "Lunches",
+      "Beverages",
+      "Tips",
+      "Personal expenses",
+      "Travel insurance",
+      "Wadi Disah permits (weather dependent)",
+      "Any item not mentioned"
+    ],
+    "hotelOptions": [
+      {
+        "class": "5★",
+        "am": [
+          "Bristol Amman",
+          "W Amman"
+        ],
+        "pe": [
+          "H Luxury Petra"
+        ],
+        "wr": [
+          "Mazayen Luxury Camp"
+        ],
+        "aq": [
+          "Kempinski Aqaba",
+          "Hyatt Regency Aqaba"
+        ],
+        "ds": [
+          "Holiday Inn Dead Sea",
+          "Movenpick Dead Sea"
+        ],
+        "sa": [
+          "Habitas AlUla",
+          "Ritz-Carlton Riyadh",
+          "Hilton Jeddah",
+          "Shaza Taif"
+        ]
+      },
+      {
+        "class": "4★",
+        "am": [
+          "Mena Tyche Amman"
+        ],
+        "pe": [
+          "P Quattro Petra"
+        ],
+        "wr": [
+          "Rum Oasis Camp"
+        ],
+        "aq": [
+          "City Tower Aqaba"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "sa": [
+          "Shaden Resort AlUla",
+          "Narcissus Riyadh",
+          "Radisson Blu Jeddah"
+        ]
+      },
+      {
+        "class": "3★",
+        "am": [
+          "Misk Amman"
+        ],
+        "pe": [
+          "Petra Corner"
+        ],
+        "wr": [
+          "Magic Luxury Camp"
+        ],
+        "aq": [
+          "Dweik Hotel Aqaba"
+        ],
+        "ds": [
+          "Grand East Dead Sea"
+        ],
+        "sa": [
+          "Caravan by Habitas",
+          "Ibis Riyadh",
+          "Holiday Inn Jeddah"
+        ]
+      }
+    ],
+    "seasonPricing": [
+      {
+        "season": "Low",
+        "ranges": [
+          "2026-08-01..2026-02-28",
+          "2026-06-01..2026-08-31",
+          "2026-12-01..2026-12-22"
+        ],
+        "ppUsd": {
+          "2pax": 4780,
+          "3to5": 4430,
+          "6to7": 3980,
+          "8to9": 3800,
+          "10to14": 3660,
+          "singleSupp": 1820
+        }
+      },
+      {
+        "season": "High",
+        "ranges": [
+          "2026-03-01..2026-05-31",
+          "2026-09-01..2026-11-30",
+          "2026-12-23..2027-01-07"
+        ],
+        "ppUsd": {
+          "2pax": 5250,
+          "3to5": 4870,
+          "6to7": 4360,
+          "8to9": 4170,
+          "10to14": 4010,
+          "singleSupp": 2060
+        }
+      }
+    ],
+    "addons": [
+      {
+        "label": "eSIM Data Package (20GB for 14 days - Jordan & Saudi Arabia)",
+        "priceUsd": 60
+      },
+      "Seasonal rose farms in Taif (Mar-Apr)",
+      "Wadi Disah requires 4×4 and local permits (weather dependent)",
+      "AlUla adventure experiences (zipline, bike trails)",
+      "Diriyah by Night"
+    ]
+  }
+]

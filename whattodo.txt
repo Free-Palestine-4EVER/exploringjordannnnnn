@@ -1,0 +1,29 @@
+STATUS: All changes regarding code, styling (Amber theme), and features (Booking Form, Reviews, etc.) are saved.
+
+NEXT SESSION INSTRUCTIONS:
+1. Read this file to understand the context.
+2. The user will provide photos (files or links) for the specific cities/stops in the tours below.
+3. You must update `data/tours.json` to replace the current Unsplash images with the user's specific photos for the `images` array (Carousel) and `heroImage`.
+4. Update the photos "one by one" as the user provides them.
+
+LIST OF TOURS & CITIES FOR PHOTOS:
+
+1. Jordan Highlights (6 Days / 5 Nights)
+   - ID: jordan-highlights-6d5n
+   - Cities/Stops: Amman, Jerash, Madaba, Mount Nebo, Shobak, Petra, Wadi Rum, Dead Sea
+
+2. Classic Jordan (7 Days / 6 Nights)
+   - ID: classic-jordan-7d6n
+   - Cities/Stops: Amman, Jerash, Madaba, Mount Nebo, Shobak, Petra, Wadi Rum, Dead Sea
+
+3. Grand Jordan (8 Days / 7 Nights)
+   - ID: grand-jordan-8d7n
+   - Cities/Stops: Amman, Jerash, Madaba, Mount Nebo, Shobak, Petra, Little Petra, Wadi Rum, Amman, Dead Sea
+
+4. Jordan Highlights (5 Days / 4 Nights)
+   - ID: jordan-highlights-5d4n
+   - Cities/Stops: Amman, Jerash, Madaba, Mount Nebo, Petra, Dead Sea
+
+5. Jordan In-Depth (9 Days / 8 Nights)
+   - ID: jordan-in-depth-9d8n
+   - Cities/Stops: Amman, Jerash, Ajloun, Umm Qais, Madaba, Mount Nebo, Kerak, Petra, Little Petra, Wadi Rum, Aqaba, Dead Sea
