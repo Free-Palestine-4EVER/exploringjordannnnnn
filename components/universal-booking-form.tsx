@@ -63,39 +63,36 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
 
         try {
             const season = (() => {
-                const month = new Date(startDate).getMonth() + 1
+                const date = new Date(startDate)
+                if (isNaN(date.getTime())) return "Low" // Fallback
+                const month = date.getMonth() + 1
                 return ((month >= 3 && month <= 5) || (month >= 9 && month <= 11)) ? "High" : "Low"
             })()
+
+            const tourTitleValue = selectedTour?.title || destinationName || 'General Inquiry'
+
+            const payload = {
+                firstName,
+                lastName,
+                email,
+                phone,
+                tourName: tourTitleValue,
+                tourDate: startDate,
+                groupSize,
+                numPeople,
+                hotelClass,
+                pricePerPerson: pricePerPerson || 0,
+                totalPrice: (pricePerPerson * numPeople) || 0,
+                currency: "USD",
+                country,
+                specialRequests: requests || "None",
+                season,
+            }
 
             const response = await fetch('/api/booking', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: `${firstName} ${lastName}`,
-                    email,
-                    phone,
-                    tourTitle: selectedTour?.title || destinationName || 'General Inquiry',
-                    pricePerPerson,
-                    totalPrice: pricePerPerson * numPeople,
-                    groupSize,
-                    numPeople,
-                    startDate,
-                    season,
-                    duration: selectedTour?.duration?.days || 7,
-                    hotelClass,
-                    country,
-                    specialRequests: requests,
-                    message: `
-Booking Request
-Tour: ${selectedTour?.title || destinationName || 'Not specified'}
-Departure: ${startDate}
-Group: ${groupSize} people
-Hotel: ${hotelClass}
-Country: ${country}
-Requests: ${requests || 'None'}
-Total Price: $${pricePerPerson * numPeople} ($${pricePerPerson}/person)
-                    `.trim()
-                })
+                body: JSON.stringify(payload)
             })
 
             if (response.ok) {
