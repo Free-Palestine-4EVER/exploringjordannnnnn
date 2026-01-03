@@ -62,6 +62,11 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
         e.preventDefault()
 
         try {
+            const season = (() => {
+                const month = new Date(startDate).getMonth() + 1
+                return ((month >= 3 && month <= 5) || (month >= 9 && month <= 11)) ? "High" : "Low"
+            })()
+
             const response = await fetch('/api/booking', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -70,6 +75,16 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                     email,
                     phone,
                     tourTitle: selectedTour?.title || destinationName || 'General Inquiry',
+                    pricePerPerson,
+                    totalPrice: pricePerPerson * numPeople,
+                    groupSize,
+                    numPeople,
+                    startDate,
+                    season,
+                    duration: selectedTour?.duration?.days || 7,
+                    hotelClass,
+                    country,
+                    specialRequests: requests,
                     message: `
 Booking Request
 Tour: ${selectedTour?.title || destinationName || 'Not specified'}
@@ -78,6 +93,7 @@ Group: ${groupSize} people
 Hotel: ${hotelClass}
 Country: ${country}
 Requests: ${requests || 'None'}
+Total Price: $${pricePerPerson * numPeople} ($${pricePerPerson}/person)
                     `.trim()
                 })
             })
