@@ -62,7 +62,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
         e.preventDefault()
 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('/api/booking', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
