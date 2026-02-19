@@ -104,20 +104,20 @@ const itinerary = [
     },
     {
         day: 7,
-        title: "The Dead Sea — Float & Relax",
-        route: "Wadi Rum → Dead Sea",
+        title: "Dead Sea & Return to Amman",
+        route: "Wadi Rum → Dead Sea → Amman",
         icon: Waves,
         color: "cyan",
         image: "/dead-sea-floating-jordan.jpg",
         description:
-            "Wake up in the peaceful desert before departing toward the Dead Sea, the lowest point on Earth. Check in at your resort and enjoy the renowned healing waters with time to swim and relax. The rest of the day is at leisure to enjoy resort facilities, spa treatments, or rest by the pool.",
-        overnight: "Dead Sea",
+            "Wake up in the peaceful desert before departing toward the Dead Sea, the lowest point on Earth. Upon arrival, enjoy the renowned healing waters with time to swim and relax. The rest of the day is at leisure to enjoy resort facilities, spa treatments, or rest by the pool. Afterwards, drive back to Amman for dinner and overnight.",
+        overnight: "Amman",
         meals: ["Breakfast", "Dinner"],
     },
     {
         day: 8,
         title: "Departure",
-        route: "Dead Sea → QAIA",
+        route: "Amman → QAIA",
         icon: Plane,
         color: "slate",
         image: null,
@@ -129,17 +129,15 @@ const itinerary = [
 ]
 
 const hotels4Star = [
-    { location: "Amman", name: "Mena Tyche or similar", nights: 3, meal: "HB" },
+    { location: "Amman", name: "Mena Tyche or similar", nights: 4, meal: "HB" },
     { location: "Petra", name: "Petra Legacy or similar", nights: 2, meal: "HB" },
     { location: "Wadi Rum", name: "Rum Oasis Camp (Deluxe Tent)", nights: 1, meal: "HB" },
-    { location: "Dead Sea", name: "Grand East or similar", nights: 1, meal: "HB" },
 ]
 
 const hotels5Star = [
-    { location: "Amman", name: "Bristol or similar", nights: 3, meal: "HB" },
+    { location: "Amman", name: "Bristol or similar", nights: 4, meal: "HB" },
     { location: "Petra", name: "Hayat Zaman or similar", nights: 2, meal: "HB" },
     { location: "Wadi Rum", name: "Rum Oasis Camp (Deluxe Tent)", nights: 1, meal: "HB" },
-    { location: "Dead Sea", name: "Holiday Inn or similar", nights: 1, meal: "HB" },
 ]
 
 const included = [
@@ -150,10 +148,11 @@ const included = [
     "7 nights hotel accommodation on HB basis (Dinner & Breakfast)",
     "Entrance fees to all mentioned tourist sites",
     "2-hour Jeep tour 4×4 in Wadi Rum",
+    "Entrance to Dead Sea through Holiday Inn Resort or similar",
 ]
 
 const excluded = [
-    "Accompanied guide supplement for 6 days — $570 per person",
+    "Accompanied guide supplement for 6 days — $370 per person",
     "International flights",
     "Lunches",
     "Tips and porterage",
@@ -339,8 +338,8 @@ export default function ProgramClientPage() {
                             <button
                                 onClick={() => setActiveTab("4star")}
                                 className={`px-8 py-3 rounded-xl text-sm font-bold transition-all duration-300 ${activeTab === "4star"
-                                        ? "bg-amber-500 text-white shadow-lg shadow-amber-500/30"
-                                        : "text-white/70 hover:text-white hover:bg-white/10"
+                                    ? "bg-amber-500 text-white shadow-lg shadow-amber-500/30"
+                                    : "text-white/70 hover:text-white hover:bg-white/10"
                                     }`}
                             >
                                 ★★★★ Comfort
@@ -348,8 +347,8 @@ export default function ProgramClientPage() {
                             <button
                                 onClick={() => setActiveTab("5star")}
                                 className={`px-8 py-3 rounded-xl text-sm font-bold transition-all duration-300 ${activeTab === "5star"
-                                        ? "bg-amber-500 text-white shadow-lg shadow-amber-500/30"
-                                        : "text-white/70 hover:text-white hover:bg-white/10"
+                                    ? "bg-amber-500 text-white shadow-lg shadow-amber-500/30"
+                                    : "text-white/70 hover:text-white hover:bg-white/10"
                                     }`}
                             >
                                 ★★★★★ Premium
@@ -375,7 +374,7 @@ export default function ProgramClientPage() {
                                         <div className="hidden md:block bg-white/20 backdrop-blur-sm rounded-xl px-4 py-2 text-center">
                                             <p className="text-xs text-amber-100">Per Person</p>
                                             <p className="text-3xl font-extrabold">
-                                                ${activeTab === "4star" ? "1,230" : "1,430"}
+                                                ${activeTab === "4star" ? "1,130" : "1,330"}
                                             </p>
                                         </div>
                                     </div>
@@ -383,7 +382,7 @@ export default function ProgramClientPage() {
                                     <div className="md:hidden mt-4 bg-white/20 backdrop-blur-sm rounded-xl px-4 py-3 text-center">
                                         <p className="text-xs text-amber-100">Price Per Person (sharing DBL/TWN)</p>
                                         <p className="text-4xl font-extrabold mt-1">
-                                            ${activeTab === "4star" ? "1,230" : "1,430"}
+                                            ${activeTab === "4star" ? "1,130" : "1,330"}
                                         </p>
                                     </div>
                                 </div>
@@ -438,7 +437,7 @@ export default function ProgramClientPage() {
                                         </div>
                                         <div className="text-right">
                                             <p className="text-3xl md:text-4xl font-extrabold text-slate-900">
-                                                ${activeTab === "4star" ? "1,230" : "1,430"}
+                                                ${activeTab === "4star" ? "1,130" : "1,330"}
                                             </p>
                                             <p className="text-xs text-slate-500">USD per person</p>
                                         </div>
