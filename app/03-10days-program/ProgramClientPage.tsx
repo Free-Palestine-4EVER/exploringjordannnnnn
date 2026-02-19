@@ -374,7 +374,7 @@ export default function ProgramClientPage() {
                                         <div className="hidden md:block bg-white/20 backdrop-blur-sm rounded-xl px-4 py-2 text-center">
                                             <p className="text-xs text-amber-100">Per Person</p>
                                             <p className="text-3xl font-extrabold">
-                                                ${activeTab === "4star" ? "1,130" : "1,330"}
+                                                ${activeTab === "4star" ? "1,080" : "1,280"}
                                             </p>
                                         </div>
                                     </div>
@@ -382,7 +382,7 @@ export default function ProgramClientPage() {
                                     <div className="md:hidden mt-4 bg-white/20 backdrop-blur-sm rounded-xl px-4 py-3 text-center">
                                         <p className="text-xs text-amber-100">Price Per Person (sharing DBL/TWN)</p>
                                         <p className="text-4xl font-extrabold mt-1">
-                                            ${activeTab === "4star" ? "1,130" : "1,330"}
+                                            ${activeTab === "4star" ? "1,080" : "1,280"}
                                         </p>
                                     </div>
                                 </div>
@@ -437,7 +437,7 @@ export default function ProgramClientPage() {
                                         </div>
                                         <div className="text-right">
                                             <p className="text-3xl md:text-4xl font-extrabold text-slate-900">
-                                                ${activeTab === "4star" ? "1,130" : "1,330"}
+                                                ${activeTab === "4star" ? "1,080" : "1,280"}
                                             </p>
                                             <p className="text-xs text-slate-500">USD per person</p>
                                         </div>
