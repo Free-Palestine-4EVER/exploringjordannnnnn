@@ -35,7 +35,7 @@ export const trackContactSubmission = () => {
   if (typeof window !== "undefined" && (window as any).gtag) {
     ;(window as any).gtag("event", "generate_lead", {
       currency: "USD",
-      value: 0,
+      value: 1.0,
     })
   }
 }

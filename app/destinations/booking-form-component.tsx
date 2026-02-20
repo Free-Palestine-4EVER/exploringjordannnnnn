@@ -67,7 +67,7 @@ Requests: ${requests || 'None'}
             })
 
             if (response.ok) {
-                trackBookingSubmission()
+                trackBookingSubmission((pricePerPerson * numPeople) || 0)
                 setIsSubmitted(true)
                 setTimeout(() => setIsSubmitted(false), 5000)
             } else {

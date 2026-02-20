@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { trackContactSubmission } from "@/lib/gtag"
 import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
 
@@ -25,11 +26,7 @@ export default function ContactPage() {
       setIsSuccess(true)
 
       // Track conversion for Google Ads
-      if (typeof window !== "undefined" && (window as any).gtag) {
-        ; (window as any).gtag("event", "conversion", {
-          send_to: "AW-17670467400/RGcgCOvy2L0bEMje9-lB",
-        })
-      }
+      trackContactSubmission()
 
       // Reset form
       setTimeout(() => setIsSuccess(false), 5000)
