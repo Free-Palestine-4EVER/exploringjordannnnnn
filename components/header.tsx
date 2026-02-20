@@ -181,6 +181,12 @@ export default function Header() {
                     <Link href="/faq">{t.common.faq}</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild className="bg-transparent text-white">
+                    <Link href="/partners">Partners</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
 
@@ -375,6 +381,14 @@ export default function Header() {
                         className="block text-2xl font-light text-amber-600 hover:text-amber-700 transition-colors"
                       >
                         {t.common.contact}
+                      </Link>
+
+                      <Link
+                        href="/partners"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block text-2xl font-light text-amber-600 hover:text-amber-700 transition-colors"
+                      >
+                        Partners
                       </Link>
 
                       <div className="pt-4 border-t border-amber-100">
