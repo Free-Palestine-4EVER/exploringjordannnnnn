@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { format } from "date-fns"
 import { Card, CardContent } from "@/components/ui/card"
+import { trackBookingSubmission } from "@/lib/gtag"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { CheckCircle2, Send } from "lucide-react"
@@ -66,6 +67,7 @@ Requests: ${requests || 'None'}
             })
 
             if (response.ok) {
+                trackBookingSubmission()
                 setIsSubmitted(true)
                 setTimeout(() => setIsSubmitted(false), 5000)
             } else {
