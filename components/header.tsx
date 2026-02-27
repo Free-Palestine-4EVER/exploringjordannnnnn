@@ -15,6 +15,7 @@ import { Compass, Menu, X, Sparkles, ChevronDown } from "lucide-react"
 import toursData from "@/data/tours.json"
 import { useState } from "react"
 import { useTranslations } from "@/lib/i18n/language-context"
+import LanguageSwitcher from "@/components/language-switcher"
 
 
 const jordanTours = toursData.filter(
@@ -191,7 +192,7 @@ export default function Header() {
             </NavigationMenu>
 
             <div className="flex items-center gap-4">
-
+              <LanguageSwitcher variant="header" />
               <Button
                 asChild
                 variant="outline"
@@ -396,7 +397,11 @@ export default function Header() {
                       </div>
                     </nav>
 
-                    <div className="mt-8 pt-6 border-t border-amber-100">
+                    <div className="mt-6 pt-4 border-t border-amber-100">
+                      <LanguageSwitcher variant="footer" />
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t border-amber-100">
                       <Link
                         href="/book-now"
                         onClick={() => setMobileMenuOpen(false)}
