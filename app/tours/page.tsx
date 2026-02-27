@@ -8,8 +8,10 @@ import Link from "next/link"
 import TourCardEnhanced from "@/components/tour-card-enhanced"
 import { getAllTours } from "@/lib/tour-utils"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function ToursPage() {
+  const t = useTranslations()
   const tours = getAllTours()
   const [selectedTourForCustomization, setSelectedTourForCustomization] = useState<string | null>(null)
 
@@ -36,19 +38,17 @@ export default function ToursPage() {
 
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4 text-sky-800">
-            Our Jordan Tour Packages
+            {t.toursPage.title}
           </h1>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Choose from our three carefully crafted tour packages. Each tour can be fully customized to match your
-            preferences, travel dates, and budget.
+            {t.toursPage.subtitle}
           </p>
         </div>
 
         <Alert className="mb-8 bg-sky-50 border-sky-200">
           <Info className="h-4 w-4 text-sky-600" />
           <AlertDescription className="text-sky-900">
-            All tours can be customized! Select your preferred hotel class to see pricing, then click "Tailor this trip"
-            to personalize your itinerary, add activities, and request a quote.
+            {t.toursPage.alert}
           </AlertDescription>
         </Alert>
 
@@ -60,40 +60,31 @@ export default function ToursPage() {
 
         <Card className="bg-gradient-to-br from-sky-50 to-blue-50 border-sky-200">
           <CardContent className="p-6 md:p-8">
-            <h2 className="text-2xl font-bold mb-4 text-sky-800">Why Choose Our Tours?</h2>
+            <h2 className="text-2xl font-bold mb-4 text-sky-800">{t.toursPage.whyChoose}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-sky-700 mb-2">Flexible Customization</h3>
-                <p className="text-sm text-muted-foreground">
-                  Every tour can be tailored to your needs. Change hotels, add activities, adjust the itinerary, or
-                  modify travel dates.
-                </p>
+                <h3 className="font-semibold text-sky-700 mb-2">{t.toursPage.flexible}</h3>
+                <p className="text-sm text-muted-foreground">{t.toursPage.flexibleDesc}</p>
               </div>
               <div>
-                <h3 className="font-semibold text-sky-700 mb-2">Transparent Pricing</h3>
-                <p className="text-sm text-muted-foreground">
-                  See prices for different hotel classes and group sizes. No hidden fees - what you see is what you get.
-                </p>
+                <h3 className="font-semibold text-sky-700 mb-2">{t.toursPage.transparent}</h3>
+                <p className="text-sm text-muted-foreground">{t.toursPage.transparentDesc}</p>
               </div>
               <div>
-                <h3 className="font-semibold text-sky-700 mb-2">Expert Local Guides</h3>
-                <p className="text-sm text-muted-foreground">
-                  All tours include licensed English-speaking guides who bring Jordan's history and culture to life.
-                </p>
+                <h3 className="font-semibold text-sky-700 mb-2">{t.toursPage.expertGuides}</h3>
+                <p className="text-sm text-muted-foreground">{t.toursPage.expertGuidesDesc}</p>
               </div>
               <div>
-                <h3 className="font-semibold text-sky-700 mb-2">All-Inclusive Packages</h3>
-                <p className="text-sm text-muted-foreground">
-                  Transportation, accommodation, meals (half board), entrance fees, and activities are all included.
-                </p>
+                <h3 className="font-semibold text-sky-700 mb-2">{t.toursPage.allInclusive}</h3>
+                <p className="text-sm text-muted-foreground">{t.toursPage.allInclusiveDesc}</p>
               </div>
             </div>
             <div className="mt-6 pt-6 border-t border-sky-200">
               <p className="text-sm text-muted-foreground mb-4">
-                Need help choosing the right tour? Our team is here to assist you.
+                {t.toursPage.needHelp}
               </p>
               <Button asChild>
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact">{t.common.contactUs}</Link>
               </Button>
             </div>
           </CardContent>

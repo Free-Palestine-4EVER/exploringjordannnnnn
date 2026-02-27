@@ -1,11 +1,15 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { useTranslations } from "@/lib/i18n/language-context"
 import { Award, Users, Globe, Heart, Shield, Star, MapPin, Calendar, CheckCircle2 } from "lucide-react"
 
 export default function AboutPage() {
+  const t = useTranslations()
   return (
     <div className="min-h-screen pt-32">
       {/* Hero Section */}
@@ -19,14 +23,14 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <Badge className="mb-4 bg-blue-600 hover:bg-blue-700 text-white border-0">Est. 2015</Badge>
+          <Badge className="mb-4 bg-blue-600 hover:bg-blue-700 text-white border-0">{t.aboutPage.badge}</Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
-            Crafting Unforgettable
+            {t.aboutPage.heroTitle}
             <br />
-            Jordan Adventures
+            {t.aboutPage.heroTitle2}
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 text-balance">
-            Your trusted partner in exploring the wonders of Jordan
+            {t.aboutPage.heroSubtitle}
           </p>
         </div>
       </section>

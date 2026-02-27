@@ -6,8 +6,10 @@ import { Check, Mail, Phone, Clock, Home, Calendar } from "lucide-react"
 import Link from "next/link"
 import BubbleButton from "@/components/bubble-button"
 import { motion } from "framer-motion"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function ThankYouPage() {
+  const t = useTranslations()
   return (
     <main className="pt-24 pb-16 bg-gradient-to-b from-sky-50 to-white min-h-screen">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -20,10 +22,9 @@ export default function ThankYouPage() {
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-6">
             <Check className="h-10 w-10 text-green-600" />
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">Thank You!</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">{t.thankYouPage.title}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Your trip customization request has been received. We're excited to help you plan your perfect Jordan
-            adventure!
+            {t.thankYouPage.subtitle}
           </p>
         </motion.div>
 
@@ -34,8 +35,8 @@ export default function ThankYouPage() {
         >
           <Card className="border-none shadow-lg mb-8">
             <div className="bg-gradient-to-r from-sky-500 to-blue-500 text-white p-6">
-              <h2 className="text-2xl font-bold mb-2">What Happens Next?</h2>
-              <p className="text-white/90">Here's what you can expect from our team</p>
+              <h2 className="text-2xl font-bold mb-2">{t.thankYouPage.whatHappensNext}</h2>
+              <p className="text-white/90">{t.thankYouPage.whatHappensNextDesc}</p>
             </div>
             <CardContent className="p-6">
               <div className="space-y-6">
@@ -46,11 +47,8 @@ export default function ThankYouPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1 text-sky-700">Within 24 Hours</h3>
-                    <p className="text-muted-foreground">
-                      Our travel specialists will review your request and send you a detailed quote with confirmed
-                      pricing and availability.
-                    </p>
+                    <h3 className="font-bold text-lg mb-1 text-sky-700">{t.thankYouPage.within24Hours}</h3>
+                    <p className="text-muted-foreground">{t.thankYouPage.within24HoursDesc}</p>
                   </div>
                 </div>
 
@@ -181,7 +179,7 @@ export default function ThankYouPage() {
           <BubbleButton asChild size="lg">
             <Link href="/">
               <Home className="h-4 w-4 mr-2" />
-              Return to Homepage
+              {t.thankYouPage.returnHome}
             </Link>
           </BubbleButton>
         </motion.div>

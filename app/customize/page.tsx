@@ -17,8 +17,10 @@ import Link from "next/link"
 import { getAllTours, getTourBySlug, calculateTourPrice, formatPrice } from "@/lib/tour-utils"
 import type { Tour } from "@/lib/types/tour"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 function CustomizerContent() {
+  const t = useTranslations()
   const searchParams = useSearchParams()
   const router = useRouter()
   const tourSlug = searchParams.get("tour")
@@ -120,11 +122,8 @@ function CustomizerContent() {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-sky-800">Customize Your Jordan Experience</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Tailor your perfect Jordan adventure. Choose your tour, travel dates, hotel class, and add special
-            experiences to create your dream trip.
-          </p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-sky-800">{t.customizePage.title}</h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{t.customizePage.subtitle}</p>
         </div>
 
         {/* Progress Steps */}

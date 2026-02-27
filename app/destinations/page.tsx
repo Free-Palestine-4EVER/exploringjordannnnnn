@@ -5,42 +5,44 @@ import Image from "next/image"
 import Link from "next/link"
 import BubbleButton from "@/components/bubble-button"
 import { useState } from "react"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function DestinationsPage() {
+  const t = useTranslations()
   const destinations = [
     {
-      name: "Petra",
-      description: "Discover the ancient city carved into rose-colored rock",
+      name: t.destinations.petra.name,
+      description: t.destinations.petra.description,
       image: "/images/petra.jpg",
       slug: "petra",
     },
     {
-      name: "Wadi Rum",
-      description: "Experience the otherworldly desert landscapes",
+      name: t.destinations.wadiRum.name,
+      description: t.destinations.wadiRum.description,
       image: "/images/wadi-rum-landscape.png",
       slug: "wadi-rum",
     },
     {
-      name: "Dead Sea",
-      description: "Float effortlessly in the mineral-rich waters",
+      name: t.destinations.deadSea.name,
+      description: t.destinations.deadSea.description,
       image: "/images/dead-sea-float.png",
       slug: "dead-sea",
     },
     {
-      name: "Jerash",
-      description: "Walk through one of the best preserved Roman cities",
+      name: t.destinations.jerash.name,
+      description: t.destinations.jerash.description,
       image: "/images/jerash.png",
       slug: "jerash",
     },
     {
-      name: "Amman",
-      description: "Explore Jordan's vibrant and historic capital city",
+      name: t.destinations.amman.name,
+      description: t.destinations.amman.description,
       image: "/images/amman.png",
       slug: "amman",
     },
     {
-      name: "Aqaba",
-      description: "Dive into the crystal clear waters of the Red Sea",
+      name: t.destinations.aqaba.name,
+      description: t.destinations.aqaba.description,
       image: "/images/aqaba.png",
       slug: "aqaba",
     },
@@ -58,10 +60,9 @@ export default function DestinationsPage() {
         </div>
 
         <div className="text-center mb-8 md:mb-12">
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4">Explore Jordan's Treasures</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4">{t.destinationsPage.title}</h1>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            From ancient wonders to natural marvels, Jordan offers a diverse range of unforgettable destinations.
-            Discover the magic of each unique location.
+            {t.destinationsPage.subtitle}
           </p>
         </div>
 
@@ -72,12 +73,12 @@ export default function DestinationsPage() {
         </div>
 
         <div className="mt-16 bg-muted rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Can't Decide Where to Go?</h2>
+          <h2 className="text-2xl font-bold mb-4">{t.destinationsPage.cantDecide}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-            Let our travel experts help you plan the perfect Jordan itinerary based on your interests, time, and budget.
+            {t.destinationsPage.cantDecideDesc}
           </p>
           <BubbleButton asChild size="lg">
-            <Link href="/contact">Contact Our Travel Experts</Link>
+            <Link href="/contact">{t.destinationsPage.contactExperts}</Link>
           </BubbleButton>
         </div>
       </div>

@@ -15,8 +15,10 @@ import { getAllTours } from "@/lib/tour-utils"
 import Image from "next/image"
 import TravelTipCard from "@/components/travel-tip-card"
 import SecondaryHero from "@/components/secondary-hero"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function Home() {
+  const t = useTranslations()
   const allTours = getAllTours()
   const [selectedTourForCustomization, setSelectedTourForCustomization] = useState<string | null>(null)
 
@@ -44,12 +46,9 @@ export default function Home() {
 
       <section className="container mx-auto py-12 px-4 md:py-24 bg-gradient-to-b from-amber-50 to-amber-100">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-amber-600 text-white hover:bg-amber-700">Discover Jordan</Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-amber-900">Our Jordan Tour Packages</h2>
-          <p className="text-amber-800 max-w-2xl mx-auto">
-            Explore the wonders of Jordan with our carefully crafted tour packages. From ancient Petra to the desert
-            landscapes of Wadi Rum and the healing waters of the Dead Sea.
-          </p>
+          <Badge className="mb-4 bg-amber-600 text-white hover:bg-amber-700">{t.homePage.jordanToursBadge}</Badge>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-amber-900">{t.homePage.jordanToursTitle}</h2>
+          <p className="text-amber-800 max-w-2xl mx-auto">{t.homePage.jordanToursDesc}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
@@ -67,7 +66,7 @@ export default function Home() {
         <div className="text-center">
           <BubbleButton asChild size="lg" className="gap-2 bg-amber-600 hover:bg-amber-700 text-white">
             <Link href="/tours">
-              View All Jordan Tours
+              {t.homePage.viewAllJordan}
               <ChevronRight className="h-4 w-4" />
             </Link>
           </BubbleButton>
@@ -79,12 +78,9 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-sky-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-sky-100 text-sky-700 hover:bg-sky-200">Explore Jordan</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">Discover Jordan's Rich History</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Jordan is home to some of the world's most remarkable historical sites, from ancient cities to biblical
-              landmarks.
-            </p>
+            <Badge className="mb-4 bg-sky-100 text-sky-700 hover:bg-sky-200">{t.homePage.historyBadge}</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">{t.homePage.historyTitle}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t.homePage.historyDesc}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -99,31 +95,28 @@ export default function Home() {
               />
             </div>
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-sky-700">A Journey Through Time</h3>
-              <p className="text-lg">
-                Jordan's history spans thousands of years, with influences from the Nabataeans, Romans, Byzantines, and
-                Islamic empires. Each civilization has left its mark on this incredible land.
-              </p>
+              <h3 className="text-2xl font-bold text-sky-700">{t.homePage.journeyTime}</h3>
+              <p className="text-lg">{t.homePage.journeyTimeDesc}</p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg shadow-md">
-                  <h4 className="font-bold text-sky-600">Petra</h4>
-                  <p>Ancient city carved into rose-colored rock</p>
+                  <h4 className="font-bold text-sky-600">{t.homePage.petraTitle}</h4>
+                  <p>{t.homePage.petraDesc}</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-md">
-                  <h4 className="font-bold text-sky-600">Jerash</h4>
-                  <p>Well-preserved Roman provincial city</p>
+                  <h4 className="font-bold text-sky-600">{t.homePage.jerashTitle}</h4>
+                  <p>{t.homePage.jerashDesc}</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-md">
-                  <h4 className="font-bold text-sky-600">Mount Nebo</h4>
-                  <p>Where Moses viewed the Promised Land</p>
+                  <h4 className="font-bold text-sky-600">{t.homePage.mountNeboTitle}</h4>
+                  <p>{t.homePage.mountNeboDesc}</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-md">
-                  <h4 className="font-bold text-sky-600">Desert Castles</h4>
-                  <p>Early Islamic art and architecture</p>
+                  <h4 className="font-bold text-sky-600">{t.homePage.desertCastlesTitle}</h4>
+                  <p>{t.homePage.desertCastlesDesc}</p>
                 </div>
               </div>
               <BubbleButton asChild>
-                <Link href="/destinations">Explore Historical Sites</Link>
+                <Link href="/destinations">{t.homePage.exploreHistorical}</Link>
               </BubbleButton>
             </div>
           </div>
@@ -135,12 +128,9 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-sky-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-sky-100 text-sky-700 hover:bg-sky-200">Tour Options</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">Choose Your Perfect Journey</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              We offer multiple tour durations to fit your schedule. Each can be customized with your preferred hotel
-              class, activities, and travel dates.
-            </p>
+            <Badge className="mb-4 bg-sky-100 text-sky-700 hover:bg-sky-200">{t.homePage.tourOptionsBadge}</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">{t.homePage.tourOptionsTitle}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t.homePage.tourOptionsDesc}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -180,30 +170,28 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-sky-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-sky-100 text-sky-700 hover:bg-sky-200">Travel Tips</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">Prepare for Your Jordan Adventure</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Make the most of your journey with these helpful tips and insights about traveling in Jordan.
-            </p>
+            <Badge className="mb-4 bg-sky-100 text-sky-700 hover:bg-sky-200">{t.homePage.travelTipsBadge}</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-sky-800">{t.homePage.travelTipsTitle}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t.homePage.travelTipsDesc}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TravelTipCard
               image="/images/jordan-culture.jpg"
-              title="Cultural Etiquette"
-              description="Jordan is a welcoming country with rich traditions. Learn about local customs and etiquette to enhance your experience."
+              title={t.homePage.culturalEtiquette}
+              description={t.homePage.culturalEtiquetteDesc}
             />
 
             <TravelTipCard
               image="/images/jordan-weather.jpg"
-              title="Weather & Packing"
-              description="Jordan's climate varies by region and season. Find out what to pack and when to visit for ideal conditions."
+              title={t.homePage.weatherPacking}
+              description={t.homePage.weatherPackingDesc}
             />
 
             <TravelTipCard
               image="/images/jordan-cuisine.jpg"
-              title="Cuisine & Dining"
-              description="Jordanian cuisine offers delicious flavors and unique dishes. Discover what to try during your visit."
+              title={t.homePage.cuisineDining}
+              description={t.homePage.cuisineDiningDesc}
             />
           </div>
         </div>

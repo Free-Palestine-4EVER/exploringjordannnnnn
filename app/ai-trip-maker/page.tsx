@@ -27,6 +27,7 @@ import {
   Tent,
   Plane,
 } from "lucide-react"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 const countries = [
   {
@@ -65,6 +66,7 @@ const activities = [
 ]
 
 export default function AITripMakerPage() {
+  const t = useTranslations()
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState({
     countries: [] as string[],
@@ -194,12 +196,10 @@ export default function AITripMakerPage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <Sparkles className="h-5 w-5" />
-              <span className="text-sm font-medium">Smart Trip Builder</span>
+              <span className="text-sm font-medium">{t.aiTripMaker.badge}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Create Your Perfect Journey</h1>
-            <p className="text-xl text-white/90">
-              Answer a few questions and we'll craft a personalized itinerary just for you
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t.aiTripMaker.heroTitle}</h1>
+            <p className="text-xl text-white/90">{t.aiTripMaker.heroSubtitle}</p>
           </div>
         </div>
       </div>

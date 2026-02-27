@@ -11,8 +11,10 @@ import { useToast } from "@/components/ui/use-toast"
 import { trackPartnerInquiry } from "@/lib/gtag"
 import { Building2, Globe, Handshake, MapPin, Users, CheckCircle2, ArrowRight, Star } from "lucide-react"
 import Link from "next/link"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function PartnersPage() {
+  const t = useTranslations()
   const [formData, setFormData] = useState({
     companyName: "",
     contactName: "",
@@ -67,24 +69,23 @@ export default function PartnersPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm px-4 py-1">
-              B2B Partnership Program
+              {t.partnersPage.badge}
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Your Ground Partner in Jordan
+              {t.partnersPage.heroTitle}
             </h1>
             <p className="text-xl md:text-2xl text-amber-100 mb-8">
-              We handle everything on the ground — hotels, guides, transport, experiences.
-              You sell to your clients and set your own margins.
+              {t.partnersPage.heroSubtitle}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="#inquiry-form">
                 <Button size="lg" className="bg-white text-amber-900 hover:bg-amber-50 text-lg px-8">
-                  Become a Partner <ArrowRight className="ml-2 h-5 w-5" />
+                  {t.partnersPage.becomePartner} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </a>
               <a href="mailto:info@exploringjordan.com">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8">
-                  Request Rate Sheet
+                  {t.partnersPage.requestRateSheet}
                 </Button>
               </a>
             </div>
@@ -96,9 +97,9 @@ export default function PartnersPage() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-amber-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Why Partner With Exploring Jordan?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">{t.partnersPage.whyPartnerTitle}</h2>
             <p className="text-lg text-amber-700 max-w-2xl mx-auto">
-              We're a licensed Destination Management Company based in Jordan, serving travel agencies across Europe and beyond.
+              {t.partnersPage.whyPartnerSubtitle}
             </p>
           </div>
 
