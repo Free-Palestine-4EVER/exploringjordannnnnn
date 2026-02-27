@@ -82,11 +82,11 @@ const no: TranslationType = {
     "accommodationsDesc": "Stay in carefully selected hotels and unique accommodations that enhance your experience."
   },
   "testimonials": {
-    "title": "What Our Travelers Say",
+    "title": "Hva Våre Reisende Sier",
     "subtitle": "Don't just take our word for it - hear from travelers who've experienced the magic of Jordan with us."
   },
   "featuredDestinations": {
-    "title": "Explore Jordan's Treasures",
+    "title": "Utforsk Jordans Skatter",
     "subtitle": "From ancient wonders to natural marvels, Jordan offers a diverse range of unforgettable destinations.",
     "viewAll": "View All Destinations"
   },
@@ -113,7 +113,7 @@ const no: TranslationType = {
     "needHelp": "Need help choosing the right tour? Our team is here to assist you."
   },
   "destinationsPage": {
-    "title": "Explore Jordan's Treasures",
+    "title": "Utforsk Jordans Skatter",
     "subtitle": "From ancient wonders to natural marvels, Jordan offers a diverse range of unforgettable destinations. Discover the magic of each unique location.",
     "cantDecide": "Can't Decide Where to Go?",
     "cantDecideDesc": "Let our travel experts help you plan the perfect Jordan itinerary based on your interests, time, and budget.",
@@ -138,7 +138,7 @@ const no: TranslationType = {
     },
     "amman": {
       "name": "Amman",
-      "description": "Explore Jordan's vibrant and historic capital city"
+      "description": "Utforsk Jordans livlige og historiske hovedstad"
     },
     "aqaba": {
       "name": "Aqaba",
@@ -147,11 +147,11 @@ const no: TranslationType = {
   },
   "aboutPage": {
     "badge": "Est. 2015",
-    "heroTitle": "Crafting Unforgettable",
+    "heroTitle": "Skaper Uforglemmelige Opplevelser",
     "heroTitle2": "Jordan Adventures",
     "heroSubtitle": "Your trusted partner in exploring the wonders of Jordan",
     "storyBadge": "Our Story",
-    "storyTitle": "Born from a passion for Jordan",
+    "storyTitle": "Født av en lidenskap for Jordan",
     "storyP1": "Jordan Explorer was founded in 2015 by a group of travel enthusiasts who fell in love with the rich history, stunning landscapes, and warm hospitality of Jordan.",
     "storyP2": "What started as a small operation organizing tours to Petra has grown into a premier travel company specializing in comprehensive tours across Jordan's most iconic destinations.",
     "storyP3": "Today, we've helped over 10,000 travelers discover the magic of Jordan, creating memories that last a lifetime.",
@@ -331,7 +331,7 @@ const no: TranslationType = {
     "jordanToursTitle": "Our Jordan Tour Packages",
     "jordanToursDesc": "Explore the wonders of Jordan with our carefully crafted tour packages. From ancient Petra to the desert landscapes of Wadi Rum and the healing waters of the Dead Sea.",
     "viewAllJordan": "View All Jordan Tours",
-    "historyBadge": "Explore Jordan",
+    "historyBadge": "Utforsk Jordan",
     "historyTitle": "Discover Jordan's Rich History",
     "historyDesc": "Jordan is home to some of the world's most remarkable historical sites, from ancient cities to biblical landmarks.",
     "journeyTime": "A Journey Through Time",
