@@ -63,9 +63,10 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/10 hover:text-white gap-2">
+          <Button variant="ghost" size="sm" className="text-white hover:bg-white/10 hover:text-white gap-1.5 px-2">
             <Globe className="h-4 w-4" />
-            <span className="hidden sm:inline">{currentLang.flag}</span>
+            <span>{currentLang.flag}</span>
+            <span className="text-xs font-medium uppercase">{currentLang.code}</span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-48">
