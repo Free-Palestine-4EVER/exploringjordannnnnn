@@ -81,12 +81,12 @@ export default function Header() {
       </div>
 
       <header
-        className={`fixed ${mobileMenuOpen ? "hidden" : "top-8"} left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-r from-amber-600 to-amber-500 backdrop-blur-md shadow-md py-2 md:py-3`}
+        className={`fixed ${mobileMenuOpen ? "hidden" : "top-8"} left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-r from-amber-600 to-amber-500 backdrop-blur-md shadow-md py-3 md:py-4`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-1 md:gap-2">
-            <Compass className="h-6 w-6 md:h-8 md:w-8 text-white" />
-            <span className="font-bold text-lg md:text-xl text-white">Jordan Explorer</span>
+          <Link href="/" className="flex items-center gap-2 md:gap-3">
+            <Compass className="h-7 w-7 md:h-9 md:w-9 text-white" />
+            <span className="font-bold text-xl md:text-2xl text-white">Jordan Explorer</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

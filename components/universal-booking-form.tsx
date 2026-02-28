@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { CheckCircle2, Send } from "lucide-react"
 import toursData from "@/data/tours.json"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 interface BookingFormProps {
     preSelectedTourId?: string
@@ -15,6 +16,7 @@ interface BookingFormProps {
 }
 
 export default function UniversalBookingForm({ preSelectedTourId, destinationName }: BookingFormProps) {
+    const t = useTranslations()
     // Filter Jordan tours only
     const jordanTours = (toursData as any[]).filter((t: any) => {
         const title = t.title.toLowerCase()
@@ -114,15 +116,15 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
     return (
         <Card className="border-none shadow-2xl overflow-hidden">
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-6">
-                <h3 className="font-bold text-2xl mb-1">Book Your Tour</h3>
-                <p className="text-amber-100 text-sm">Get instant price estimate</p>
+                <h3 className="font-bold text-2xl mb-1">{t.bookingForm.title}</h3>
+                <p className="text-amber-100 text-sm">{t.bookingForm.subtitle}</p>
             </div>
 
             <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Tour Selection */}
                     <div>
-                        <Label htmlFor="tour-select" className="text-sm font-bold text-gray-900 mb-2 block">Select Tour *</Label>
+                        <Label htmlFor="tour-select" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.selectTour}</Label>
                         <select
                             id="tour-select"
                             value={selectedTourId}
@@ -130,7 +132,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                             className="flex h-12 w-full rounded-md border border-gray-300 bg-amber-50 border-amber-200 px-3 py-2 text-sm"
                             required
                         >
-                            <option value="">Choose a tour...</option>
+                            <option value="">{t.bookingForm.chooseTour}</option>
                             {jordanTours.map((tour: any) => (
                                 <option key={tour.id} value={tour.id}>
                                     {tour.title} - {tour.tagline}
@@ -141,10 +143,10 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
 
                     {/* Travel Details */}
                     <div className="space-y-4 pt-6 border-t border-gray-200">
-                        <h4 className="text-lg font-bold text-gray-900 mb-1">Travel Details</h4>
+                        <h4 className="text-lg font-bold text-gray-900 mb-1">{t.bookingForm.travelDetails}</h4>
 
                         <div>
-                            <Label htmlFor="start-date" className="text-sm font-bold text-gray-900 mb-2 block">Departure Date *</Label>
+                            <Label htmlFor="start-date" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.departureDate}</Label>
                             <input
                                 id="start-date"
                                 type="date"
@@ -165,7 +167,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                         </div>
 
                         <div>
-                            <Label htmlFor="group-size" className="text-sm font-bold text-gray-900 mb-2 block">Group Size *</Label>
+                            <Label htmlFor="group-size" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.groupSize}</Label>
                             <select
                                 id="group-size"
                                 value={groupSize}
@@ -173,16 +175,16 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                                 className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                 required
                             >
-                                <option value="1">1 Person</option>
-                                <option value="2-3">2-3 People</option>
-                                <option value="4-5">4-5 People</option>
-                                <option value="6-7">6-7 People</option>
-                                <option value="8+">8+ People</option>
+                                <option value="1">{t.bookingForm.person1}</option>
+                                <option value="2-3">{t.bookingForm.people2to3}</option>
+                                <option value="4-5">{t.bookingForm.people4to5}</option>
+                                <option value="6-7">{t.bookingForm.people6to7}</option>
+                                <option value="8+">{t.bookingForm.people8plus}</option>
                             </select>
                         </div>
 
                         <div>
-                            <Label htmlFor="hotel-class" className="text-sm font-bold text-gray-900 mb-2 block">Hotel Class *</Label>
+                            <Label htmlFor="hotel-class" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.hotelClass}</Label>
                             <select
                                 id="hotel-class"
                                 value={hotelClass}
@@ -190,9 +192,9 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                                 className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                 required
                             >
-                                <option value="3-star">⭐⭐⭐ Comfortable</option>
-                                <option value="4-star">⭐⭐⭐⭐ Superior</option>
-                                <option value="5-star">⭐⭐⭐⭐⭐ Luxury</option>
+                                <option value="3-star">⭐⭐⭐ {t.bookingForm.comfortable}</option>
+                                <option value="4-star">⭐⭐⭐⭐ {t.bookingForm.superior}</option>
+                                <option value="5-star">⭐⭐⭐⭐⭐ {t.bookingForm.luxury}</option>
                             </select>
                         </div>
                     </div>
@@ -200,7 +202,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                     {/* Price Summary */}
                     {selectedTourId && (
                         <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-5 space-y-3 border border-amber-200 shadow-sm">
-                            <h4 className="font-semibold text-gray-900 text-sm mb-2">Price Summary</h4>
+                            <h4 className="font-semibold text-gray-900 text-sm mb-2">{t.bookingForm.priceSummary}</h4>
                             <div className="flex justify-between text-sm">
                                 <span className="text-muted-foreground">Tour:</span>
                                 <span className="font-medium">{selectedTour?.title}</span>
@@ -234,12 +236,12 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
 
                     {/* Personal Information */}
                     <div className="pt-6 border-t border-gray-200">
-                        <h4 className="text-lg font-bold text-gray-900 mb-4">Your Information</h4>
+                        <h4 className="text-lg font-bold text-gray-900 mb-4">{t.bookingForm.yourInfo}</h4>
 
                         <div className="space-y-4">
                             <div className="grid grid-cols-2 gap-3">
                                 <div>
-                                    <Label htmlFor="firstName" className="text-sm font-bold text-gray-900 mb-2 block">First Name *</Label>
+                                    <Label htmlFor="firstName" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.firstName}</Label>
                                     <input
                                         id="firstName"
                                         type="text"
@@ -251,7 +253,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                                     />
                                 </div>
                                 <div>
-                                    <Label htmlFor="lastName" className="text-sm font-bold text-gray-900 mb-2 block">Last Name *</Label>
+                                    <Label htmlFor="lastName" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.lastName}</Label>
                                     <input
                                         id="lastName"
                                         type="text"
@@ -265,7 +267,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                             </div>
 
                             <div>
-                                <Label htmlFor="email" className="text-sm font-bold text-gray-900 mb-2 block">Email *</Label>
+                                <Label htmlFor="email" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.emailLabel}</Label>
                                 <input
                                     id="email"
                                     type="email"
@@ -278,7 +280,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                             </div>
 
                             <div>
-                                <Label htmlFor="phone" className="text-sm font-bold text-gray-900 mb-2 block">Phone *</Label>
+                                <Label htmlFor="phone" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.phoneLabel}</Label>
                                 <input
                                     id="phone"
                                     type="tel"
@@ -291,7 +293,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                             </div>
 
                             <div>
-                                <Label htmlFor="country" className="text-sm font-bold text-gray-900 mb-2 block">Country *</Label>
+                                <Label htmlFor="country" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.country}</Label>
                                 <input
                                     id="country"
                                     type="text"
@@ -304,7 +306,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                             </div>
 
                             <div>
-                                <Label htmlFor="requests" className="text-sm font-bold text-gray-900 mb-2 block">Special Requests</Label>
+                                <Label htmlFor="requests" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.specialRequests}</Label>
                                 <textarea
                                     id="requests"
                                     value={requests}

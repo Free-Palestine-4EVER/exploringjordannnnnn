@@ -10,6 +10,7 @@ import AnnouncementBar from "@/components/announcement-bar"
 import Script from "next/script"
 import { LanguageProvider } from "@/lib/i18n/language-context"
 import WhatsAppButton from "@/components/whatsapp-button"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -47,6 +48,7 @@ export default function RootLayout({
           <WhatsAppButton />
           <Toaster />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   )

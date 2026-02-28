@@ -12,6 +12,7 @@ import type { Tour } from "@/lib/types/tour"
 import { getMinPrice, formatPrice, getTourReviews } from "@/lib/tour-utils"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Star } from "lucide-react"
+import { useTranslations } from "@/lib/i18n/language-context"
 import {
   Carousel,
   CarouselContent,
@@ -33,6 +34,7 @@ export default function TourCardEnhanced({
   onCustomize,
   colorTheme = "amber",
 }: TourCardEnhancedProps) {
+  const t = useTranslations()
   const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [selectedHotelClass, setSelectedHotelClass] = useState<"5*" | "4*" | "3*">("4*")
 
@@ -156,7 +158,7 @@ export default function TourCardEnhanced({
           )}
 
           <Badge className={`absolute top-4 left-4 ${colors.badge} z-10 font-medium`}>
-            {tour.duration.days} Days / {tour.duration.nights} Nights
+            {tour.duration.days} {t.common.days} / {tour.duration.nights} {t.common.nights}
           </Badge>
         </div>
 
@@ -225,7 +227,7 @@ export default function TourCardEnhanced({
 
         <CardFooter className="pt-0 pb-4 px-4 md:px-6 bg-white flex flex-col gap-2">
           <BubbleButton asChild className="w-full">
-            <Link href={`/tours/${tour.slug}`}>View Full Details</Link>
+            <Link href={`/tours/${tour.slug}`}>{t.common.viewDetails}</Link>
           </BubbleButton>
           <BubbleButton className={`w-full ${colors.button}`} onClick={() => onCustomize?.(tour.id)}>
             Book this trip

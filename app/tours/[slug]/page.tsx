@@ -46,6 +46,7 @@ import { format } from "date-fns"
 import { CalendarIcon, Send, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import UniversalBookingForm from "@/components/universal-booking-form"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 
 interface TourPageProps {
@@ -62,6 +63,7 @@ export default function TourPage({ params }: TourPageProps) {
     notFound()
   }
 
+  const t = useTranslations()
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
   const [activeTab, setActiveTab] = useState("overview")
   const [selectedHotelClass, setSelectedHotelClass] = useState<"5*" | "4*" | "3*">("4*")
@@ -146,11 +148,11 @@ export default function TourPage({ params }: TourPageProps) {
                 </div>
                 <div className="flex items-center gap-1 text-muted-foreground text-sm">
                   <MapPin className="h-4 w-4" />
-                  <span>Jordan</span>
+                  <span>{t.common.home}</span>
                 </div>
                 <div className="flex items-center gap-1 text-muted-foreground text-sm">
                   <Users className="h-4 w-4" />
-                  <span>Private tour</span>
+                  <span>{t.tourDetail.privateTour}</span>
                 </div>
               </div>
             </div>
@@ -170,14 +172,14 @@ export default function TourPage({ params }: TourPageProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-4 md:p-6">
-                <h2 className="text-xl md:text-2xl font-bold text-white">Experience the Magic of Jordan</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-white">{t.tourDetail.experienceMagic}</h2>
               </div>
             </div>
 
             {/* Photo Gallery */}
             {tour.images && tour.images.length > 0 && (
               <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-amber-900">Tour Gallery</h2>
+                <h2 className="text-2xl font-bold mb-4 text-amber-900">{t.tourDetail.tourGallery}</h2>
                 <div className="relative">
                   <Carousel
                     className="w-full"
@@ -242,16 +244,16 @@ export default function TourPage({ params }: TourPageProps) {
             <div className="mb-8">
               <Tabs defaultValue="overview" value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid grid-cols-4 mb-6">
-                  <TabsTrigger value="overview">Overview</TabsTrigger>
-                  <TabsTrigger value="itinerary">Itinerary</TabsTrigger>
-                  <TabsTrigger value="hotels">Hotels</TabsTrigger>
-                  <TabsTrigger value="pricing">Pricing</TabsTrigger>
+                  <TabsTrigger value="overview">{t.tourDetail.overview}</TabsTrigger>
+                  <TabsTrigger value="itinerary">{t.tourDetail.itinerary}</TabsTrigger>
+                  <TabsTrigger value="hotels">{t.tourDetail.hotels}</TabsTrigger>
+                  <TabsTrigger value="pricing">{t.tourDetail.pricing}</TabsTrigger>
                 </TabsList>
 
                 {/* Overview Tab */}
                 <TabsContent value="overview" className="mt-0">
                   <div className="bg-white rounded-xl shadow-md p-6 mb-6">
-                    <h2 className="text-2xl font-bold mb-4 text-amber-800">Tour Highlights</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-amber-800">{t.tourDetail.tourHighlights}</h2>
                     <div className="grid md:grid-cols-2 gap-3">
                       {tour.highlights.map((highlight, index) => (
                         <div key={index} className="flex items-start gap-2 bg-amber-50 p-3 rounded-lg">
@@ -263,7 +265,7 @@ export default function TourPage({ params }: TourPageProps) {
                   </div>
 
                   <div className="bg-white rounded-xl shadow-md p-6 mb-6">
-                    <h2 className="text-2xl font-bold mb-4 text-amber-800">Tour Route</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-amber-800">{t.tourDetail.tourRoute}</h2>
                     <div className="flex flex-wrap gap-2">
                       {tour.route.map((location, index) => (
                         <Badge key={index} variant="outline" className="bg-amber-50 text-amber-700 border-amber-200">
@@ -309,7 +311,7 @@ export default function TourPage({ params }: TourPageProps) {
                 {/* Itinerary Tab */}
                 <TabsContent value="itinerary" className="mt-0">
                   <div className="bg-white rounded-xl shadow-md p-6">
-                    <h2 className="text-2xl font-bold mb-6 text-amber-800">Day-by-Day Itinerary</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-amber-800">{t.tourDetail.dayByDay}</h2>
                     <div className="space-y-4">
                       {tour.dailyPlan.map((day) => (
                         <Card key={day.day} className="overflow-hidden border-none shadow-md">
@@ -325,7 +327,7 @@ export default function TourPage({ params }: TourPageProps) {
                             <p className="mb-3">{day.body}</p>
                             {day.activities && day.activities.length > 0 && (
                               <div className="mb-2">
-                                <p className="text-sm font-medium text-muted-foreground mb-1">Activities:</p>
+                                <p className="text-sm font-medium text-muted-foreground mb-1">{t.tourDetail.activities}</p>
                                 <div className="flex flex-wrap gap-1">
                                   {day.activities.map((activity, idx) => (
                                     <Badge key={idx} variant="outline" className="text-xs">
@@ -337,7 +339,7 @@ export default function TourPage({ params }: TourPageProps) {
                             )}
                             {day.meals && day.meals.length > 0 && (
                               <div>
-                                <p className="text-sm font-medium text-muted-foreground mb-1">Meals:</p>
+                                <p className="text-sm font-medium text-muted-foreground mb-1">{t.tourDetail.meals}</p>
                                 <p className="text-sm">{day.meals.join(", ")}</p>
                               </div>
                             )}
@@ -351,7 +353,7 @@ export default function TourPage({ params }: TourPageProps) {
                 {/* Hotels Tab */}
                 <TabsContent value="hotels" className="mt-0">
                   <div className="bg-white rounded-xl shadow-md p-6">
-                    <h2 className="text-2xl font-bold mb-4 text-amber-800">Accommodation Options</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-amber-800">{t.tourDetail.accommodationOptions}</h2>
                     <p className="text-muted-foreground mb-6">
                       Choose from three hotel classes. All hotels are carefully selected for quality, location, and
                       comfort. Hotels listed are examples - similar properties may be used based on availability.
@@ -373,7 +375,7 @@ export default function TourPage({ params }: TourPageProps) {
                                 <ul className="text-sm space-y-1">
                                   {option.am?.map((hotel, idx) => (
                                     <li key={idx}>• {hotel}</li>
-                                  )) || <li>Not specified</li>}
+                                  )) || <li>{t.tourDetail.notSpecified}</li>}
                                 </ul>
                               </div>
                               <div className="bg-amber-50 p-4 rounded-lg">
@@ -381,7 +383,7 @@ export default function TourPage({ params }: TourPageProps) {
                                 <ul className="text-sm space-y-1">
                                   {option.pe?.map((hotel, idx) => (
                                     <li key={idx}>• {hotel}</li>
-                                  )) || <li>Not specified</li>}
+                                  )) || <li>{t.tourDetail.notSpecified}</li>}
                                 </ul>
                               </div>
                               <div className="bg-amber-50 p-4 rounded-lg">
@@ -389,7 +391,7 @@ export default function TourPage({ params }: TourPageProps) {
                                 <ul className="text-sm space-y-1">
                                   {option.wr?.map((hotel, idx) => (
                                     <li key={idx}>• {hotel}</li>
-                                  )) || <li>Not specified</li>}
+                                  )) || <li>{t.tourDetail.notSpecified}</li>}
                                 </ul>
                               </div>
                               <div className="bg-amber-50 p-4 rounded-lg">
@@ -397,7 +399,7 @@ export default function TourPage({ params }: TourPageProps) {
                                 <ul className="text-sm space-y-1">
                                   {option.ds?.map((hotel, idx) => (
                                     <li key={idx}>• {hotel}</li>
-                                  )) || <li>Not specified</li>}
+                                  )) || <li>{t.tourDetail.notSpecified}</li>}
                                 </ul>
                               </div>
                             </div>
@@ -414,7 +416,7 @@ export default function TourPage({ params }: TourPageProps) {
                 {/* Pricing Tab */}
                 <TabsContent value="pricing" className="mt-0">
                   <div className="bg-white rounded-xl shadow-md p-6">
-                    <h2 className="text-2xl font-bold mb-4 text-amber-800">Tour Pricing</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-amber-800">{t.tourDetail.tourPricing}</h2>
                     <p className="text-muted-foreground mb-6">
                       Prices vary by season, group size, and hotel class. Select options below to see pricing details.
                     </p>
@@ -439,8 +441,8 @@ export default function TourPage({ params }: TourPageProps) {
                           <Table>
                             <TableHeader>
                               <TableRow>
-                                <TableHead>Group Size</TableHead>
-                                <TableHead className="text-right">Price per Person</TableHead>
+                                <TableHead>{t.tourDetail.groupSize}</TableHead>
+                                <TableHead className="text-right">{t.tourDetail.pricePerPerson}</TableHead>
                               </TableRow>
                             </TableHeader>
                             <TableBody>
@@ -475,7 +477,7 @@ export default function TourPage({ params }: TourPageProps) {
                                 </TableCell>
                               </TableRow>
                               <TableRow>
-                                <TableCell>Single Room Supplement</TableCell>
+                                <TableCell>{t.tourDetail.singleRoomSupplement}</TableCell>
                                 <TableCell className="text-right font-semibold">
                                   {formatPrice(season.ppUsd.singleSupp)}
                                 </TableCell>
@@ -488,7 +490,7 @@ export default function TourPage({ params }: TourPageProps) {
 
                     <div className="mt-6 bg-amber-50 p-4 rounded-lg">
                       <p className="text-sm text-amber-900">
-                        <strong>Note:</strong> Prices shown are for 4-star hotels. Prices vary by hotel class selection.
+                        {t.tourDetail.pricingNote}
                         Final pricing will be confirmed based on your specific requirements and travel dates.
                       </p>
                     </div>
@@ -508,8 +510,8 @@ export default function TourPage({ params }: TourPageProps) {
               {/* Contact Card */}
               <Card className="border-none shadow-lg overflow-hidden">
                 <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white p-4">
-                  <h3 className="font-bold text-xl">Need Help?</h3>
-                  <p className="text-white/90 text-sm">We're here to assist you</p>
+                  <h3 className="font-bold text-xl">{t.tourDetail.needHelp}</h3>
+                  <p className="text-white/90 text-sm">{t.tourDetail.hereToAssist}</p>
                 </div>
                 <CardContent className="p-6">
                   <div className="space-y-4">
@@ -518,7 +520,7 @@ export default function TourPage({ params }: TourPageProps) {
                         <Phone className="h-6 w-6 text-amber-600" />
                       </div>
                       <div>
-                        <div className="text-sm text-muted-foreground">Call us</div>
+                        <div className="text-sm text-muted-foreground">{t.tourDetail.callUs}</div>
                         <a href="tel:+41766633924" className="font-medium hover:underline text-amber-700">
                           +41 76 663 39 24
                         </a>
@@ -530,7 +532,7 @@ export default function TourPage({ params }: TourPageProps) {
                         <Mail className="h-6 w-6 text-amber-600" />
                       </div>
                       <div>
-                        <div className="text-sm text-muted-foreground">Email us</div>
+                        <div className="text-sm text-muted-foreground">{t.tourDetail.emailUs}</div>
                         <a
                           href="mailto:info@jordanexplorer.com"
                           className="font-medium hover:underline text-amber-700 text-sm"
