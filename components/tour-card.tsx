@@ -8,6 +8,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import BubbleButton from "@/components/bubble-button"
 import { useState } from "react"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 interface TourCardProps {
   title: string
@@ -32,6 +33,7 @@ export default function TourCard({
   featured = false,
   priority = false,
 }: TourCardProps) {
+  const t = useTranslations()
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   // Convert .png to .jpg for all image paths
@@ -59,7 +61,7 @@ export default function TourCard({
             priority={priority}
           />
 
-          {featured && <Badge className="absolute top-4 left-4 bg-sky-600 hover:bg-sky-700 z-10">Featured</Badge>}
+          {featured && <Badge className="absolute top-4 left-4 bg-sky-600 hover:bg-sky-700 z-10">{t.tourCard.featured}</Badge>}
           <div className="absolute bottom-4 left-4 flex items-center gap-1 bg-black/60 text-white text-sm px-2 py-1 rounded-full z-10">
             <Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
             <span>{rating}</span>
@@ -70,31 +72,25 @@ export default function TourCard({
         <CardContent className="pt-4 md:pt-6 flex-grow bg-white px-4 md:px-6">
           <div className="flex items-center gap-2 mb-1 md:mb-2 text-muted-foreground text-xs md:text-sm">
             <Calendar className="h-3 w-3 md:h-4 md:w-4" />
-            <span>{days} days</span>
+            <span>{days} {t.common.days}</span>
             <span className="mx-1 md:mx-2">•</span>
             <MapPin className="h-3 w-3 md:h-4 md:w-4" />
-            <span>Jordan</span>
+            <span>{t.tourCard.jordan}</span>
           </div>
           <h3 className="text-base md:text-xl font-bold mb-1 md:mb-2 text-sky-700 line-clamp-2">{title}</h3>
           <div className="flex items-baseline gap-1 mb-2 md:mb-4">
             <span className="text-lg md:text-xl font-bold text-sky-700">${price}</span>
-            <span className="text-xs md:text-sm text-muted-foreground">per person</span>
+            <span className="text-xs md:text-sm text-muted-foreground">{t.common.perPerson}</span>
           </div>
           <div className="flex flex-wrap gap-2 mb-4">
-            <Badge variant="outline" className="bg-sky-50 text-sky-700 border-sky-200">
-              Petra
-            </Badge>
-            <Badge variant="outline" className="bg-sky-50 text-sky-700 border-sky-200">
-              Dead Sea
-            </Badge>
-            <Badge variant="outline" className="bg-sky-50 text-sky-700 border-sky-200">
-              Wadi Rum
-            </Badge>
+            <Badge variant="outline" className="bg-sky-50 text-sky-700 border-sky-200">{t.tourCard.petra}</Badge>
+            <Badge variant="outline" className="bg-sky-50 text-sky-700 border-sky-200">{t.tourCard.deadSea}</Badge>
+            <Badge variant="outline" className="bg-sky-50 text-sky-700 border-sky-200">{t.tourCard.wadiRum}</Badge>
           </div>
         </CardContent>
         <CardFooter className="pt-0 pb-6 px-6 bg-white">
           <BubbleButton asChild className="w-full">
-            <Link href={`/tours/${slug}`}>View Details</Link>
+            <Link href={`/tours/${slug}`}>{t.tourCard.viewDetails}</Link>
           </BubbleButton>
         </CardFooter>
       </Card>

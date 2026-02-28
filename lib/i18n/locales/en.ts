@@ -395,6 +395,10 @@ const en = {
     featured: "Featured",
     startsFrom: "Starts from",
     daysNights: "{days} Days / {nights} Nights",
+    jordan: "Jordan", petra: "Petra", deadSea: "Dead Sea", wadiRum: "Wadi Rum",
+    hotelClass: "Hotel Class", fiveStar: "5-Star Luxury", fourStar: "4-Star Superior", threeStar: "3-Star Comfort",
+    basedOn67: "Based on 6-7 people", priceRange: "Price range", tourHighlights: "Tour Highlights",
+    more: "more", bookTrip: "Book this trip",
   },
   secondaryHero: {
     startPlanning: "Start Planning Your Trip",

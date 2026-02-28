@@ -171,7 +171,7 @@ export default function TourCardEnhanced({
                 <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <span className="text-xs text-muted-foreground">({getTourReviews(tour.slug)} reviews)</span>
+            <span className="text-xs text-muted-foreground">({getTourReviews(tour.slug)} {t.tourDetail.reviews})</span>
           </div>
 
           <p className="text-xs md:text-sm text-muted-foreground mb-3">{tour.tagline}</p>
@@ -179,7 +179,7 @@ export default function TourCardEnhanced({
           <div className="mb-4">
             <label className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">
               <Hotel className="h-3 w-3" />
-              Hotel Class
+              {t.tourCard.hotelClass}
             </label>
             <Select
               value={selectedHotelClass}
@@ -189,27 +189,27 @@ export default function TourCardEnhanced({
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="5*">5-Star Luxury</SelectItem>
-                <SelectItem value="4*">4-Star Superior</SelectItem>
-                <SelectItem value="3*">3-Star Comfort</SelectItem>
+                <SelectItem value="5*">{t.tourCard.fiveStar}</SelectItem>
+                <SelectItem value="4*">{t.tourCard.fourStar}</SelectItem>
+                <SelectItem value="3*">{t.tourCard.threeStar}</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div className={`${colors.pricingBg} rounded-lg p-3 mb-4`}>
             <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-xs text-muted-foreground">From</span>
+              <span className="text-xs text-muted-foreground">{t.common.from}</span>
               <span className={`text-xl md:text-2xl font-bold ${colors.pricingText}`}>{formatPrice(minPrice)}</span>
-              <span className="text-xs text-muted-foreground">per person</span>
+              <span className="text-xs text-muted-foreground">{t.common.perPerson}</span>
             </div>
-            <p className="text-xs text-muted-foreground">Based on 6-7 people • {selectedHotelClass} hotels</p>
+            <p className="text-xs text-muted-foreground">{t.tourCard.basedOn67} • {selectedHotelClass} hotels</p>
             <p className={`text-xs ${colors.pricingSubtext} mt-1`}>
-              Price range: {formatPrice(lowestPrice)} - {formatPrice(highestPrice)}
+              {t.tourCard.priceRange}: {formatPrice(lowestPrice)} - {formatPrice(highestPrice)}
             </p>
           </div>
 
           <div className="mb-4">
-            <p className="text-xs font-medium text-muted-foreground mb-2">Tour Highlights:</p>
+            <p className="text-xs font-medium text-muted-foreground mb-2">{t.tourCard.tourHighlights}:</p>
             <div className="flex flex-wrap gap-1.5">
               {tour.highlights.slice(0, 4).map((highlight, idx) => (
                 <Badge key={idx} variant="outline" className={`bg-white ${colors.highlightText} text-xs`}>
@@ -218,7 +218,7 @@ export default function TourCardEnhanced({
               ))}
               {tour.highlights.length > 4 && (
                 <Badge variant="outline" className={`bg-white ${colors.highlightText} text-xs`}>
-                  +{tour.highlights.length - 4} more
+                  +{tour.highlights.length - 4} {t.tourCard.more}
                 </Badge>
               )}
             </div>
@@ -230,7 +230,7 @@ export default function TourCardEnhanced({
             <Link href={`/tours/${tour.slug}`}>{t.common.viewDetails}</Link>
           </BubbleButton>
           <BubbleButton className={`w-full ${colors.button}`} onClick={() => onCustomize?.(tour.id)}>
-            Book this trip
+            {t.tourCard.bookTrip}
           </BubbleButton>
         </CardFooter>
       </Card>
