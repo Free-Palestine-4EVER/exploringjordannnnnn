@@ -9,7 +9,7 @@ import UniversalBookingForm from "@/components/universal-booking-form"
 
 import { notFound } from "next/navigation"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, use } from "react"
 import toursData from "@/data/tours.json"
 import type { Tour } from "@/lib/types/tour"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
@@ -31,6 +31,7 @@ interface DestinationPageProps {
 }
 
 export default function DestinationPage({ params }: DestinationPageProps) {
+  const { slug } = use(params)
   const t = useTranslations()
   // This would normally come from a database or API
   const destinations = {
@@ -355,7 +356,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
     },
   }
 
-  const destination = destinations[params.slug as keyof typeof destinations]
+  const destination = destinations[slug as keyof typeof destinations]
 
   if (!destination) {
     notFound()
