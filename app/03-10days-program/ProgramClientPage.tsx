@@ -24,141 +24,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-
-/* ------------------------------------------------------------------ */
-/*  DATA                                                               */
-/* ------------------------------------------------------------------ */
-
-const itinerary = [
-    {
-        day: 1,
-        title: "Arrival — Welcome to Jordan",
-        route: "QAIA → Amman",
-        icon: Plane,
-        color: "blue",
-        image: "/amman-city-jordan-citadel.jpg",
-        description:
-            "Upon arrival at Queen Alia International Airport, you will be welcomed by our representative who will assist with arrival formalities. Transfer to your hotel in Amman for check-in. Enjoy the rest of the day at leisure to relax or explore the capital at your own pace.",
-        overnight: "Amman",
-        meals: ["Dinner"],
-    },
-    {
-        day: 2,
-        title: "Amman City Tour & Desert Castles",
-        route: "Amman → Desert Castles → Amman",
-        icon: Castle,
-        color: "amber",
-        image: "/amman-citadel-roman-columns.jpg",
-        description:
-            "After breakfast, begin your city tour of Amman, visiting highlights such as the Citadel, the Roman Theater, and the bustling downtown area. Later, drive east to explore Jordan's famous Desert Castles including Qasr Amra (UNESCO site), Qasr Al Kharana, and Qasr Al Azraq.",
-        overnight: "Amman",
-        meals: ["Breakfast", "Dinner"],
-    },
-    {
-        day: 3,
-        title: "Ancient Jerash & Ajloun Castle",
-        route: "Amman → Jerash → Ajloun → Amman",
-        icon: Landmark,
-        color: "emerald",
-        image: "/jerash-roman-ruins-columns.jpg",
-        description:
-            "Drive north to Jerash, one of the best-preserved Roman cities in the world. Explore Hadrian's Arch, Oval Plaza, Roman Theater, Cardo Street, and temples. Continue to Ajloun to visit Ajloun Castle, a 12th-century Islamic fortress built by Saladin's forces, offering panoramic views over the Jordan Valley.",
-        overnight: "Amman",
-        meals: ["Breakfast", "Dinner"],
-    },
-    {
-        day: 4,
-        title: "Madaba Mosaics & Mount Nebo",
-        route: "Amman → Madaba → Mount Nebo → Petra",
-        icon: Church,
-        color: "purple",
-        image: "/petra-treasury-jordan-sunset-golden-hour.jpg",
-        description:
-            "Head south toward Madaba, known for its stunning Byzantine mosaics including the famous 6th-century Holy Land Map. Continue to Mount Nebo, the memorial site of Prophet Moses, where you can admire sweeping views of the Jordan Valley. Drive to Petra for check-in.",
-        overnight: "Petra",
-        meals: ["Breakfast", "Dinner"],
-    },
-    {
-        day: 5,
-        title: "Petra — Full Day Exploration",
-        route: "Petra",
-        icon: Mountain,
-        color: "rose",
-        image: "/petra-treasury-ancient-ruins.jpg",
-        description:
-            "Spend the entire day exploring Petra, Jordan's crown jewel and one of the New Seven Wonders of the World. Walk through the narrow Siq leading to the breathtaking Treasury, then continue discovering the Street of Facades, Royal Tombs, and the Theater. Climb to the Monastery for panoramic views.",
-        overnight: "Petra",
-        meals: ["Breakfast", "Dinner"],
-    },
-    {
-        day: 6,
-        title: "Little Petra & Wadi Rum Jeep Safari",
-        route: "Petra → Little Petra → Wadi Rum",
-        icon: Compass,
-        color: "orange",
-        image: "/wadi-rum-desert-red-sand-dunes-dramatic-rock-forma.jpg",
-        description:
-            "Visit Little Petra, a Nabatean suburb with carved facades and an atmospheric canyon. Then proceed to Wadi Rum, the Valley of the Moon. Enjoy a thrilling 2-hour 4×4 jeep tour through the desert, exploring dunes, canyons, and iconic rock bridges. Dinner and overnight in a desert camp.",
-        overnight: "Wadi Rum",
-        meals: ["Breakfast", "Dinner"],
-    },
-    {
-        day: 7,
-        title: "Dead Sea & Return to Amman",
-        route: "Wadi Rum → Dead Sea → Amman",
-        icon: Waves,
-        color: "cyan",
-        image: "/dead-sea-floating-jordan.jpg",
-        description:
-            "Wake up in the peaceful desert before departing toward the Dead Sea, the lowest point on Earth. Upon arrival, enjoy the renowned healing waters with time to swim and relax. The rest of the day is at leisure to enjoy resort facilities, spa treatments, or rest by the pool. Afterwards, drive back to Amman for dinner and overnight.",
-        overnight: "Amman",
-        meals: ["Breakfast", "Dinner"],
-    },
-    {
-        day: 8,
-        title: "Departure",
-        route: "Amman → QAIA",
-        icon: Plane,
-        color: "slate",
-        image: null,
-        description:
-            "Breakfast at hotel. Transfer to Queen Alia International Airport for your departure flight. We hope you carry home unforgettable memories of Jordan!",
-        overnight: null,
-        meals: ["Breakfast"],
-    },
-]
-
-const hotels4Star = [
-    { location: "Amman", name: "Mena Tyche or similar", nights: 4, meal: "HB" },
-    { location: "Petra", name: "Petra Legacy or similar", nights: 2, meal: "HB" },
-    { location: "Wadi Rum", name: "Rum Oasis Camp (Deluxe Tent)", nights: 1, meal: "HB" },
-]
-
-const hotels5Star = [
-    { location: "Amman", name: "Bristol or similar", nights: 4, meal: "HB" },
-    { location: "Petra", name: "Hayat Zaman or similar", nights: 2, meal: "HB" },
-    { location: "Wadi Rum", name: "Rum Oasis Camp (Deluxe Tent)", nights: 1, meal: "HB" },
-]
-
-const included = [
-    "Meet and assist upon arrival and departure",
-    "All transfers by AC modern vehicles",
-    "English speaking local guide in Jerash for 1 hour",
-    "English speaking local guide in Petra for 2 hours",
-    "7 nights hotel accommodation on HB basis (Dinner & Breakfast)",
-    "Entrance fees to all mentioned tourist sites",
-    "2-hour Jeep tour 4×4 in Wadi Rum",
-    "Entrance to Dead Sea through Holiday Inn Resort or similar",
-]
-
-const excluded = [
-    "Accompanied guide supplement for 6 days — $370 per person",
-    "International flights",
-    "Lunches",
-    "Tips and porterage",
-    "Beverages in general",
-    "Any other services not mentioned above",
-]
+import { useTranslations } from "@/lib/i18n/language-context"
 
 /* ------------------------------------------------------------------ */
 /*  COLOUR UTILITIES                                                   */
@@ -175,20 +41,58 @@ const colorMap: Record<string, { border: string; bg: string; text: string; dot: 
     slate: { border: "border-slate-400", bg: "bg-slate-400", text: "text-slate-500", dot: "bg-slate-400", badge: "bg-slate-50", badgeText: "text-slate-600" },
 }
 
+const dayIcons = [Plane, Castle, Landmark, Church, Mountain, Compass, Waves, Plane]
+const dayColors = ["blue", "amber", "emerald", "purple", "rose", "orange", "cyan", "slate"]
+const dayImages = [
+    "/amman-city-jordan-citadel.jpg",
+    "/amman-citadel-roman-columns.jpg",
+    "/jerash-roman-ruins-columns.jpg",
+    "/petra-treasury-jordan-sunset-golden-hour.jpg",
+    "/petra-treasury-ancient-ruins.jpg",
+    "/wadi-rum-desert-red-sand-dunes-dramatic-rock-forma.jpg",
+    "/dead-sea-floating-jordan.jpg",
+    null,
+]
+
 /* ------------------------------------------------------------------ */
 /*  COMPONENT                                                          */
 /* ------------------------------------------------------------------ */
 
 export default function ProgramClientPage() {
     const [activeTab, setActiveTab] = useState<"4star" | "5star">("4star")
+    const t = useTranslations()
+    const p = t.programPage
+
+    const itinerary = [
+        { title: p.day1Title, route: p.day1Route, description: p.day1Description, overnight: p.overnightAmman, meals: [p.mealDinner] },
+        { title: p.day2Title, route: p.day2Route, description: p.day2Description, overnight: p.overnightAmman, meals: [p.mealBreakfast, p.mealDinner] },
+        { title: p.day3Title, route: p.day3Route, description: p.day3Description, overnight: p.overnightAmman, meals: [p.mealBreakfast, p.mealDinner] },
+        { title: p.day4Title, route: p.day4Route, description: p.day4Description, overnight: p.overnightPetra, meals: [p.mealBreakfast, p.mealDinner] },
+        { title: p.day5Title, route: p.day5Route, description: p.day5Description, overnight: p.overnightPetra, meals: [p.mealBreakfast, p.mealDinner] },
+        { title: p.day6Title, route: p.day6Route, description: p.day6Description, overnight: p.overnightWadiRum, meals: [p.mealBreakfast, p.mealDinner] },
+        { title: p.day7Title, route: p.day7Route, description: p.day7Description, overnight: p.overnightAmman, meals: [p.mealBreakfast, p.mealDinner] },
+        { title: p.day8Title, route: p.day8Route, description: p.day8Description, overnight: null, meals: [p.mealBreakfast] },
+    ]
+
+    const hotels4Star = [
+        { location: p.overnightAmman, name: p.hotel4Amman, nights: 4, meal: "HB" },
+        { location: p.overnightPetra, name: p.hotel4Petra, nights: 2, meal: "HB" },
+        { location: p.overnightWadiRum, name: p.hotel4WadiRum, nights: 1, meal: "HB" },
+    ]
+
+    const hotels5Star = [
+        { location: p.overnightAmman, name: p.hotel5Amman, nights: 4, meal: "HB" },
+        { location: p.overnightPetra, name: p.hotel5Petra, nights: 2, meal: "HB" },
+        { location: p.overnightWadiRum, name: p.hotel5WadiRum, nights: 1, meal: "HB" },
+    ]
+
+    const included = [p.included1, p.included2, p.included3, p.included4, p.included5, p.included6, p.included7, p.included8]
+    const excluded = [p.excluded1, p.excluded2, p.excluded3, p.excluded4, p.excluded5, p.excluded6]
 
     return (
         <div className="bg-gradient-to-br from-slate-50 via-white to-amber-50/30">
-            {/* ============================================================ */}
-            {/*  HERO                                                        */}
-            {/* ============================================================ */}
+            {/* HERO */}
             <section className="relative pt-32 pb-24 px-4 overflow-hidden">
-                {/* decorative bg */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 via-transparent to-rose-600/5" />
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-400/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
@@ -196,67 +100,64 @@ export default function ProgramClientPage() {
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-full text-sm font-semibold mb-8 shadow-lg shadow-amber-600/20">
                         <Star className="w-4 h-4" />
-                        Exclusive Offer • 8-Day Program
+                        {p.heroBadge}
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
-                        Discover the
+                        {p.heroTitle1}
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-rose-500 to-blue-600">
-                            Heart of Jordan
+                            {p.heroTitle2}
                         </span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
-                        An expertly crafted 8-day journey through ancient wonders, desert landscapes, and the healing waters of the Dead Sea.
+                        {p.heroSubtitle}
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-slate-700">
                         <div className="flex items-center gap-2">
                             <Calendar className="w-5 h-5 text-amber-600" />
-                            <span className="font-medium">8 Days / 7 Nights</span>
+                            <span className="font-medium">{p.duration}</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <MapPin className="w-5 h-5 text-amber-600" />
-                            <span className="font-medium">Amman • Petra • Wadi Rum • Dead Sea</span>
+                            <span className="font-medium">{p.destinations}</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Users className="w-5 h-5 text-amber-600" />
-                            <span className="font-medium">2 Travelers</span>
+                            <span className="font-medium">{p.travelers}</span>
                         </div>
                     </div>
 
-                    {/* scroll cue */}
                     <div className="mt-14 animate-bounce">
                         <ChevronDown className="w-6 h-6 text-amber-600/60 mx-auto" />
                     </div>
                 </div>
             </section>
 
-            {/* ============================================================ */}
-            {/*  ITINERARY TIMELINE                                          */}
-            {/* ============================================================ */}
+            {/* ITINERARY TIMELINE */}
             <section className="py-24 px-4">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-20">
-                        <p className="text-amber-600 font-semibold uppercase tracking-widest text-sm mb-3">Your Journey</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Day-by-Day Itinerary</h2>
+                        <p className="text-amber-600 font-semibold uppercase tracking-widest text-sm mb-3">{p.journeyLabel}</p>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">{p.itineraryTitle}</h2>
                         <p className="text-lg text-slate-500 max-w-xl mx-auto">
-                            Every moment carefully planned for an unforgettable experience
+                            {p.itinerarySubtitle}
                         </p>
                     </div>
 
                     <div className="space-y-0">
                         {itinerary.map((day, idx) => {
-                            const c = colorMap[day.color]
-                            const Icon = day.icon
+                            const c = colorMap[dayColors[idx]]
+                            const Icon = dayIcons[idx]
+                            const image = dayImages[idx]
                             const isLast = idx === itinerary.length - 1
 
                             return (
-                                <div key={day.day} className="relative flex gap-6 md:gap-10">
-                                    {/* timeline spine */}
+                                <div key={idx} className="relative flex gap-6 md:gap-10">
                                     <div className="flex flex-col items-center">
                                         <div
-                                            className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl ${c.bg} text-white flex items-center justify-center shadow-lg shadow-${day.color}-500/25 flex-shrink-0 z-10`}
+                                            className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl ${c.bg} text-white flex items-center justify-center shadow-lg shadow-${dayColors[idx]}-500/25 flex-shrink-0 z-10`}
                                         >
                                             <Icon className="w-6 h-6" />
                                         </div>
@@ -265,14 +166,12 @@ export default function ProgramClientPage() {
                                         )}
                                     </div>
 
-                                    {/* card */}
                                     <div className={`flex-1 pb-12 ${isLast ? "pb-0" : ""}`}>
                                         <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100 group">
-                                            {/* image banner */}
-                                            {day.image && (
+                                            {image && (
                                                 <div className="relative h-48 md:h-56 overflow-hidden">
                                                     <Image
-                                                        src={day.image}
+                                                        src={image}
                                                         alt={day.title}
                                                         fill
                                                         className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -288,7 +187,7 @@ export default function ProgramClientPage() {
                                                 <div className="flex items-start justify-between mb-3">
                                                     <div>
                                                         <span className={`text-xs font-bold uppercase tracking-wider ${c.badgeText}`}>
-                                                            Day {day.day}
+                                                            {p.day} {idx + 1}
                                                         </span>
                                                         <h3 className="text-xl md:text-2xl font-bold text-slate-900 mt-1">
                                                             {day.title}
@@ -302,7 +201,7 @@ export default function ProgramClientPage() {
                                                     {day.overnight && (
                                                         <div className={`inline-flex items-center gap-1.5 px-3 py-1.5 ${c.badge} ${c.badgeText} rounded-full text-xs font-semibold`}>
                                                             <Building2 className="w-3.5 h-3.5" />
-                                                            Overnight: {day.overnight}
+                                                            {p.overnight}: {day.overnight}
                                                         </div>
                                                     )}
                                                     <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full text-xs font-semibold">
@@ -319,20 +218,17 @@ export default function ProgramClientPage() {
                 </div>
             </section>
 
-            {/* ============================================================ */}
-            {/*  HOTELS & PRICING                                            */}
-            {/* ============================================================ */}
+            {/* HOTELS & PRICING */}
             <section className="py-24 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
-                        <p className="text-amber-400 font-semibold uppercase tracking-widest text-sm mb-3">Choose Your Style</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Hotels & Pricing</h2>
+                        <p className="text-amber-400 font-semibold uppercase tracking-widest text-sm mb-3">{p.chooseStyleLabel}</p>
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{p.hotelsTitle}</h2>
                         <p className="text-lg text-blue-200 max-w-xl mx-auto">
-                            Select between comfortable 4-star or premium 5-star accommodations
+                            {p.hotelsSubtitle}
                         </p>
                     </div>
 
-                    {/* Tabs */}
                     <div className="flex justify-center mb-12">
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-1.5 inline-flex gap-1">
                             <button
@@ -342,7 +238,7 @@ export default function ProgramClientPage() {
                                     : "text-white/70 hover:text-white hover:bg-white/10"
                                     }`}
                             >
-                                ★★★★ Comfort
+                                ★★★★ {p.comfort}
                             </button>
                             <button
                                 onClick={() => setActiveTab("5star")}
@@ -351,15 +247,13 @@ export default function ProgramClientPage() {
                                     : "text-white/70 hover:text-white hover:bg-white/10"
                                     }`}
                             >
-                                ★★★★★ Premium
+                                ★★★★★ {p.premium}
                             </button>
                         </div>
                     </div>
 
-                    {/* Pricing Card */}
                     <div className="max-w-3xl mx-auto">
                         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-amber-400/50">
-                            {/* header */}
                             <div className="bg-gradient-to-r from-amber-500 via-amber-600 to-orange-600 p-8 text-white relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3" />
                                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3" />
@@ -367,20 +261,19 @@ export default function ProgramClientPage() {
                                     <div className="flex items-center justify-between mb-4">
                                         <div>
                                             <h3 className="text-2xl md:text-3xl font-bold">
-                                                {activeTab === "4star" ? "4-Star Comfort Package" : "5-Star Premium Package"}
+                                                {activeTab === "4star" ? p.comfortPackage : p.premiumPackage}
                                             </h3>
-                                            <p className="text-amber-100 mt-1">8 Days / 7 Nights • 2 Travelers</p>
+                                            <p className="text-amber-100 mt-1">{p.packageDuration}</p>
                                         </div>
                                         <div className="hidden md:block bg-white/20 backdrop-blur-sm rounded-xl px-4 py-2 text-center">
-                                            <p className="text-xs text-amber-100">Per Person</p>
+                                            <p className="text-xs text-amber-100">{p.perPersonLabel}</p>
                                             <p className="text-3xl font-extrabold">
                                                 ${activeTab === "4star" ? "1,080" : "1,280"}
                                             </p>
                                         </div>
                                     </div>
-                                    {/* mobile price */}
                                     <div className="md:hidden mt-4 bg-white/20 backdrop-blur-sm rounded-xl px-4 py-3 text-center">
-                                        <p className="text-xs text-amber-100">Price Per Person (sharing DBL/TWN)</p>
+                                        <p className="text-xs text-amber-100">{p.pricePerPersonSharing}</p>
                                         <p className="text-4xl font-extrabold mt-1">
                                             ${activeTab === "4star" ? "1,080" : "1,280"}
                                         </p>
@@ -388,20 +281,19 @@ export default function ProgramClientPage() {
                                 </div>
                             </div>
 
-                            {/* hotels table */}
                             <div className="p-6 md:p-8">
                                 <h4 className="font-bold text-slate-900 text-lg mb-5 flex items-center gap-2">
                                     <Building2 className="w-5 h-5 text-amber-600" />
-                                    Your Accommodations
+                                    {p.yourAccommodations}
                                 </h4>
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-sm">
                                         <thead>
                                             <tr className="border-b-2 border-slate-200">
-                                                <th className="text-left py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">Location</th>
-                                                <th className="text-left py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">Hotel</th>
-                                                <th className="text-center py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">Nights</th>
-                                                <th className="text-center py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">Meals</th>
+                                                <th className="text-left py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">{p.locationHeader}</th>
+                                                <th className="text-left py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">{p.hotelHeader}</th>
+                                                <th className="text-center py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">{p.nightsHeader}</th>
+                                                <th className="text-center py-3 px-2 text-slate-500 font-semibold uppercase tracking-wider text-xs">{p.mealsHeader}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -426,20 +318,19 @@ export default function ProgramClientPage() {
                                     </table>
                                 </div>
 
-                                <p className="text-xs text-slate-400 mt-4 italic">* Hotels are subject to availability. Similar category alternatives may be provided.</p>
+                                <p className="text-xs text-slate-400 mt-4 italic">{p.hotelsDisclaimer}</p>
 
-                                {/* Price summary */}
                                 <div className="mt-8 p-5 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200">
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <p className="text-sm text-slate-500 font-medium">Price per person (sharing DBL/TWN)</p>
-                                            <p className="text-sm text-slate-400">For 2 passengers with private car</p>
+                                            <p className="text-sm text-slate-500 font-medium">{p.pricePerPersonSharingShort}</p>
+                                            <p className="text-sm text-slate-400">{p.forTwoPassengers}</p>
                                         </div>
                                         <div className="text-right">
                                             <p className="text-3xl md:text-4xl font-extrabold text-slate-900">
                                                 ${activeTab === "4star" ? "1,080" : "1,280"}
                                             </p>
-                                            <p className="text-xs text-slate-500">USD per person</p>
+                                            <p className="text-xs text-slate-500">{p.usdPerPerson}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -449,24 +340,21 @@ export default function ProgramClientPage() {
                 </div>
             </section>
 
-            {/* ============================================================ */}
-            {/*  INCLUDED / EXCLUDED                                         */}
-            {/* ============================================================ */}
+            {/* INCLUDED / EXCLUDED */}
             <section className="py-24 px-4">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
-                        <p className="text-amber-600 font-semibold uppercase tracking-widest text-sm mb-3">Package Details</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">What's Included</h2>
+                        <p className="text-amber-600 font-semibold uppercase tracking-widest text-sm mb-3">{p.packageDetailsLabel}</p>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">{p.whatsIncludedTitle}</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        {/* Included */}
                         <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 shadow-lg border border-emerald-100">
                             <div className="flex items-center gap-3 mb-8">
                                 <div className="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-600/20">
                                     <Check className="w-6 h-6 text-white" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-900">Included</h3>
+                                <h3 className="text-2xl font-bold text-slate-900">{p.includedTitle}</h3>
                             </div>
                             <ul className="space-y-4">
                                 {included.map((item, index) => (
@@ -480,13 +368,12 @@ export default function ProgramClientPage() {
                             </ul>
                         </div>
 
-                        {/* Excluded */}
                         <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl p-8 shadow-lg border border-slate-200">
                             <div className="flex items-center gap-3 mb-8">
                                 <div className="w-12 h-12 bg-slate-600 rounded-2xl flex items-center justify-center shadow-lg shadow-slate-600/20">
                                     <X className="w-6 h-6 text-white" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-900">Not Included</h3>
+                                <h3 className="text-2xl font-bold text-slate-900">{p.notIncludedTitle}</h3>
                             </div>
                             <ul className="space-y-4">
                                 {excluded.map((item, index) => (
@@ -503,26 +390,24 @@ export default function ProgramClientPage() {
                 </div>
             </section>
 
-            {/* ============================================================ */}
-            {/*  CTA SECTION                                                 */}
-            {/* ============================================================ */}
+            {/* CTA SECTION */}
             <section className="py-20 px-4 bg-gradient-to-r from-amber-600 via-amber-500 to-orange-500 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/3" />
                 <div className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-y-1/2 translate-x-1/3" />
                 <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Book This Journey?</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{p.readyToBook}</h2>
                     <p className="text-xl text-white/90 mb-10 leading-relaxed">
-                        Secure your spot on this incredible 8-day Jordan adventure. Contact us to finalize your reservation.
+                        {p.readyToBookSubtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button asChild size="lg" className="text-lg px-10 py-7 bg-white text-amber-700 hover:bg-amber-50 font-bold shadow-xl shadow-black/10 rounded-xl">
-                            <Link href="/contact">Contact Us to Book</Link>
+                            <Link href="/contact">{p.contactToBook}</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline" className="text-lg px-10 py-7 border-2 border-white/40 text-white hover:bg-white/10 bg-transparent font-bold rounded-xl">
-                            <Link href="https://wa.me/962776615785" target="_blank">WhatsApp Us</Link>
+                            <Link href="https://wa.me/962776615785" target="_blank">{t.common.whatsappUs}</Link>
                         </Button>
                     </div>
-                    <p className="text-sm text-white/70 mt-8">Available 24/7 via WhatsApp or email</p>
+                    <p className="text-sm text-white/70 mt-8">{p.available247}</p>
                 </div>
             </section>
         </div>
