@@ -627,6 +627,9 @@ const lv: TranslationType = {
     "countriesSelected": "valstis izvēlētas"
   },
   tourDetail: {
+    day: "Diena",
+    daysNights: "{days} Dienas / {nights} Naktis",
+    hotelsSuffix: "viesnīcas",
     privateTour: "Privata ture",
     experienceMagic: "Izbaudiet Jordanijas burvestibu",
     tourGallery: "Tures galerija",

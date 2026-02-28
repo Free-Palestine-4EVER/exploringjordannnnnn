@@ -637,6 +637,9 @@ const bg: TranslationType = {
     "countriesSelected": "държави избрани"
   },
   tourDetail: {
+    day: "Ден",
+    daysNights: "{days} Дни / {nights} Нощи",
+    hotelsSuffix: "хотели",
     privateTour: "Частен тур",
     experienceMagic: "Преживейте магията на Йордания",
     tourGallery: "Галерия на тура",

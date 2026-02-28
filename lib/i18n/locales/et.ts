@@ -627,6 +627,9 @@ const et: TranslationType = {
     "countriesSelected": "riiki valitud"
   },
   tourDetail: {
+    day: "Päev",
+    daysNights: "{days} Päeva / {nights} Ööd",
+    hotelsSuffix: "hotellid",
     privateTour: "Privaatne tuur",
     experienceMagic: "Kogege Jordaania volusid",
     tourGallery: "Tuuri galerii",

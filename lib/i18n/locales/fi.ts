@@ -637,6 +637,9 @@ const fi: TranslationType = {
     "countriesSelected": "maata valittu"
   },
   tourDetail: {
+    day: "Päivä",
+    daysNights: "{days} Päivää / {nights} Yötä",
+    hotelsSuffix: "hotellit",
     privateTour: "Yksityinen kierros",
     experienceMagic: "Koe Jordanian taika",
     tourGallery: "Kierrosgalleria",

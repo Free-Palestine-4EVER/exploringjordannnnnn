@@ -627,6 +627,9 @@ const hu: TranslationType = {
     "countriesSelected": "ország kiválasztva"
   },
   tourDetail: {
+    day: "Nap",
+    daysNights: "{days} Nap / {nights} Éjszaka",
+    hotelsSuffix: "szállodák",
     privateTour: "Privat tura",
     experienceMagic: "Tapasztald meg Jordania varazsat",
     tourGallery: "Tura galeria",

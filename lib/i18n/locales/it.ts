@@ -637,6 +637,9 @@ const it: TranslationType = {
     "countriesSelected": "paesi selezionati"
   },
   tourDetail: {
+    day: "Giorno",
+    daysNights: "{days} Giorni / {nights} Notti",
+    hotelsSuffix: "hotel",
     privateTour: "Tour privato",
     experienceMagic: "Scopri la magia della Giordania",
     tourGallery: "Galleria del tour",

@@ -627,6 +627,9 @@ const el: TranslationType = {
     "countriesSelected": "χώρες επιλέχθηκαν"
   },
   tourDetail: {
+    day: "Ημέρα",
+    daysNights: "{days} Ημέρες / {nights} Νύχτες",
+    hotelsSuffix: "ξενοδοχεία",
     privateTour: "Ιδιωτικη εκδρομη",
     experienceMagic: "Ζηστε τη μαγεια της Ιορδανιας",
     tourGallery: "Γκαλερι εκδρομης",

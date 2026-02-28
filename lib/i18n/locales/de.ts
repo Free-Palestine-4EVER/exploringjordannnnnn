@@ -637,6 +637,9 @@ const de: TranslationType = {
     "countriesSelected": "Länder ausgewählt"
   },
   tourDetail: {
+    day: "Tag",
+    daysNights: "{days} Tage / {nights} Nächte",
+    hotelsSuffix: "Hotels",
     privateTour: "Private Tour",
     experienceMagic: "Erleben Sie die Magie Jordaniens",
     tourGallery: "Tour-Galerie",

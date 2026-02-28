@@ -637,6 +637,9 @@ const sk: TranslationType = {
     "countriesSelected": "krajiny vybrané"
   },
   tourDetail: {
+    day: "Deň",
+    daysNights: "{days} Dní / {nights} Nocí",
+    hotelsSuffix: "hotely",
     privateTour: "Sukromny zajazd",
     experienceMagic: "Zazite magiu Jordanska",
     tourGallery: "Galeria zajazdu",

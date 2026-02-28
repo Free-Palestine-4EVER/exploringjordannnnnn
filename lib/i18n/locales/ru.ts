@@ -627,6 +627,9 @@ const ru: TranslationType = {
     "countriesSelected": "стран выбрано"
   },
   tourDetail: {
+    day: "День",
+    daysNights: "{days} Дней / {nights} Ночей",
+    hotelsSuffix: "отели",
     privateTour: "Частный тур",
     experienceMagic: "Почувствуйте магию Иордании",
     tourGallery: "Галерея тура",

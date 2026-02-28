@@ -347,6 +347,9 @@ const en = {
     countrySelected: "country selected", countriesSelected: "countries selected",
   },
   tourDetail: {
+    day: "Day",
+    daysNights: "{days} days / {nights} nights",
+    hotelsSuffix: "hotels",
     privateTour: "Private tour",
     experienceMagic: "Experience the Magic of Jordan",
     tourGallery: "Tour Gallery",

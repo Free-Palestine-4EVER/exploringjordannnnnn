@@ -627,6 +627,9 @@ const ro: TranslationType = {
     "countriesSelected": "țări selectate"
   },
   tourDetail: {
+    day: "Ziua",
+    daysNights: "{days} Zile / {nights} Nopți",
+    hotelsSuffix: "hoteluri",
     privateTour: "Tur privat",
     experienceMagic: "Traieste magia Iordaniei",
     tourGallery: "Galerie tur",

@@ -46,7 +46,9 @@ import { format } from "date-fns"
 import { CalendarIcon, Send, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import UniversalBookingForm from "@/components/universal-booking-form"
-import { useTranslations } from "@/lib/i18n/language-context"
+import { useTranslations, useLanguage } from "@/lib/i18n/language-context"
+import { getTranslatedTour, translateHighlight, translateInclusion, translateExclusion } from "@/lib/tour-translations"
+import { getTranslatedDailyTitle, getTranslatedDailyBody } from "@/lib/daily-plan-translations"
 
 
 interface TourPageProps {
@@ -64,6 +66,8 @@ export default function TourPage({ params }: TourPageProps) {
   }
 
   const t = useTranslations()
+  const { language } = useLanguage()
+  const translatedTour = getTranslatedTour(tour.id, language)
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
   const [activeTab, setActiveTab] = useState("overview")
   const [selectedHotelClass, setSelectedHotelClass] = useState<"5*" | "4*" | "3*">("4*")
@@ -121,12 +125,12 @@ export default function TourPage({ params }: TourPageProps) {
                   {t.breadcrumb.tours}
                 </Link>
                 <ChevronRight className="h-3 w-3" />
-                <span>{tour.title}</span>
+                <span>{translatedTour.title || tour.title}</span>
               </div>
 
               {/* Title and Info */}
               <div className="flex flex-wrap items-center gap-2 md:gap-4 mb-3 md:mb-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-900">{tour.title}</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-900">{translatedTour.title || tour.title}</h1>
                 <div className="flex items-center gap-1">
                   <div className="flex text-amber-500">
                     {[...Array(5)].map((_, i) => (
@@ -137,13 +141,13 @@ export default function TourPage({ params }: TourPageProps) {
                 </div>
               </div>
 
-              <p className="text-lg text-muted-foreground mb-4">{tour.tagline}</p>
+              <p className="text-lg text-muted-foreground mb-4">{translatedTour.tagline || tour.tagline}</p>
 
               <div className="flex flex-wrap gap-3 md:gap-4">
                 <div className="flex items-center gap-1 text-muted-foreground text-sm">
                   <Calendar className="h-4 w-4" />
                   <span>
-                    {tour.duration.days} days / {tour.duration.nights} nights
+                    {t.tourDetail.daysNights.replace('{days}', String(tour.duration.days)).replace('{nights}', String(tour.duration.nights))}
                   </span>
                 </div>
                 <div className="flex items-center gap-1 text-muted-foreground text-sm">
@@ -164,7 +168,7 @@ export default function TourPage({ params }: TourPageProps) {
               />
               <Image
                 src={imagePath || "/placeholder.svg?height=600&width=1200&query=jordan petra"}
-                alt={tour.title}
+                alt={translatedTour.title || tour.title}
                 fill
                 className={`object-cover ${loadedImages["hero"] ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
                 onLoad={() => handleImageLoad("hero")}
@@ -199,7 +203,7 @@ export default function TourPage({ params }: TourPageProps) {
                           <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                             <Image
                               src={img}
-                              alt={`${tour.title} - Photo ${index + 1}`}
+                              alt={`${translatedTour.title || tour.title} - Photo ${index + 1}`}
                               fill
                               className="object-cover hover:scale-105 transition-transform duration-300"
                               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -258,7 +262,7 @@ export default function TourPage({ params }: TourPageProps) {
                       {tour.highlights.map((highlight, index) => (
                         <div key={index} className="flex items-start gap-2 bg-amber-50 p-3 rounded-lg">
                           <Check className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm">{highlight}</span>
+                          <span className="text-sm">{translateHighlight(highlight, language)}</span>
                         </div>
                       ))}
                     </div>
@@ -285,7 +289,7 @@ export default function TourPage({ params }: TourPageProps) {
                         {tour.inclusions.map((item, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                            <span>{item}</span>
+                            <span>{translateInclusion(item, language)}</span>
                           </li>
                         ))}
                       </ul>
@@ -300,7 +304,7 @@ export default function TourPage({ params }: TourPageProps) {
                         {tour.exclusions.map((item, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
                             <ChevronRight className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-400" />
-                            <span>{item}</span>
+                            <span>{translateExclusion(item, language)}</span>
                           </li>
                         ))}
                       </ul>
@@ -317,14 +321,14 @@ export default function TourPage({ params }: TourPageProps) {
                         <Card key={day.day} className="overflow-hidden border-none shadow-md">
                           <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white p-4">
                             <div className="flex items-center justify-between">
-                              <h3 className="font-bold text-lg">Day {day.day}</h3>
+                              <h3 className="font-bold text-lg">{t.tourDetail.day} {day.day}</h3>
                               <Badge variant="secondary" className="bg-white/20">
-                                {day.title}
+                                {getTranslatedDailyTitle(day.title, language)}
                               </Badge>
                             </div>
                           </div>
                           <CardContent className="p-4">
-                            <p className="mb-3">{day.body}</p>
+                            <p className="mb-3">{getTranslatedDailyBody(day.body, language)}</p>
                             {day.activities && day.activities.length > 0 && (
                               <div className="mb-2">
                                 <p className="text-sm font-medium text-muted-foreground mb-1">{t.tourDetail.activities}</p>

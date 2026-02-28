@@ -627,6 +627,9 @@ const sl: TranslationType = {
     "countriesSelected": "države izbrane"
   },
   tourDetail: {
+    day: "Dan",
+    daysNights: "{days} Dni / {nights} Noči",
+    hotelsSuffix: "hoteli",
     privateTour: "Zasebni izlet",
     experienceMagic: "Dozivite carolijo Jordanije",
     tourGallery: "Galerija izleta",

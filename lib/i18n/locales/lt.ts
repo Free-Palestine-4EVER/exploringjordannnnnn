@@ -627,6 +627,9 @@ const lt: TranslationType = {
     "countriesSelected": "šalys pasirinktos"
   },
   tourDetail: {
+    day: "Diena",
+    daysNights: "{days} Dienos / {nights} Naktys",
+    hotelsSuffix: "viešbučiai",
     privateTour: "Privati kelione",
     experienceMagic: "Patirkite Jordanijos magija",
     tourGallery: "Keliones galerija",

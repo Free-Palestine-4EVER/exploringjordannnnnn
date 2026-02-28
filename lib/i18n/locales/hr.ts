@@ -637,6 +637,9 @@ const hr: TranslationType = {
     "countriesSelected": "države odabrane"
   },
   tourDetail: {
+    day: "Dan",
+    daysNights: "{days} Dana / {nights} Noći",
+    hotelsSuffix: "hoteli",
     privateTour: "Privatna tura",
     experienceMagic: "Dozivite caroliju Jordana",
     tourGallery: "Galerija ture",

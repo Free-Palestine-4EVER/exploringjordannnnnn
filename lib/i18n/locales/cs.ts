@@ -637,6 +637,9 @@ const cs: TranslationType = {
     "countriesSelected": "zemí vybráno"
   },
   tourDetail: {
+    day: "Den",
+    daysNights: "{days} Dní / {nights} Nocí",
+    hotelsSuffix: "hotely",
     privateTour: "Soukromy zajezd",
     experienceMagic: "Poznejte kouzlo Jordanska",
     tourGallery: "Galerie zajezdu",

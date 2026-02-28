@@ -13,7 +13,7 @@ import { getMinPrice, formatPrice, getTourReviews } from "@/lib/tour-utils"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Star } from "lucide-react"
 import { useTranslations, useLanguage } from "@/lib/i18n/language-context"
-import { getTranslatedTour } from "@/lib/tour-translations"
+import { getTranslatedTour, translateHighlight } from "@/lib/tour-translations"
 import {
   Carousel,
   CarouselContent,
@@ -205,7 +205,7 @@ export default function TourCardEnhanced({
               <span className={`text-xl md:text-2xl font-bold ${colors.pricingText}`}>{formatPrice(minPrice)}</span>
               <span className="text-xs text-muted-foreground">{t.common.perPerson}</span>
             </div>
-            <p className="text-xs text-muted-foreground">{t.tourCard.basedOn67} • {selectedHotelClass} hotels</p>
+            <p className="text-xs text-muted-foreground">{t.tourCard.basedOn67} • {selectedHotelClass} {t.tourDetail.hotelsSuffix}</p>
             <p className={`text-xs ${colors.pricingSubtext} mt-1`}>
               {t.tourCard.priceRange}: {formatPrice(lowestPrice)} - {formatPrice(highestPrice)}
             </p>
@@ -216,7 +216,7 @@ export default function TourCardEnhanced({
             <div className="flex flex-wrap gap-1.5">
               {tour.highlights.slice(0, 4).map((highlight, idx) => (
                 <Badge key={idx} variant="outline" className={`bg-white ${colors.highlightText} text-xs`}>
-                  {highlight}
+                  {translateHighlight(highlight, language)}
                 </Badge>
               ))}
               {tour.highlights.length > 4 && (

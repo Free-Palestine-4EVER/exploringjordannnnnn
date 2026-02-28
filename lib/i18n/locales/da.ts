@@ -637,6 +637,9 @@ const da: TranslationType = {
     "countriesSelected": "lande valgt"
   },
   tourDetail: {
+    day: "Dag",
+    daysNights: "{days} Dage / {nights} Nætter",
+    hotelsSuffix: "hoteller",
     privateTour: "Privat tur",
     experienceMagic: "Oplev Jordans magi",
     tourGallery: "Turgalleri",

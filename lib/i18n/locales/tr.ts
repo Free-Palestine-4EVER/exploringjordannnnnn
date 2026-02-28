@@ -627,6 +627,9 @@ const tr: TranslationType = {
     "countriesSelected": "ülke seçildi"
   },
   tourDetail: {
+    day: "Gün",
+    daysNights: "{days} Gün / {nights} Gece",
+    hotelsSuffix: "oteller",
     privateTour: "Ozel tur",
     experienceMagic: "Urdun'un buyusunu yasayin",
     tourGallery: "Tur galerisi",

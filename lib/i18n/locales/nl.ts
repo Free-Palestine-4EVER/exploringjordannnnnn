@@ -637,6 +637,9 @@ const nl: TranslationType = {
     "countriesSelected": "landen geselecteerd"
   },
   tourDetail: {
+    day: "Dag",
+    daysNights: "{days} Dagen / {nights} Nachten",
+    hotelsSuffix: "hotels",
     privateTour: "Prive tour",
     experienceMagic: "Ervaar de magie van Jordanie",
     tourGallery: "Tour galerij",

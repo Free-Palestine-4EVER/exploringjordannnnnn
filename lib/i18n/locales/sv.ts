@@ -637,6 +637,9 @@ const sv: TranslationType = {
     "countriesSelected": "länder valda"
   },
   tourDetail: {
+    day: "Dag",
+    daysNights: "{days} Dagar / {nights} Nätter",
+    hotelsSuffix: "hotell",
     privateTour: "Privat tur",
     experienceMagic: "Upplev Jordaniens magi",
     tourGallery: "Turgalleri",

@@ -627,6 +627,9 @@ const uk: TranslationType = {
     "countriesSelected": "країн обрано"
   },
   tourDetail: {
+    day: "День",
+    daysNights: "{days} Днів / {nights} Ночей",
+    hotelsSuffix: "готелі",
     privateTour: "Приватний тур",
     experienceMagic: "Відчуйте магію Йорданії",
     tourGallery: "Галерея туру",
