@@ -22,7 +22,8 @@ import { cn } from "@/lib/utils"
 import { format } from "date-fns"
 import { CalendarIcon, Send, CheckCircle2 } from "lucide-react"
 import { formatPrice } from "@/lib/tour-utils"
-import { useTranslations } from "@/lib/i18n/language-context"
+import { useTranslations, useLanguage } from "@/lib/i18n/language-context"
+import { getTranslatedDestination } from "@/lib/destination-translations"
 
 interface DestinationPageProps {
   params: {
@@ -356,11 +357,23 @@ export default function DestinationPage({ params }: DestinationPageProps) {
     },
   }
 
-  const destination = destinations[slug as keyof typeof destinations]
+  const { language } = useLanguage()
+  const destinationBase = destinations[slug as keyof typeof destinations]
 
-  if (!destination) {
+  if (!destinationBase) {
     notFound()
   }
+
+  const translated = getTranslatedDestination(slug, language)
+  const destination = translated ? {
+    ...destinationBase,
+    name: translated.name || destinationBase.name,
+    title: translated.title || destinationBase.title,
+    description: translated.description || destinationBase.description,
+    longDescription: translated.longDescription || destinationBase.longDescription,
+    facts: translated.facts || destinationBase.facts,
+    activities: translated.activities || destinationBase.activities,
+  } : destinationBase
 
   // Filter tours that include this destination in their route
   const relatedToursData = toursData.filter((tour) =>
