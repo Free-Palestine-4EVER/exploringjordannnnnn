@@ -17,8 +17,10 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function ReviewForm() {
+  const t = useTranslations()
   const [rating, setRating] = useState(0)
   const [hoverRating, setHoverRating] = useState(0)
   const [reviewText, setReviewText] = useState("")
@@ -39,7 +41,7 @@ export default function ReviewForm() {
 
       // Always decline the review for now
       setDialogMessage(
-        "We couldn't verify your ticket ID. Please ensure you've entered the correct ID from your booking confirmation. If you continue to experience issues, please contact our customer support.",
+        t.reviewForm.verificationMessage,
       )
       setShowDialog(true)
 
@@ -54,12 +56,12 @@ export default function ReviewForm() {
 
   return (
     <div className="bg-white rounded-xl shadow-md p-4 md:p-6 mb-6 md:mb-8">
-      <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-sky-700">Write a Review</h2>
+      <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-sky-700">{t.reviewForm.title}</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
         <div>
           <Label htmlFor="rating" className="block mb-2 font-medium text-sm md:text-base">
-            Your Rating
+            {t.reviewForm.yourRating}
           </Label>
           <div className="flex gap-1">
             {[1, 2, 3, 4, 5].map((star) => (
@@ -83,11 +85,11 @@ export default function ReviewForm() {
 
         <div>
           <Label htmlFor="review" className="block mb-2 font-medium">
-            Your Review
+            {t.reviewForm.yourReview}
           </Label>
           <Textarea
             id="review"
-            placeholder="Share your experience with this tour..."
+            placeholder={t.reviewForm.reviewPlaceholder}
             value={reviewText}
             onChange={(e) => setReviewText(e.target.value)}
             className="min-h-[120px]"
@@ -98,7 +100,7 @@ export default function ReviewForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           <div>
             <Label htmlFor="name" className="block mb-1 md:mb-2 font-medium text-sm md:text-base">
-              Your Name
+              {t.reviewForm.yourName}
             </Label>
             <Input
               id="name"
@@ -111,7 +113,7 @@ export default function ReviewForm() {
           </div>
           <div>
             <Label htmlFor="email" className="block mb-1 md:mb-2 font-medium text-sm md:text-base">
-              Your Email
+              {t.reviewForm.yourEmail}
             </Label>
             <Input
               id="email"
@@ -127,30 +129,30 @@ export default function ReviewForm() {
 
         <div className="bg-sky-50 p-4 rounded-lg border border-sky-100">
           <Label htmlFor="ticketId" className="block mb-2 font-medium text-sky-700">
-            Traveler Ticket ID
+            {t.reviewForm.ticketId}
           </Label>
           <Input
             id="ticketId"
-            placeholder="e.g. JE-12345-ABC"
+            placeholder={t.reviewForm.ticketIdPlaceholder}
             value={ticketId}
             onChange={(e) => setTicketId(e.target.value)}
             className="mb-2"
             required
           />
           <p className="text-sm text-muted-foreground">
-            Please enter your ticket ID from your booking confirmation to verify your purchase.
+            {t.reviewForm.ticketIdHelp}
           </p>
         </div>
 
         <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Submit Review"}
+          {isSubmitting ? t.reviewForm.submitting : t.reviewForm.submitReview}
         </Button>
       </form>
 
       <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Verification Failed</AlertDialogTitle>
+            <AlertDialogTitle>{t.reviewForm.verificationFailed}</AlertDialogTitle>
             <AlertDialogDescription>{dialogMessage}</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

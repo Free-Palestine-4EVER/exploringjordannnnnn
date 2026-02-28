@@ -40,21 +40,12 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">Our Story</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Born from a passion for Jordan</h2>
+              <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">{t.aboutPage.storyBadge}</Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">{t.aboutPage.storyTitle}</h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  Jordan Explorer was founded in 2015 by a group of travel enthusiasts who fell in love with the rich
-                  history, stunning landscapes, and warm hospitality of Jordan.
-                </p>
-                <p>
-                  What started as a small operation organizing tours to Petra has grown into a premier travel company
-                  specializing in comprehensive tours across Jordan's most iconic destinations.
-                </p>
-                <p>
-                  Today, we've helped over 10,000 travelers discover the magic of Jordan, creating memories that last a
-                  lifetime.
-                </p>
+                <p>{t.aboutPage.storyP1}</p>
+                <p>{t.aboutPage.storyP2}</p>
+                <p>{t.aboutPage.storyP3}</p>
               </div>
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
@@ -73,15 +64,15 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Impact in Numbers</h2>
-            <p className="text-xl text-blue-100">A decade of excellence in Jordan travel</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t.aboutPage.impactTitle}</h2>
+            <p className="text-xl text-blue-100">{t.aboutPage.impactSubtitle}</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Users, number: "10,000+", label: "Happy Travelers" },
-              { icon: MapPin, number: "50+", label: "Destinations" },
-              { icon: Calendar, number: "10", label: "Years Experience" },
-              { icon: Star, number: "4.9/5", label: "Average Rating" },
+              { icon: Users, number: "10,000+", label: t.aboutPage.happyTravelers },
+              { icon: MapPin, number: "50+", label: t.aboutPage.destinations },
+              { icon: Calendar, number: "10", label: t.aboutPage.yearsExperience },
+              { icon: Star, number: "4.9/5", label: t.aboutPage.averageRating },
             ].map((stat, index) => (
               <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-center p-6">
                 <CardContent className="p-0">
@@ -99,11 +90,10 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">Our Mission</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">What Drives Us Forward</h2>
+            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">{t.aboutPage.missionBadge}</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">{t.aboutPage.missionTitle}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to creating authentic, enriching travel experiences that connect people with the culture,
-              history, and beauty of Jordan.
+              {t.aboutPage.missionSubtitle}
             </p>
           </div>
 
@@ -111,21 +101,18 @@ export default function AboutPage() {
             {[
               {
                 icon: Heart,
-                title: "Passion for Excellence",
-                description:
-                  "Every tour is crafted with meticulous attention to detail, ensuring an unforgettable experience from start to finish.",
+                title: t.aboutPage.passion,
+                description: t.aboutPage.passionDesc,
               },
               {
                 icon: Shield,
-                title: "Trust & Safety",
-                description:
-                  "Your safety and comfort are our top priorities. We work with vetted partners and maintain the highest safety standards.",
+                title: t.aboutPage.trust,
+                description: t.aboutPage.trustDesc,
               },
               {
                 icon: Globe,
-                title: "Cultural Authenticity",
-                description:
-                  "We create genuine connections with local communities, offering authentic experiences that go beyond typical tourism.",
+                title: t.aboutPage.cultural,
+                description: t.aboutPage.culturalDesc,
               },
             ].map((value, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
@@ -146,36 +133,35 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">Why Choose Us</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">The Jordan Explorer Difference</h2>
+            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">{t.aboutPage.whyChooseBadge}</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">{t.aboutPage.whyChooseTitle}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Expert Local Guides",
-                description:
-                  "Our guides are passionate locals with deep knowledge of history, culture, and hidden gems.",
+                title: t.aboutPage.expertGuides,
+                description: t.aboutPage.expertGuidesDesc,
               },
               {
-                title: "Flexible Itineraries",
-                description: "Customize your tour to match your interests, pace, and travel style.",
+                title: t.aboutPage.flexibleItineraries,
+                description: t.aboutPage.flexibleItinerariesDesc,
               },
               {
-                title: "Premium Accommodations",
-                description: "Stay in carefully selected 3★, 4★, and 5★ hotels that offer comfort and authentic charm.",
+                title: t.aboutPage.premiumAccommodations,
+                description: t.aboutPage.premiumAccommodationsDesc,
               },
               {
-                title: "Small Group Sizes",
-                description: "Intimate group experiences ensure personalized attention and meaningful connections.",
+                title: t.aboutPage.smallGroups,
+                description: t.aboutPage.smallGroupsDesc,
               },
               {
-                title: "24/7 Support",
-                description: "Our team is always available to assist you before, during, and after your journey.",
+                title: t.aboutPage.support247,
+                description: t.aboutPage.support247Desc,
               },
               {
-                title: "Best Value Guarantee",
-                description: "Competitive pricing with no hidden fees, plus free eSIM and flexible cancellation.",
+                title: t.aboutPage.bestValue,
+                description: t.aboutPage.bestValueDesc,
               },
             ].map((feature, index) => (
               <Card key={index} className="border-2 border-gray-100 hover:border-blue-200 transition-colors">
@@ -196,33 +182,32 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">Our Team</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Meet the People Behind Your Journey</h2>
+            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">{t.aboutPage.teamBadge}</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">{t.aboutPage.teamTitle}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our dedicated team of travel experts, guides, and support staff work tirelessly to make your Jordan
-              adventure extraordinary.
+              {t.aboutPage.teamSubtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Ahmed Al-Hassan",
-                role: "Founder & CEO",
+                name: t.aboutPage.founderName,
+                role: t.aboutPage.founderRole,
                 image: "/professional-middle-eastern-man-smiling.png",
-                bio: "With 15 years in tourism, Ahmed's vision transformed Jordan Explorer into a leading tour operator.",
+                bio: t.aboutPage.founderBio,
               },
               {
-                name: "Sarah Mitchell",
-                role: "Head of Operations",
+                name: t.aboutPage.operationsName,
+                role: t.aboutPage.operationsRole,
                 image: "/professional-woman-smiling.png",
-                bio: "Sarah ensures every tour runs smoothly, coordinating logistics across Jordan.",
+                bio: t.aboutPage.operationsBio,
               },
               {
-                name: "Omar Khalil",
-                role: "Lead Tour Guide",
+                name: t.aboutPage.guideName,
+                role: t.aboutPage.guideRole,
                 image: "/friendly-tour-guide-middle-eastern-man.jpg",
-                bio: "Omar's passion for history and storytelling brings ancient sites to life for our guests.",
+                bio: t.aboutPage.guideBio,
               },
             ].map((member, index) => (
               <Card key={index} className="border-0 shadow-lg overflow-hidden group">
@@ -249,14 +234,13 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <Award className="w-16 h-16 mx-auto mb-6 text-blue-200" />
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Adventure?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.aboutPage.ctaTitle}</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied travelers who've discovered the magic of Jordan with Jordan Explorer. Your
-            journey of a lifetime awaits.
+            {t.aboutPage.ctaSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8">
-              <Link href="/tours">Explore Our Tours</Link>
+              <Link href="/tours">{t.aboutPage.exploreTours}</Link>
             </Button>
             <Button
               asChild
@@ -264,7 +248,7 @@ export default function AboutPage() {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 bg-transparent"
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">{t.common.contactUs}</Link>
             </Button>
           </div>
         </div>

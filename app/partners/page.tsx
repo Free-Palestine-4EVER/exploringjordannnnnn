@@ -44,16 +44,16 @@ export default function PartnersPage() {
         trackPartnerInquiry()
         setIsSubmitted(true)
         toast({
-          title: "Partnership inquiry sent!",
-          description: "We'll get back to you within 24 hours with our B2B rate sheet.",
+          title: t.partnersPage.inquirySent,
+          description: t.partnersPage.inquirySentDesc,
         })
       } else {
         throw new Error("Failed to submit")
       }
     } catch {
       toast({
-        title: "Something went wrong",
-        description: "Please email us directly at info@exploringjordan.com",
+        title: t.partnersPage.errorTitle,
+        description: t.partnersPage.errorDesc,
         variant: "destructive",
       })
     } finally {
@@ -107,33 +107,33 @@ export default function PartnersPage() {
             {[
               {
                 icon: <MapPin className="h-8 w-8" />,
-                title: "Local Expertise",
-                description: "Based in Jordan with deep local knowledge. We know every hotel, route, and hidden gem.",
+                title: t.partnersPage.localExpertise,
+                description: t.partnersPage.localExpertiseDesc,
               },
               {
                 icon: <Handshake className="h-8 w-8" />,
-                title: "B2B Net Rates",
-                description: "Competitive net rates so you set your own markup. No hidden fees, transparent pricing.",
+                title: t.partnersPage.b2bNetRates,
+                description: t.partnersPage.b2bNetRatesDesc,
               },
               {
                 icon: <Users className="h-8 w-8" />,
-                title: "White-Label Service",
-                description: "We operate under your brand. Your clients never know about us — it's your tour, your reputation.",
+                title: t.partnersPage.whiteLabelService,
+                description: t.partnersPage.whiteLabelServiceDesc,
               },
               {
                 icon: <Globe className="h-8 w-8" />,
-                title: "Multi-Language Guides",
-                description: "Licensed guides in English, German, French, Spanish, Italian, and more.",
+                title: t.partnersPage.multiLanguageGuides,
+                description: t.partnersPage.multiLanguageGuidesDesc,
               },
               {
                 icon: <Building2 className="h-8 w-8" />,
-                title: "All Hotel Classes",
-                description: "From boutique 3★ to luxury 5★. Dead Sea resorts, Wadi Rum glamping, Petra hotels — we have contracts with all.",
+                title: t.partnersPage.allHotelClasses,
+                description: t.partnersPage.allHotelClassesDesc,
               },
               {
                 icon: <Star className="h-8 w-8" />,
-                title: "24/7 Support",
-                description: "Dedicated operations team on the ground. Emergency support for your clients around the clock.",
+                title: t.partnersPage.support247,
+                description: t.partnersPage.support247Desc,
               },
             ].map((item, index) => (
               <div
@@ -153,21 +153,15 @@ export default function PartnersPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-12">Our Services for Partners</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-12">{t.partnersPage.servicesTitle}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                "Private airport transfers & meet-and-greet",
-                "Hotel bookings (3★ to 5★ luxury)",
-                "Licensed professional guides",
-                "4x4 desert jeep tours in Wadi Rum",
-                "Bedouin camping & glamping experiences",
-                "Dead Sea resort day-use & overnights",
-                "Petra by Day & Petra by Night tours",
-                "Cooking classes & cultural experiences",
-                "Dana Nature Reserve trekking",
-                "Aqaba diving & snorkeling",
-                "Jordan Pass arrangement",
-                "Custom itinerary design",
+                t.partnersPage.service1, t.partnersPage.service2,
+                t.partnersPage.service3, t.partnersPage.service4,
+                t.partnersPage.service5, t.partnersPage.service6,
+                t.partnersPage.service7, t.partnersPage.service8,
+                t.partnersPage.service9, t.partnersPage.service10,
+                t.partnersPage.service11, t.partnersPage.service12,
               ].map((service, index) => (
                 <div key={index} className="flex items-center gap-3 p-4 bg-amber-50 rounded-lg">
                   <CheckCircle2 className="h-5 w-5 text-green-600 shrink-0" />
@@ -182,24 +176,24 @@ export default function PartnersPage() {
       {/* Popular Programs */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-amber-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-12">Most Popular Partner Programs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-12">{t.partnersPage.popularPrograms}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                days: "3 Days",
-                title: "Petra & Wadi Rum Express",
+                days: t.partnersPage.program1Days,
+                title: t.partnersPage.program1Title,
                 highlights: ["Petra full day", "Wadi Rum jeep tour", "Bedouin camp overnight", "All transfers included"],
                 popular: false,
               },
               {
-                days: "5 Days",
-                title: "Classic Jordan",
+                days: t.partnersPage.program2Days,
+                title: t.partnersPage.program2Title,
                 highlights: ["Amman city tour", "Jerash & Ajloun", "Petra full day", "Wadi Rum", "Dead Sea"],
                 popular: true,
               },
               {
-                days: "8 Days",
-                title: "Full Discovery",
+                days: t.partnersPage.program3Days,
+                title: t.partnersPage.program3Title,
                 highlights: ["Amman", "Jerash", "Mount Nebo", "Madaba", "Petra (2 days)", "Wadi Rum", "Dead Sea", "Aqaba"],
                 popular: false,
               },
@@ -215,7 +209,7 @@ export default function PartnersPage() {
                     ? "bg-gradient-to-r from-amber-600 to-amber-500"
                     : "bg-gradient-to-r from-amber-800 to-amber-700"
                 }`}>
-                  {program.popular && <Badge className="mb-2 bg-white text-amber-700">Most Requested</Badge>}
+                  {program.popular && <Badge className="mb-2 bg-white text-amber-700">{t.partnersPage.mostRequested}</Badge>}
                   <h3 className="text-3xl font-bold">{program.days}</h3>
                   <p className="text-amber-100">{program.title}</p>
                 </div>
@@ -229,7 +223,7 @@ export default function PartnersPage() {
                     ))}
                   </ul>
                   <a href="mailto:info@exploringjordan.com?subject=B2B Rate Request - ${program.title}">
-                    <Button className="w-full mt-6 bg-amber-600 hover:bg-amber-700">Request Net Rates</Button>
+                    <Button className="w-full mt-6 bg-amber-600 hover:bg-amber-700">{t.partnersPage.requestNetRates}</Button>
                   </a>
                 </div>
               </div>
@@ -243,28 +237,28 @@ export default function PartnersPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Become a Partner</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">{t.partnersPage.formTitle}</h2>
               <p className="text-lg text-amber-700">
-                Fill out the form below and we'll send you our B2B rate sheet within 24 hours.
+                {t.partnersPage.formSubtitle}
               </p>
             </div>
 
             {isSubmitted ? (
               <div className="bg-white rounded-xl p-12 shadow-lg text-center">
                 <CheckCircle2 className="h-16 w-16 text-green-600 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-amber-900 mb-4">Thank You!</h3>
+                <h3 className="text-2xl font-bold text-amber-900 mb-4">{t.partnersPage.thankYou}</h3>
                 <p className="text-lg text-amber-700 mb-6">
-                  We've received your inquiry and will send our B2B rate sheet to your email within 24 hours.
+                  {t.partnersPage.thankYouDesc}
                 </p>
                 <Link href="/">
-                  <Button className="bg-amber-600 hover:bg-amber-700">Back to Home</Button>
+                  <Button className="bg-amber-600 hover:bg-amber-700">{t.partnersPage.backToHome}</Button>
                 </Link>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="bg-white rounded-xl p-8 shadow-lg space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="companyName">Company Name *</Label>
+                    <Label htmlFor="companyName">{t.partnersPage.companyName} *</Label>
                     <Input
                       id="companyName"
                       required
@@ -274,7 +268,7 @@ export default function PartnersPage() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="contactName">Contact Person *</Label>
+                    <Label htmlFor="contactName">{t.partnersPage.contactPerson} *</Label>
                     <Input
                       id="contactName"
                       required
@@ -287,7 +281,7 @@ export default function PartnersPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="email">Business Email *</Label>
+                    <Label htmlFor="email">{t.partnersPage.businessEmail} *</Label>
                     <Input
                       id="email"
                       type="email"
@@ -298,7 +292,7 @@ export default function PartnersPage() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone">Phone / WhatsApp</Label>
+                    <Label htmlFor="phone">{t.partnersPage.phoneWhatsApp}</Label>
                     <Input
                       id="phone"
                       value={formData.phone}
@@ -310,7 +304,7 @@ export default function PartnersPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="website">Website</Label>
+                    <Label htmlFor="website">{t.partnersPage.website}</Label>
                     <Input
                       id="website"
                       value={formData.website}
@@ -319,10 +313,10 @@ export default function PartnersPage() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="country">Country *</Label>
+                    <Label htmlFor="country">{t.partnersPage.country} *</Label>
                     <Select onValueChange={(v) => setFormData({ ...formData, country: v })}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select country" />
+                        <SelectValue placeholder={t.partnersPage.selectCountry} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="uk">United Kingdom</SelectItem>
@@ -344,10 +338,10 @@ export default function PartnersPage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="agencySize">Annual Clients to Middle East</Label>
+                  <Label htmlFor="agencySize">{t.partnersPage.annualClients}</Label>
                   <Select onValueChange={(v) => setFormData({ ...formData, agencySize: v })}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Approximate volume" />
+                      <SelectValue placeholder={t.partnersPage.approximateVolume} />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="1-50">1–50 clients/year</SelectItem>
@@ -360,12 +354,12 @@ export default function PartnersPage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="message">Additional Information</Label>
+                  <Label htmlFor="message">{t.partnersPage.additionalInfo}</Label>
                   <Textarea
                     id="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your needs — types of tours, client demographics, preferred hotel class..."
+                    placeholder={t.partnersPage.additionalInfoPlaceholder}
                     rows={4}
                   />
                 </div>
@@ -376,7 +370,7 @@ export default function PartnersPage() {
                   className="w-full bg-amber-600 hover:bg-amber-700 text-lg"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Submit Partnership Inquiry"}
+                  {isSubmitting ? t.common.sending : t.partnersPage.submitInquiry}
                 </Button>
               </form>
             )}

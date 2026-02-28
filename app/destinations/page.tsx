@@ -53,10 +53,10 @@ export default function DestinationsPage() {
       <div className="container mx-auto px-4">
         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
           <Link href="/" className="hover:underline">
-            Home
+            {t.breadcrumb.home}
           </Link>
           <ChevronRight className="h-3 w-3" />
-          <span>Destinations</span>
+          <span>{t.breadcrumb.destinations}</span>
         </div>
 
         <div className="text-center mb-8 md:mb-12">
@@ -87,7 +87,8 @@ export default function DestinationsPage() {
 }
 
 // Separate component for destination card with loading state
-function DestinationCard({ destination }) {
+function DestinationCard({ destination }: { destination: any }) {
+  const t = useTranslations()
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   return (
@@ -114,7 +115,7 @@ function DestinationCard({ destination }) {
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 md:mb-2">{destination.name}</h2>
           <p className="text-sm md:text-base text-white/90 mb-2 md:mb-4 line-clamp-2">{destination.description}</p>
           <span className="inline-flex items-center text-sm md:text-base text-white font-medium">
-            Explore
+            {t.common.explore}
             <ChevronRight className="h-3 w-3 md:h-4 md:w-4 ml-1 transition-transform group-hover:translate-x-1" />
           </span>
         </div>

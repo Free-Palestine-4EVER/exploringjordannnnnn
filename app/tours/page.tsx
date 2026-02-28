@@ -30,10 +30,10 @@ export default function ToursPage() {
       <div className="container mx-auto px-4">
         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
           <Link href="/" className="hover:underline">
-            Home
+            {t.breadcrumb.home}
           </Link>
           <ChevronRight className="h-3 w-3" />
-          <span>Tours</span>
+          <span>{t.breadcrumb.tours}</span>
         </div>
 
         <div className="text-center mb-8 md:mb-12">

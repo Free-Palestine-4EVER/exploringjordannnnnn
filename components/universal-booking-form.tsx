@@ -103,10 +103,10 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                 setIsSubmitted(true)
                 setTimeout(() => setIsSubmitted(false), 5000)
             } else {
-                alert('Failed to send. Please try again.')
+                alert(t.bookingForm.failedToSend)
             }
         } catch (error) {
-            alert('Failed to send. Please try again.')
+            alert(t.bookingForm.failedToSend)
         }
     }
 
@@ -204,32 +204,32 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                         <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-5 space-y-3 border border-amber-200 shadow-sm">
                             <h4 className="font-semibold text-gray-900 text-sm mb-2">{t.bookingForm.priceSummary}</h4>
                             <div className="flex justify-between text-sm">
-                                <span className="text-muted-foreground">Tour:</span>
+                                <span className="text-muted-foreground">{t.bookingForm.tour}</span>
                                 <span className="font-medium">{selectedTour?.title}</span>
                             </div>
                             <div className="flex justify-between text-sm">
-                                <span className="text-muted-foreground">Duration:</span>
-                                <span className="font-medium">{selectedTour?.duration?.days} days</span>
+                                <span className="text-muted-foreground">{t.bookingForm.duration}</span>
+                                <span className="font-medium">{selectedTour?.duration?.days} {t.bookingForm.daysLabel}</span>
                             </div>
                             <div className="flex justify-between text-sm">
-                                <span className="text-muted-foreground">Season:</span>
+                                <span className="text-muted-foreground">{t.bookingForm.season}</span>
                                 <span className="font-medium">
                                     {(() => {
                                         const month = new Date(startDate).getMonth() + 1
-                                        return ((month >= 3 && month <= 5) || (month >= 9 && month <= 11)) ? "High" : "Low"
-                                    })()} Season
+                                        return ((month >= 3 && month <= 5) || (month >= 9 && month <= 11)) ? t.bookingForm.highSeason : t.bookingForm.lowSeason
+                                    })()}
                                 </span>
                             </div>
                             <div className="flex justify-between text-sm">
-                                <span className="text-muted-foreground">Price per person:</span>
+                                <span className="text-muted-foreground">{t.bookingForm.pricePerPerson}</span>
                                 <span className="font-semibold text-amber-700">${pricePerPerson}</span>
                             </div>
                             <div className="border-t-2 border-amber-400 pt-3 flex justify-between items-center">
-                                <span className="font-bold text-gray-900">Total Estimate:</span>
+                                <span className="font-bold text-gray-900">{t.bookingForm.totalEstimate}</span>
                                 <span className="text-2xl font-bold text-amber-600">${pricePerPerson * numPeople}</span>
                             </div>
                             <p className="text-xs text-gray-500 pt-1">
-                                *Based on {numPeople} traveler{numPeople > 1 ? 's' : ''}. Final price confirmed after booking.
+                                {t.bookingForm.basedOnTravelers.replace('{count}', String(numPeople))}
                             </p>
                         </div>
                     )}
@@ -327,19 +327,19 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                         {isSubmitted ? (
                             <>
                                 <CheckCircle2 className="w-5 h-5 mr-2" />
-                                Request Sent!
+                                {t.bookingForm.requestSent}
                             </>
                         ) : (
                             <>
                                 <Send className="w-5 h-5 mr-2" />
-                                Submit Booking Request
+                                {t.bookingForm.submitBooking}
                             </>
                         )}
                     </Button>
 
                     {isSubmitted && (
                         <p className="text-center text-green-600 text-sm font-medium">
-                            Thank you! We'll contact you within 24 hours.
+                            {t.bookingForm.thankYouBooking}
                         </p>
                     )}
                 </form>

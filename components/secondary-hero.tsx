@@ -4,8 +4,10 @@ import { Sparkles, ArrowRight, Shield, Clock, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import BubbleButton from "@/components/bubble-button"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function SecondaryHero() {
+    const t = useTranslations()
     return (
         <section className="py-16 md:py-24 relative overflow-hidden">
             {/* Background with amber gradient */}
@@ -28,7 +30,7 @@ export default function SecondaryHero() {
                         className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-amber-200 rounded-full px-4 py-1.5 mb-6 text-amber-800 text-sm font-medium shadow-sm"
                     >
                         <Sparkles className="w-4 h-4 text-amber-500" />
-                        <span>Premium Travel Experience</span>
+                        <span>{t.secondaryHero.badge}</span>
                     </motion.div>
 
                     <motion.h2
@@ -38,9 +40,9 @@ export default function SecondaryHero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight"
                     >
-                        We are one stop <span className="text-amber-600">full service</span>,
+                        {t.secondaryHero.title} <span className="text-amber-600">{t.secondaryHero.titleHighlight}</span>,
                         <br />
-                        from airport to airport
+                        {t.secondaryHero.titleEnd}
                     </motion.h2>
 
                     <motion.p
@@ -50,8 +52,7 @@ export default function SecondaryHero() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto"
                     >
-                        Experience a seamless journey where every detail is handled with precision.
-                        From your arrival to your departure, we ensure a smooth, comfortable, and unforgettable adventure in Jordan.
+                        {t.secondaryHero.subtitle}
                     </motion.p>
 
                     <motion.div
@@ -65,24 +66,24 @@ export default function SecondaryHero() {
                             <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 text-amber-600">
                                 <MapPin className="w-6 h-6" />
                             </div>
-                            <h3 className="font-bold text-lg mb-2 text-gray-900">Seamless Transfers</h3>
-                            <p className="text-gray-600">Private luxury transport from the moment you land until you leave.</p>
+                            <h3 className="font-bold text-lg mb-2 text-gray-900">{t.secondaryHero.seamlessTransfers}</h3>
+                            <p className="text-gray-600">{t.secondaryHero.seamlessTransfersDesc}</p>
                         </div>
 
                         <div className="bg-white p-6 rounded-xl shadow-lg border border-amber-100/50 hover:shadow-xl transition-shadow">
                             <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 text-amber-600">
                                 <Shield className="w-6 h-6" />
                             </div>
-                            <h3 className="font-bold text-lg mb-2 text-gray-900">Full Protection</h3>
-                            <p className="text-gray-600">Fully licensed and insured services for your complete peace of mind.</p>
+                            <h3 className="font-bold text-lg mb-2 text-gray-900">{t.secondaryHero.fullProtection}</h3>
+                            <p className="text-gray-600">{t.secondaryHero.fullProtectionDesc}</p>
                         </div>
 
                         <div className="bg-white p-6 rounded-xl shadow-lg border border-amber-100/50 hover:shadow-xl transition-shadow">
                             <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 text-amber-600">
                                 <Clock className="w-6 h-6" />
                             </div>
-                            <h3 className="font-bold text-lg mb-2 text-gray-900">24/7 Support</h3>
-                            <p className="text-gray-600">Round-the-clock assistance throughout your entire stay in Jordan.</p>
+                            <h3 className="font-bold text-lg mb-2 text-gray-900">{t.secondaryHero.support247}</h3>
+                            <p className="text-gray-600">{t.secondaryHero.support247Desc}</p>
                         </div>
                     </motion.div>
 
@@ -94,7 +95,7 @@ export default function SecondaryHero() {
                     >
                         <Link href="/book-now">
                             <BubbleButton className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg shadow-lg shadow-amber-500/30">
-                                Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
+                                {t.secondaryHero.startJourney} <ArrowRight className="ml-2 w-5 h-5" />
                             </BubbleButton>
                         </Link>
                     </motion.div>

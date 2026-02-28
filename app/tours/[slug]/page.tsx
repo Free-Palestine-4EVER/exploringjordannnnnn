@@ -114,11 +114,11 @@ export default function TourPage({ params }: TourPageProps) {
             <div className="mb-8">
               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                 <Link href="/" className="hover:underline">
-                  Home
+                  {t.breadcrumb.home}
                 </Link>
                 <ChevronRight className="h-3 w-3" />
                 <Link href="/tours" className="hover:underline">
-                  Tours
+                  {t.breadcrumb.tours}
                 </Link>
                 <ChevronRight className="h-3 w-3" />
                 <span>{tour.title}</span>
@@ -133,7 +133,7 @@ export default function TourPage({ params }: TourPageProps) {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-sm font-medium text-muted-foreground">({reviewCount} reviews)</span>
+                  <span className="text-sm font-medium text-muted-foreground">({reviewCount} {t.tourDetail.reviews})</span>
                 </div>
               </div>
 
@@ -279,7 +279,7 @@ export default function TourPage({ params }: TourPageProps) {
                     <div className="bg-white rounded-xl shadow-md p-6">
                       <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-amber-800">
                         <Check className="h-5 w-5 text-primary" />
-                        What's Included
+                        {t.tourDetail.whatsIncluded}
                       </h3>
                       <ul className="space-y-2">
                         {tour.inclusions.map((item, index) => (
@@ -294,7 +294,7 @@ export default function TourPage({ params }: TourPageProps) {
                     <div className="bg-white rounded-xl shadow-md p-6">
                       <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-gray-700">
                         <Info className="h-5 w-5 text-gray-500" />
-                        What's Not Included
+                        {t.tourDetail.whatsNotIncluded}
                       </h3>
                       <ul className="space-y-2">
                         {tour.exclusions.map((item, index) => (
@@ -355,8 +355,7 @@ export default function TourPage({ params }: TourPageProps) {
                   <div className="bg-white rounded-xl shadow-md p-6">
                     <h2 className="text-2xl font-bold mb-4 text-amber-800">{t.tourDetail.accommodationOptions}</h2>
                     <p className="text-muted-foreground mb-6">
-                      Choose from three hotel classes. All hotels are carefully selected for quality, location, and
-                      comfort. Hotels listed are examples - similar properties may be used based on availability.
+                      {t.tourDetail.hotelDescription}
                     </p>
 
                     <Accordion type="single" collapsible className="w-full">
@@ -365,7 +364,7 @@ export default function TourPage({ params }: TourPageProps) {
                           <AccordionTrigger className="text-lg font-semibold">
                             <div className="flex items-center gap-2">
                               <Hotel className="h-5 w-5 text-amber-600" />
-                              {option.class} Hotels
+                              {option.class} {t.tourDetail.hotelClassLabel}
                             </div>
                           </AccordionTrigger>
                           <AccordionContent>
@@ -404,7 +403,7 @@ export default function TourPage({ params }: TourPageProps) {
                               </div>
                             </div>
                             <p className="text-xs text-muted-foreground mt-3 italic">
-                              * Or similar properties based on availability
+                              {t.tourDetail.orSimilar}
                             </p>
                           </AccordionContent>
                         </AccordionItem>
@@ -418,14 +417,14 @@ export default function TourPage({ params }: TourPageProps) {
                   <div className="bg-white rounded-xl shadow-md p-6">
                     <h2 className="text-2xl font-bold mb-4 text-amber-800">{t.tourDetail.tourPricing}</h2>
                     <p className="text-muted-foreground mb-6">
-                      Prices vary by season, group size, and hotel class. Select options below to see pricing details.
+                      {t.tourDetail.pricingDescription}
                     </p>
 
                     {tour.seasonPricing.map((season, seasonIdx) => (
                       <div key={seasonIdx} className="mb-8">
                         <div className="flex items-center gap-2 mb-4">
                           <Badge className={season.season === "High" ? "bg-orange-500" : "bg-green-500"}>
-                            {season.season} Season
+                            {season.season === "High" ? t.tourDetail.highSeason : t.tourDetail.lowSeason}
                           </Badge>
                           <span className="text-sm text-muted-foreground">
                             {season.ranges
@@ -447,31 +446,31 @@ export default function TourPage({ params }: TourPageProps) {
                             </TableHeader>
                             <TableBody>
                               <TableRow>
-                                <TableCell>2 travelers</TableCell>
+                                <TableCell>{t.tourDetail.travelers2}</TableCell>
                                 <TableCell className="text-right font-semibold">
                                   {formatPrice(season.ppUsd["2pax"])}
                                 </TableCell>
                               </TableRow>
                               <TableRow>
-                                <TableCell>3-5 travelers</TableCell>
+                                <TableCell>{t.tourDetail.travelers3to5}</TableCell>
                                 <TableCell className="text-right font-semibold">
                                   {formatPrice(season.ppUsd["3to5"])}
                                 </TableCell>
                               </TableRow>
                               <TableRow className="bg-amber-50">
-                                <TableCell className="font-medium">6-7 travelers (Most Popular)</TableCell>
+                                <TableCell className="font-medium">{t.tourDetail.travelers6to7}</TableCell>
                                 <TableCell className="text-right font-semibold text-amber-700">
                                   {formatPrice(season.ppUsd["6to7"])}
                                 </TableCell>
                               </TableRow>
                               <TableRow>
-                                <TableCell>8-9 travelers</TableCell>
+                                <TableCell>{t.tourDetail.travelers8to9}</TableCell>
                                 <TableCell className="text-right font-semibold">
                                   {formatPrice(season.ppUsd["8to9"])}
                                 </TableCell>
                               </TableRow>
                               <TableRow>
-                                <TableCell>10-14 travelers</TableCell>
+                                <TableCell>{t.tourDetail.travelers10to14}</TableCell>
                                 <TableCell className="text-right font-semibold">
                                   {formatPrice(season.ppUsd["10to14"])}
                                 </TableCell>
@@ -490,8 +489,7 @@ export default function TourPage({ params }: TourPageProps) {
 
                     <div className="mt-6 bg-amber-50 p-4 rounded-lg">
                       <p className="text-sm text-amber-900">
-                        {t.tourDetail.pricingNote}
-                        Final pricing will be confirmed based on your specific requirements and travel dates.
+                        {t.tourDetail.pricingNote} {t.tourDetail.pricingFinalNote}
                       </p>
                     </div>
                   </div>

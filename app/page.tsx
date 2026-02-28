@@ -156,7 +156,7 @@ export default function Home() {
                   <h4 className="font-semibold text-lg mb-2 text-sky-700">{tour.title}</h4>
                   <p className="text-muted-foreground text-sm mb-4">{tour.tagline}</p>
                   <BubbleButton asChild variant="outline" className="w-full">
-                    <Link href={`/tours/${tour.slug}`}>View Details</Link>
+                    <Link href={`/tours/${tour.slug}`}>{t.common.viewDetails}</Link>
                   </BubbleButton>
                 </div>
               </div>

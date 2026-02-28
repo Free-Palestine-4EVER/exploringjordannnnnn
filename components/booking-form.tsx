@@ -8,14 +8,16 @@ import { format } from "date-fns"
 import { CalendarIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import BubbleButton from "@/components/bubble-button"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function BookingForm() {
+  const t = useTranslations()
   const [date, setDate] = useState<Date>()
 
   return (
     <div className="space-y-4">
       <div className="space-y-2">
-        <label className="text-sm font-medium">Departure Date</label>
+        <label className="text-sm font-medium">{t.bookingSearch.date}</label>
         <Popover>
           <PopoverTrigger asChild>
             <button
@@ -25,7 +27,7 @@ export default function BookingForm() {
               )}
             >
               <CalendarIcon className="mr-2 h-4 w-4" />
-              {date ? format(date, "PPP") : "Select date"}
+              {date ? format(date, "PPP") : t.bookingSearch.selectDate}
             </button>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0" align="start">
@@ -41,38 +43,38 @@ export default function BookingForm() {
       </div>
 
       <div className="space-y-2">
-        <label className="text-sm font-medium">Travelers</label>
+        <label className="text-sm font-medium">{t.bookingSearch.travelers}</label>
         <Select defaultValue="2">
           <SelectTrigger>
-            <SelectValue placeholder="Number of travelers" />
+            <SelectValue placeholder={t.bookingSearch.numberOfTravelers} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="1">1 Adult</SelectItem>
-            <SelectItem value="2">2 Adults</SelectItem>
-            <SelectItem value="3">3 Adults</SelectItem>
-            <SelectItem value="4">4 Adults</SelectItem>
-            <SelectItem value="5">5 Adults</SelectItem>
-            <SelectItem value="6">6+ Adults</SelectItem>
+            <SelectItem value="1">{t.bookingSearch.adult1}</SelectItem>
+            <SelectItem value="2">{t.bookingSearch.adults2}</SelectItem>
+            <SelectItem value="3">{t.bookingSearch.adults3}</SelectItem>
+            <SelectItem value="4">{t.bookingSearch.adults4}</SelectItem>
+            <SelectItem value="5">{t.bookingSearch.adults5}</SelectItem>
+            <SelectItem value="6">{t.bookingSearch.adults6plus}</SelectItem>
           </SelectContent>
         </Select>
       </div>
 
       <div className="space-y-2">
-        <label className="text-sm font-medium">Tour Option</label>
+        <label className="text-sm font-medium">{t.bookingSearch.tourOption}</label>
         <Select defaultValue="standard">
           <SelectTrigger>
-            <SelectValue placeholder="Select option" />
+            <SelectValue placeholder={t.bookingSearch.selectOption} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="standard">Standard (3-star hotels)</SelectItem>
-            <SelectItem value="comfort">Comfort (4-star hotels)</SelectItem>
-            <SelectItem value="luxury">Luxury (5-star hotels)</SelectItem>
+            <SelectItem value="standard">{t.bookingSearch.standard}</SelectItem>
+            <SelectItem value="comfort">{t.bookingSearch.comfort}</SelectItem>
+            <SelectItem value="luxury">{t.bookingSearch.luxuryOption}</SelectItem>
           </SelectContent>
         </Select>
       </div>
 
       <BubbleButton className="w-full" size="lg">
-        Book Now
+        {t.common.bookNow}
       </BubbleButton>
     </div>
   )

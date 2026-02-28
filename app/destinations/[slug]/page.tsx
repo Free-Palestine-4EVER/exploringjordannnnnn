@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils"
 import { format } from "date-fns"
 import { CalendarIcon, Send, CheckCircle2 } from "lucide-react"
 import { formatPrice } from "@/lib/tour-utils"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 interface DestinationPageProps {
   params: {
@@ -30,6 +31,7 @@ interface DestinationPageProps {
 }
 
 export default function DestinationPage({ params }: DestinationPageProps) {
+  const t = useTranslations()
   // This would normally come from a database or API
   const destinations = {
     petra: {
@@ -387,11 +389,11 @@ export default function DestinationPage({ params }: DestinationPageProps) {
       <div className="container mx-auto px-4 py-12">
         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
           <Link href="/" className="hover:underline">
-            Home
+            {t.breadcrumb.home}
           </Link>
           <ChevronRight className="h-3 w-3" />
           <Link href="/destinations" className="hover:underline">
-            Destinations
+            {t.breadcrumb.destinations}
           </Link>
           <ChevronRight className="h-3 w-3" />
           <span>{destination.name}</span>
@@ -400,12 +402,12 @@ export default function DestinationPage({ params }: DestinationPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <div className="prose max-w-none mb-8">
-              <h2 className="text-3xl font-bold mb-4">About {destination.name}</h2>
+              <h2 className="text-3xl font-bold mb-4">{t.destinationDetail.about} {destination.name}</h2>
               <p>{destination.longDescription}</p>
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6">Interesting Facts</h3>
+              <h3 className="text-2xl font-bold mb-6">{t.destinationDetail.interestingFacts}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {destination.facts.map((fact, index) => (
                   <Card key={index} className="bg-primary/5 border-none">
@@ -420,7 +422,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
 
 
             <div>
-              <h3 className="text-2xl font-bold mb-6">Tours Including {destination.name}</h3>
+              <h3 className="text-2xl font-bold mb-6">{t.destinationDetail.toursIncluding} {destination.name}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedToursData.length > 0 ? (
                   relatedToursData.slice(0, 4).map((tour) => (
@@ -431,7 +433,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
                     />
                   ))
                 ) : (
-                  <p className="text-muted-foreground col-span-2">No specific tours found for this destination at the moment.</p>
+                  <p className="text-muted-foreground col-span-2">{t.destinationDetail.noToursFound}</p>
                 )}
               </div>
             </div>

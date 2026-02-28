@@ -14,32 +14,32 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      location: "United States",
+      name: t.testimonials.review1Name,
+      location: t.testimonials.review1Location,
       avatar: "/images/avatar-1.png",
       rating: 5,
-      text: "Our Jordan Explorer tour was absolutely incredible! From the moment we arrived, everything was perfectly organized. The guides were knowledgeable and friendly, and the itinerary allowed us to see all the highlights while still having time to really experience each place. Petra was even more magnificent than I imagined!",
+      text: t.testimonials.review1Text,
     },
     {
-      name: "David Chen",
-      location: "Canada",
+      name: t.testimonials.review2Name,
+      location: t.testimonials.review2Location,
       avatar: "/images/avatar-2.png",
       rating: 5,
-      text: "The 7-day luxury tour exceeded all our expectations. The accommodations were superb, especially the desert camp in Wadi Rum. Our guide Mohammed was exceptional - his knowledge of Jordan's history and culture made the experience so much richer. I've already recommended Jordan Explorer to all my friends!",
+      text: t.testimonials.review2Text,
     },
     {
-      name: "Emma Wilson",
-      location: "Australia",
+      name: t.testimonials.review3Name,
+      location: t.testimonials.review3Location,
       avatar: "/images/avatar-3.png",
       rating: 5,
-      text: "As a solo female traveler, I was looking for a tour company that would provide both adventure and security. Jordan Explorer delivered on both counts! The hiking trails were spectacular, and I felt completely safe and well-cared for throughout my journey. The Dead Sea experience was a highlight I'll never forget.",
+      text: t.testimonials.review3Text,
     },
     {
-      name: "Carlos Mendez",
-      location: "Spain",
+      name: t.testimonials.review4Name,
+      location: t.testimonials.review4Location,
       avatar: "/images/avatar-4.png",
       rating: 5,
-      text: "We took the family adventure package with our two children (ages 8 and 11), and it was perfect! The itinerary was well-paced for kids, with plenty of exciting activities balanced with downtime. The children loved the camel rides and stargazing in Wadi Rum. A truly unforgettable family experience!",
+      text: t.testimonials.review4Text,
     },
   ]
 

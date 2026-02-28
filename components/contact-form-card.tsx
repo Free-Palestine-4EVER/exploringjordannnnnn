@@ -10,6 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 const formSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
@@ -23,6 +24,7 @@ interface ContactFormCardProps {
 }
 
 export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
+    const t = useTranslations()
     const [isSuccess, setIsSuccess] = useState(false)
 
     const form = useForm<z.infer<typeof formSchema>>({
@@ -62,22 +64,22 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                         <div className="mx-auto w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4">
                             <CheckCircle2 className="w-8 h-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
+                        <h3 className="text-2xl font-bold mb-2">{t.contactFormCard.messageSent}</h3>
                         <p className="text-green-100">
-                            We'll get back to you within 24 hours
+                            {t.contactFormCard.weWillGetBack}
                         </p>
                     </div>
                 </div>
                 <CardContent className="p-6 bg-white text-center">
                     <p className="text-gray-600 mb-6">
-                        Thank you for your inquiry about <strong className="text-amber-700">{tourTitle}</strong>
+                        {t.contactFormCard.thankYouInquiry} <strong className="text-amber-700">{tourTitle}</strong>
                     </p>
                     <Button
                         variant="outline"
                         className="border-amber-600 text-amber-700 hover:bg-amber-50"
                         onClick={() => setIsSuccess(false)}
                     >
-                        Send Another Inquiry
+                        {t.contactFormCard.sendAnother}
                     </Button>
                 </CardContent>
             </Card>
@@ -87,8 +89,8 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
     return (
         <Card className="border-none shadow-2xl overflow-hidden">
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-6">
-                <h3 className="text-2xl font-bold mb-2">Get in Touch</h3>
-                <p className="text-amber-100">Fill out the form and we'll help you plan your perfect trip</p>
+                <h3 className="text-2xl font-bold mb-2">{t.contactFormCard.getInTouch}</h3>
+                <p className="text-amber-100">{t.contactFormCard.subtitle}</p>
             </div>
             <CardContent className="p-6 bg-white">
                 <Form {...form}>
@@ -98,7 +100,7 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-sm font-semibold text-gray-900">Full Name *</FormLabel>
+                                    <FormLabel className="text-sm font-semibold text-gray-900">{t.contactFormCard.fullName}</FormLabel>
                                     <FormControl>
                                         <Input
                                             placeholder="John Doe"
@@ -116,7 +118,7 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-sm font-semibold text-gray-900">Email Address *</FormLabel>
+                                    <FormLabel className="text-sm font-semibold text-gray-900">{t.contactFormCard.emailAddress}</FormLabel>
                                     <FormControl>
                                         <Input
                                             type="email"
@@ -135,7 +137,7 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                             name="phone"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-sm font-semibold text-gray-900">Phone / WhatsApp *</FormLabel>
+                                    <FormLabel className="text-sm font-semibold text-gray-900">{t.contactFormCard.phoneWhatsApp}</FormLabel>
                                     <FormControl>
                                         <Input
                                             placeholder="+1 (555) 000-0000"
@@ -153,10 +155,10 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                             name="message"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-sm font-semibold text-gray-900">Message *</FormLabel>
+                                    <FormLabel className="text-sm font-semibold text-gray-900">{t.contactFormCard.messageLabel}</FormLabel>
                                     <FormControl>
                                         <Textarea
-                                            placeholder="Tell us about your travel plans and preferences..."
+                                            placeholder={t.contactFormCard.messagePlaceholder}
                                             className="min-h-[120px] bg-white border-gray-300 resize-none"
                                             {...field}
                                         />
@@ -182,12 +184,12 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                             {form.formState.isSubmitting ? (
                                 <>
                                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                                    Sending...
+                                    {t.contactFormCard.sending}
                                 </>
                             ) : (
                                 <>
                                     <Send className="mr-2 h-5 w-5" />
-                                    Send Inquiry
+                                    {t.contactFormCard.sendInquiry}
                                 </>
                             )}
                         </Button>
