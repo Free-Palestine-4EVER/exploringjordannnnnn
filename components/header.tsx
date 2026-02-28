@@ -184,11 +184,12 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 md:gap-4 md:hidden">
+          <div className="flex items-center gap-3 md:hidden">
+            <LanguageSwitcher variant="header" />
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white">
-                  <Menu className="h-6 w-6" />
+                <Button variant="ghost" size="icon" className="text-white h-12 w-12">
+                  <Menu className="h-8 w-8" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
