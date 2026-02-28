@@ -97,7 +97,7 @@ Requests: ${requests || 'None'}
                         <h4 className="text-lg font-bold text-gray-900 mb-1">Travel Details</h4>
 
                         <div>
-                            <Label htmlFor="start-date" className="text-sm font-bold text-gray-900 mb-2 block">Departure Date *</Label>
+                            <Label htmlFor="start-date" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.departureDate} *</Label>
                             <input
                                 id="start-date"
                                 type="date"
@@ -110,7 +110,7 @@ Requests: ${requests || 'None'}
                         </div>
 
                         <div>
-                            <Label htmlFor="group-size" className="text-sm font-bold text-gray-900 mb-2 block">Group Size *</Label>
+                            <Label htmlFor="group-size" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.groupSize} *</Label>
                             <select
                                 id="group-size"
                                 value={groupSize}
@@ -118,16 +118,16 @@ Requests: ${requests || 'None'}
                                 className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                 required
                             >
-                                <option value="1">1 Person</option>
-                                <option value="2-3">2-3 People</option>
-                                <option value="4-5">4-5 People</option>
-                                <option value="6-7">6-7 People</option>
-                                <option value="8+">8+ People</option>
+                                <option value="1">{t.bookingForm.person1}</option>
+                                <option value="2-3">{t.bookingForm.people2to3}</option>
+                                <option value="4-5">{t.bookingForm.people4to5}</option>
+                                <option value="6-7">{t.bookingForm.people6to7}</option>
+                                <option value="8+">{t.bookingForm.people8plus}</option>
                             </select>
                         </div>
 
                         <div>
-                            <Label htmlFor="hotel-class" className="text-sm font-bold text-gray-900 mb-2 block">Hotel Class *</Label>
+                            <Label htmlFor="hotel-class" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.hotelClass} *</Label>
                             <select
                                 id="hotel-class"
                                 value={hotelClass}
@@ -135,50 +135,50 @@ Requests: ${requests || 'None'}
                                 className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                 required
                             >
-                                <option value="3-star">⭐⭐⭐ Comfortable</option>
-                                <option value="4-star">⭐⭐⭐⭐ Superior</option>
-                                <option value="5-star">⭐⭐⭐⭐⭐ Luxury</option>
+                                <option value="3-star">{"⭐⭐⭐ "}{t.bookingForm.comfortable}</option>
+                                <option value="4-star">{"⭐⭐⭐⭐ "}{t.bookingForm.superior}</option>
+                                <option value="5-star">{"⭐⭐⭐⭐⭐ "}{t.bookingForm.luxury}</option>
                             </select>
                         </div>
                     </div>
 
                     {/* Price Summary */}
                     <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-5 space-y-3 border border-amber-200 shadow-sm">
-                        <h4 className="font-semibold text-gray-900 text-sm mb-2">Price Summary</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm mb-2">{t.bookingForm.priceSummary}</h4>
                         <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Destination:</span>
+                            <span className="text-muted-foreground">{t.bookingForm.destination}:</span>
                             <span className="font-medium">{destinationName}</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Season:</span>
+                            <span className="text-muted-foreground">{t.bookingForm.seasonLabel}:</span>
                             <span className="font-medium">
                                 {(() => {
                                     const month = new Date(startDate).getMonth() + 1
-                                    return ((month >= 3 && month <= 5) || (month >= 9 && month <= 11)) ? "High" : "Low"
-                                })()} Season
+                                    return ((month >= 3 && month <= 5) || (month >= 9 && month <= 11)) ? t.bookingForm.high : t.bookingForm.low
+                                })()} {t.bookingForm.seasonWord}
                             </span>
                         </div>
                         <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Price per person:</span>
+                            <span className="text-muted-foreground">{t.bookingForm.pricePerPerson}:</span>
                             <span className="font-semibold text-amber-700">${pricePerPerson}</span>
                         </div>
                         <div className="border-t-2 border-amber-400 pt-3 flex justify-between items-center">
-                            <span className="font-bold text-gray-900">Total Estimate:</span>
+                            <span className="font-bold text-gray-900">{t.bookingForm.totalEstimate}:</span>
                             <span className="text-2xl font-bold text-amber-600">${pricePerPerson * numPeople}</span>
                         </div>
                         <p className="text-xs text-gray-500 pt-1">
-                            *Based on {numPeople} traveler{numPeople > 1 ? 's' : ''}. Final price confirmed after booking.
+                            {t.bookingForm.basedOnNote}
                         </p>
                     </div>
 
                     {/* Personal Information */}
                     <div className="pt-6 border-t border-gray-200">
-                        <h4 className="text-lg font-bold text-gray-900 mb-4">Your Information</h4>
+                        <h4 className="text-lg font-bold text-gray-900 mb-4">{t.bookingForm.yourInfo}</h4>
 
                         <div className="space-y-4">
                             <div className="grid grid-cols-2 gap-3">
                                 <div>
-                                    <Label htmlFor="firstName" className="text-sm font-bold text-gray-900 mb-2 block">First Name *</Label>
+                                    <Label htmlFor="firstName" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.firstName} *</Label>
                                     <input
                                         id="firstName"
                                         type="text"
@@ -190,7 +190,7 @@ Requests: ${requests || 'None'}
                                     />
                                 </div>
                                 <div>
-                                    <Label htmlFor="lastName" className="text-sm font-bold text-gray-900 mb-2 block">Last Name *</Label>
+                                    <Label htmlFor="lastName" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.lastName} *</Label>
                                     <input
                                         id="lastName"
                                         type="text"
@@ -204,7 +204,7 @@ Requests: ${requests || 'None'}
                             </div>
 
                             <div>
-                                <Label htmlFor="email" className="text-sm font-bold text-gray-900 mb-2 block">Email *</Label>
+                                <Label htmlFor="email" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.email} *</Label>
                                 <input
                                     id="email"
                                     type="email"
@@ -217,20 +217,20 @@ Requests: ${requests || 'None'}
                             </div>
 
                             <div>
-                                <Label htmlFor="phone" className="text-sm font-bold text-gray-900 mb-2 block">Phone *</Label>
+                                <Label htmlFor="phone" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.phone} *</Label>
                                 <input
                                     id="phone"
                                     type="tel"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
-                                    placeholder="+1 (555) 000-0000"
+                                    placeholder={t.bookingForm.phonePlaceholder}
                                     className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                     required
                                 />
                             </div>
 
                             <div>
-                                <Label htmlFor="country" className="text-sm font-bold text-gray-900 mb-2 block">Country *</Label>
+                                <Label htmlFor="country" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.country} *</Label>
                                 <input
                                     id="country"
                                     type="text"
@@ -243,7 +243,7 @@ Requests: ${requests || 'None'}
                             </div>
 
                             <div>
-                                <Label htmlFor="requests" className="text-sm font-bold text-gray-900 mb-2 block">Special Requests</Label>
+                                <Label htmlFor="requests" className="text-sm font-bold text-gray-900 mb-2 block">{t.bookingForm.specialRequests}</Label>
                                 <textarea
                                     id="requests"
                                     value={requests}
@@ -264,19 +264,19 @@ Requests: ${requests || 'None'}
                         {isSubmitted ? (
                             <>
                                 <CheckCircle2 className="w-5 h-5 mr-2" />
-                                Request Sent!
+                                {t.bookingForm.requestSent}
                             </>
                         ) : (
                             <>
                                 <Send className="w-5 h-5 mr-2" />
-                                Submit Booking Request
+                                {t.bookingForm.submitBooking}
                             </>
                         )}
                     </Button>
 
                     {isSubmitted && (
                         <p className="text-center text-green-600 text-sm font-medium">
-                            Thank you! We'll contact you within 24 hours.
+                            {t.bookingForm.thankYouBooking}
                         </p>
                     )}
                 </form>
