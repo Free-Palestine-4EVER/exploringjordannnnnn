@@ -12,12 +12,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from "@/lib/i18n/language-context"
 
-const formSchema = z.object({
-    name: z.string().min(2, "Name must be at least 2 characters"),
-    email: z.string().email("Please enter a valid email address"),
-    phone: z.string().min(6, "Phone number is required"),
-    message: z.string().min(10, "Message must be at least 10 characters"),
-})
+function getFormSchema(t: any) {
+  return z.object({
+    name: z.string().min(2, t.contactFormCard.nameMin || "Name must be at least 2 characters"),
+    email: z.string().email(t.contactFormCard.emailInvalid || "Please enter a valid email address"),
+    phone: z.string().min(6, t.contactFormCard.phoneRequired || "Phone number is required"),
+    message: z.string().min(10, t.contactFormCard.messageMin || "Message must be at least 10 characters"),
+  })
+}
 
 interface ContactFormCardProps {
     tourTitle: string
@@ -27,13 +29,14 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
     const t = useTranslations()
     const [isSuccess, setIsSuccess] = useState(false)
 
-    const form = useForm<z.infer<typeof formSchema>>({
+    const formSchema = getFormSchema(t)
+    const form = useForm<z.infer<ReturnType<typeof getFormSchema>>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: "",
             email: "",
             phone: "",
-            message: `I am interested in: ${tourTitle}`,
+            message: `${t.contactFormCard.interestedIn || "I am interested in"}: ${tourTitle}`,
         },
     })
 
@@ -51,7 +54,7 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
         } catch (error) {
             console.error("Error submitting form:", error)
             form.setError("root", {
-                message: "Something went wrong. Please try again or contact us via WhatsApp."
+                message: t.contactFormCard.errorMessage || "Something went wrong. Please try again or contact us via WhatsApp."
             })
         }
     }

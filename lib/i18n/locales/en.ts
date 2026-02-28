@@ -462,6 +462,7 @@ const en = {
     firstName: "First Name", lastName: "Last Name", email: "Email", phone: "Phone", country: "Country",
     specialRequests: "Special Requests", phonePlaceholder: "+1 (555) 000-0000",
     requestSent: "Request Sent!", basedOnNote: "* Final price confirmed after booking.",
+    none: "None",
   },
   reviewForm: {
     title: "Write a Review",
@@ -553,6 +554,9 @@ const en = {
     weWillGetBack: "We'll get back to you within 24 hours",
     thankYouInquiry: "Thank you for your inquiry about",
     sendAnother: "Send Another Inquiry", namePlaceholder: "John Doe", emailPlaceholder: "john@example.com",
+    nameMin: "Name must be at least 2 characters", emailInvalid: "Please enter a valid email address",
+    phoneRequired: "Phone number is required", messageMin: "Message must be at least 10 characters",
+    interestedIn: "I am interested in", errorMessage: "Something went wrong. Please try again or contact us via WhatsApp.",
   },
   destinationDetail: {
     about: "About",

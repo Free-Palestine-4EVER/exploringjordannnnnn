@@ -88,7 +88,7 @@ export default function UniversalBookingForm({ preSelectedTourId, destinationNam
                 totalPrice: (pricePerPerson * numPeople) || 0,
                 currency: "USD",
                 country,
-                specialRequests: requests || "None",
+                specialRequests: requests || (t.bookingForm.none || "None"),
                 season,
             }
 
