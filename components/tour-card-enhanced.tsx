@@ -12,7 +12,8 @@ import type { Tour } from "@/lib/types/tour"
 import { getMinPrice, formatPrice, getTourReviews } from "@/lib/tour-utils"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Star } from "lucide-react"
-import { useTranslations } from "@/lib/i18n/language-context"
+import { useTranslations, useLanguage } from "@/lib/i18n/language-context"
+import { getTranslatedTour } from "@/lib/tour-translations"
 import {
   Carousel,
   CarouselContent,
@@ -35,6 +36,8 @@ export default function TourCardEnhanced({
   colorTheme = "amber",
 }: TourCardEnhancedProps) {
   const t = useTranslations()
+  const { language } = useLanguage()
+  const translated = getTranslatedTour(tour.id, language)
   const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [selectedHotelClass, setSelectedHotelClass] = useState<"5*" | "4*" | "3*">("4*")
 
@@ -163,7 +166,7 @@ export default function TourCardEnhanced({
         </div>
 
         <CardContent className="pt-4 md:pt-6 flex-grow bg-white px-4 md:px-6">
-          <h3 className={`text-base md:text-xl font-bold mb-1 ${colors.title}`}>{tour.title}</h3>
+          <h3 className={`text-base md:text-xl font-bold mb-1 ${colors.title}`}>{translated.title || tour.title}</h3>
 
           <div className="flex items-center gap-1 mb-2">
             <div className="flex">
@@ -174,7 +177,7 @@ export default function TourCardEnhanced({
             <span className="text-xs text-muted-foreground">({getTourReviews(tour.slug)} {t.tourDetail.reviews})</span>
           </div>
 
-          <p className="text-xs md:text-sm text-muted-foreground mb-3">{tour.tagline}</p>
+          <p className="text-xs md:text-sm text-muted-foreground mb-3">{translated.tagline || tour.tagline}</p>
 
           <div className="mb-4">
             <label className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">

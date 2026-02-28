@@ -16,6 +16,8 @@ import toursData from "@/data/tours.json"
 import { useState } from "react"
 import { useTranslations } from "@/lib/i18n/language-context"
 import LanguageSwitcher from "@/components/language-switcher"
+import { getTranslatedTour } from "@/lib/tour-translations"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 
 const jordanTours = toursData.filter(
@@ -38,6 +40,7 @@ const destinationImages = {
 
 export default function Header() {
   const t = useTranslations()
+  const { language } = useLanguage()
 
   const jordanDestinations = [
     { title: t.destinations.petra.name, href: "/destinations/petra", description: t.destinations.petra.description, image: destinationImages.petra },
@@ -88,14 +91,14 @@ export default function Header() {
                                   <div className="relative h-32 w-full rounded-md overflow-hidden">
                                     <Image
                                       src={tour.heroImage || "/placeholder.svg"}
-                                      alt={tour.title}
+                                      alt={getTranslatedTour(tour.id || tour.slug, language).title || tour.title}
                                       fill
                                       className="object-cover transition-transform group-hover:scale-105"
                                     />
                                   </div>
                                   <div>
-                                    <div className="text-sm font-semibold leading-tight mb-1">{tour.title}</div>
-                                    <div className="text-xs text-amber-600 font-medium">{tour.tagline}</div>
+                                    <div className="text-sm font-semibold leading-tight mb-1">{getTranslatedTour(tour.id || tour.slug, language).title || tour.title}</div>
+                                    <div className="text-xs text-amber-600 font-medium">{getTranslatedTour(tour.id || tour.slug, language).tagline || tour.tagline}</div>
                                   </div>
                                 </a>
                               </NavigationMenuLink>
@@ -271,14 +274,14 @@ export default function Header() {
                                       <div className="relative w-20 h-14 rounded overflow-hidden flex-shrink-0">
                                         <Image
                                           src={tour.heroImage || "/placeholder.svg"}
-                                          alt={tour.title}
+                                          alt={getTranslatedTour(tour.id || tour.slug, language).title || tour.title}
                                           fill
                                           className="object-cover"
                                         />
                                       </div>
                                       <div className="flex-1 min-w-0">
-                                        <div className="text-sm font-medium text-amber-900 truncate">{tour.title}</div>
-                                        <div className="text-xs text-amber-600 truncate">{tour.tagline}</div>
+                                        <div className="text-sm font-medium text-amber-900 truncate">{getTranslatedTour(tour.id || tour.slug, language).title || tour.title}</div>
+                                        <div className="text-xs text-amber-600 truncate">{getTranslatedTour(tour.id || tour.slug, language).tagline || tour.tagline}</div>
                                       </div>
                                     </Link>
                                   ))}
