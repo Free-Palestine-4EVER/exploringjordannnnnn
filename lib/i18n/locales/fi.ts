@@ -44,8 +44,7 @@ const fi: TranslationType = {
     "aiTripMaker": "AI Matkasuunnittelija",
     "partners": "Kumppanit",
     "customize": "Mukauta",
-    "whatsappUs": "WhatsApp-viesti",
-    whatsappUs: "Ota yhteyttä WhatsAppilla",
+    "whatsappUs": "Ota yhteyttä WhatsAppilla",
   },
   "header": {
     "jordanTours": "Jordanian matkat",
