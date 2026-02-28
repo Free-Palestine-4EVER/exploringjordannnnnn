@@ -4,7 +4,7 @@ import { useLanguage, type Language } from "@/lib/i18n/language-context"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Globe } from "lucide-react"
-import { ScrollArea } from "@/components/ui/scroll-area"
+// scroll area removed - showing all languages in grid
 
 const languages: { code: Language; name: string; flag: string }[] = [
   { code: "en", name: "English", flag: "🇬🇧" },
@@ -45,20 +45,17 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
   const currentLang = languages.find((l) => l.code === language) || languages[0]
 
   const menuItems = (
-    <div className="relative">
-      <ScrollArea className="h-[300px]">
-        {languages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            onClick={() => setLanguage(lang.code)}
-            className={language === lang.code ? "bg-amber-50 font-semibold" : ""}
-          >
-            <span className="mr-2">{lang.flag}</span>
-            {lang.name}
-          </DropdownMenuItem>
-        ))}
-      </ScrollArea>
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent" />
+    <div className="grid grid-cols-2 gap-0">
+      {languages.map((lang) => (
+        <DropdownMenuItem
+          key={lang.code}
+          onClick={() => setLanguage(lang.code)}
+          className={`text-sm ${language === lang.code ? "bg-amber-50 font-semibold" : ""}`}
+        >
+          <span className="mr-1.5">{lang.flag}</span>
+          {lang.name}
+        </DropdownMenuItem>
+      ))}
     </div>
   )
 
@@ -72,7 +69,7 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
             <span className="text-xs font-medium uppercase">{currentLang.code}</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-48 bg-white shadow-lg border">
+        <DropdownMenuContent align="end" className="w-[340px] bg-white shadow-lg border">
           {menuItems}
         </DropdownMenuContent>
       </DropdownMenu>
@@ -88,7 +85,7 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
             {currentLang.flag} {currentLang.name}
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="start" className="w-48">
+        <DropdownMenuContent align="start" className="w-[340px] bg-white shadow-lg border">
           {menuItems}
         </DropdownMenuContent>
       </DropdownMenu>
@@ -103,7 +100,7 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
           {currentLang.flag} {currentLang.name}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-48">
+      <DropdownMenuContent className="w-[340px] bg-white shadow-lg border">
         {menuItems}
       </DropdownMenuContent>
     </DropdownMenu>
