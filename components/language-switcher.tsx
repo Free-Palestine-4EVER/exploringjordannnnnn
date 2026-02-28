@@ -45,18 +45,21 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
   const currentLang = languages.find((l) => l.code === language) || languages[0]
 
   const menuItems = (
-    <ScrollArea className="h-[400px]">
-      {languages.map((lang) => (
-        <DropdownMenuItem
-          key={lang.code}
-          onClick={() => setLanguage(lang.code)}
-          className={language === lang.code ? "bg-blue-50" : ""}
-        >
-          <span className="mr-2">{lang.flag}</span>
-          {lang.name}
-        </DropdownMenuItem>
-      ))}
-    </ScrollArea>
+    <div className="relative">
+      <ScrollArea className="h-[300px]">
+        {languages.map((lang) => (
+          <DropdownMenuItem
+            key={lang.code}
+            onClick={() => setLanguage(lang.code)}
+            className={language === lang.code ? "bg-amber-50 font-semibold" : ""}
+          >
+            <span className="mr-2">{lang.flag}</span>
+            {lang.name}
+          </DropdownMenuItem>
+        ))}
+      </ScrollArea>
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent" />
+    </div>
   )
 
   if (variant === "header") {
@@ -69,7 +72,7 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
             <span className="text-xs font-medium uppercase">{currentLang.code}</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-48">
+        <DropdownMenuContent align="end" className="w-48 bg-white shadow-lg border">
           {menuItems}
         </DropdownMenuContent>
       </DropdownMenu>
