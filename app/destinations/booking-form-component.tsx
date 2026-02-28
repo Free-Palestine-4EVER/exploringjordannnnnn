@@ -7,8 +7,10 @@ import { trackBookingSubmission } from "@/lib/gtag"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { CheckCircle2, Send } from "lucide-react"
+import { useTranslations } from "@/lib/i18n/language-context"
 
 export default function BookingFormComponent({ destinationName }: { destinationName: string }) {
+    const t = useTranslations()
     const [startDate, setStartDate] = useState(format(new Date(), "yyyy-MM-dd"))
     const [groupSize, setGroupSize] = useState("2-3")
     const [hotelClass, setHotelClass] = useState("4-star")
@@ -182,7 +184,7 @@ Requests: ${requests || 'None'}
                                         type="text"
                                         value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)}
-                                        placeholder="John"
+                                        placeholder={t.bookingForm.firstNamePlaceholder}
                                         className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                         required
                                     />
@@ -194,7 +196,7 @@ Requests: ${requests || 'None'}
                                         type="text"
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
-                                        placeholder="Doe"
+                                        placeholder={t.bookingForm.lastNamePlaceholder}
                                         className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                         required
                                     />
@@ -208,7 +210,7 @@ Requests: ${requests || 'None'}
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="john@example.com"
+                                    placeholder={t.bookingForm.emailPlaceholder}
                                     className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                     required
                                 />
@@ -234,7 +236,7 @@ Requests: ${requests || 'None'}
                                     type="text"
                                     value={country}
                                     onChange={(e) => setCountry(e.target.value)}
-                                    placeholder="United States"
+                                    placeholder={t.bookingForm.countryPlaceholder}
                                     className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
                                     required
                                 />
@@ -247,7 +249,7 @@ Requests: ${requests || 'None'}
                                     value={requests}
                                     onChange={(e) => setRequests(e.target.value)}
                                     rows={3}
-                                    placeholder="Any special requirements or dietary restrictions..."
+                                    placeholder={t.bookingForm.specialReqPlaceholder}
                                     className="flex w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm resize-none"
                                 />
                             </div>

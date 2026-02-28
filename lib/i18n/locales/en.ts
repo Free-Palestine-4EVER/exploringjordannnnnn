@@ -134,6 +134,7 @@ const en = {
     faqTitle: "Have Questions?",
     faqSubtitle: "Check out our FAQ page for answers to common questions about traveling to Jordan, booking tours, visas, and more.",
     viewFaq: "View Frequently Asked Questions",
+    firstNamePlaceholder: "John", lastNamePlaceholder: "Doe", emailPlaceholder: "john@example.com",
   },
   bookNowPage: {
     badge: "Book Your Dream Journey", heroTitle: "Complete Your Booking",
@@ -255,6 +256,11 @@ const en = {
     backToHome: "Back to Home",
     inquirySent: "Partnership inquiry sent!", inquirySentDesc: "We'll get back to you within 24 hours.",
     errorTitle: "Something went wrong", errorDesc: "Please email us directly at info@exploringjordan.com",
+    h1a: "Petra full day", h1b: "Wadi Rum jeep tour", h1c: "Bedouin camp overnight", h1d: "All transfers included",
+    h2a: "Amman city tour", h2b: "Jerash & Ajloun", h2c: "Petra full day", h2d: "Wadi Rum", h2e: "Dead Sea",
+    h3a: "Amman", h3b: "Jerash", h3c: "Mount Nebo", h3d: "Madaba", h3e: "Petra (2 days)", h3f: "Wadi Rum", h3g: "Dead Sea", h3h: "Aqaba",
+    agencyPlaceholder: "Your travel agency name", fullNamePlaceholder: "Full name",
+    emailPlaceholder: "you@agency.com", websitePlaceholder: "www.youragency.com",
   },
   thankYouPage: {
     title: "Thank You!", subtitle: "Your trip customization request has been received. We're excited to help you plan your perfect Jordan adventure!",
@@ -298,6 +304,9 @@ const en = {
     detailedQuote: "Receive a detailed quote with confirmed pricing",
     finalAdjustments: "Make any final adjustments to your itinerary",
     confirmBooking: "Confirm and secure your booking",
+    flightPlaceholder: "e.g., RJ123", roomPlaceholder: "e.g., Twin beds, connecting rooms, etc.",
+    namePlaceholder: "John Doe", emailPlaceholder: "john@example.com", phonePlaceholder: "+1 234 567 8900",
+    specialRequestsPlaceholder: "Any special requests, questions, or additional information...",
   },
   aiTripMaker: {
     badge: "Smart Trip Builder", heroTitle: "Create Your Perfect Journey",
@@ -442,6 +451,8 @@ const en = {
     thankYouBooking: "Thank you! We'll contact you within 24 hours to confirm your booking.",
     daysLabel: "days",
     failedToSend: "Failed to send. Please try again.",
+    firstNamePlaceholder: "John", lastNamePlaceholder: "Doe", emailPlaceholder: "john@example.com",
+    countryPlaceholder: "United States", specialReqPlaceholder: "Any special requirements or dietary restrictions...",
   },
   reviewForm: {
     title: "Write a Review",
@@ -454,7 +465,7 @@ const en = {
     ticketIdPlaceholder: "e.g. JE-12345-ABC",
     ticketIdHelp: "Please enter your ticket ID from your booking confirmation to verify your purchase.",
     submitting: "Submitting...",
-    submitReview: "Submit Review",
+    submitReview: "Submit Review", namePlaceholder: "John Doe", emailPlaceholder: "john@example.com",
     verificationFailed: "Verification Failed",
     verificationMessage: "We couldn't verify your ticket ID. Please ensure you've entered the correct ID from your booking confirmation. If you continue to experience issues, please contact our customer support.",
   },
@@ -532,7 +543,7 @@ const en = {
     messageSent: "Message Sent!",
     weWillGetBack: "We'll get back to you within 24 hours",
     thankYouInquiry: "Thank you for your inquiry about",
-    sendAnother: "Send Another Inquiry",
+    sendAnother: "Send Another Inquiry", namePlaceholder: "John Doe", emailPlaceholder: "john@example.com",
   },
   destinationDetail: {
     about: "About",

@@ -52,16 +52,16 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="firstName">{t.contactPage.firstName}</Label>
-                    <Input id="firstName" placeholder="John" className="mt-1" />
+                    <Input id="firstName" placeholder={t.contactPage.firstNamePlaceholder} className="mt-1" />
                   </div>
                   <div>
                     <Label htmlFor="lastName">{t.contactPage.lastName}</Label>
-                    <Input id="lastName" placeholder="Doe" className="mt-1" />
+                    <Input id="lastName" placeholder={t.contactPage.lastNamePlaceholder} className="mt-1" />
                   </div>
                 </div>
                 <div>
                   <Label htmlFor="email">{t.contactPage.emailAddress}</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" className="mt-1" />
+                  <Input id="email" type="email" placeholder={t.contactPage.emailPlaceholder} className="mt-1" />
                 </div>
                 <div>
                   <Label htmlFor="phone">{t.contactPage.phoneNumber}</Label>

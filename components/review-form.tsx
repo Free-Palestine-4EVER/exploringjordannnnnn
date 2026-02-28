@@ -104,7 +104,7 @@ export default function ReviewForm() {
             </Label>
             <Input
               id="name"
-              placeholder="John Doe"
+              placeholder={t.reviewForm.namePlaceholder}
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -118,7 +118,7 @@ export default function ReviewForm() {
             <Input
               id="email"
               type="email"
-              placeholder="john@example.com"
+              placeholder={t.reviewForm.emailPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required

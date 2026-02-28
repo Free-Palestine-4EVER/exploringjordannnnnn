@@ -182,19 +182,19 @@ export default function PartnersPage() {
               {
                 days: t.partnersPage.program1Days,
                 title: t.partnersPage.program1Title,
-                highlights: ["Petra full day", "Wadi Rum jeep tour", "Bedouin camp overnight", "All transfers included"],
+                highlights: [t.partnersPage.h1a, t.partnersPage.h1b, t.partnersPage.h1c, t.partnersPage.h1d],
                 popular: false,
               },
               {
                 days: t.partnersPage.program2Days,
                 title: t.partnersPage.program2Title,
-                highlights: ["Amman city tour", "Jerash & Ajloun", "Petra full day", "Wadi Rum", "Dead Sea"],
+                highlights: [t.partnersPage.h2a, t.partnersPage.h2b, t.partnersPage.h2c, t.partnersPage.h2d, t.partnersPage.h2e],
                 popular: true,
               },
               {
                 days: t.partnersPage.program3Days,
                 title: t.partnersPage.program3Title,
-                highlights: ["Amman", "Jerash", "Mount Nebo", "Madaba", "Petra (2 days)", "Wadi Rum", "Dead Sea", "Aqaba"],
+                highlights: [t.partnersPage.h3a, t.partnersPage.h3b, t.partnersPage.h3c, t.partnersPage.h3d, t.partnersPage.h3e, t.partnersPage.h3f, t.partnersPage.h3g, t.partnersPage.h3h],
                 popular: false,
               },
             ].map((program, index) => (
@@ -264,7 +264,7 @@ export default function PartnersPage() {
                       required
                       value={formData.companyName}
                       onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                      placeholder="Your travel agency name"
+                      placeholder={t.partnersPage.agencyPlaceholder}
                     />
                   </div>
                   <div>
@@ -274,7 +274,7 @@ export default function PartnersPage() {
                       required
                       value={formData.contactName}
                       onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
-                      placeholder="Full name"
+                      placeholder={t.partnersPage.fullNamePlaceholder}
                     />
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export default function PartnersPage() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="you@agency.com"
+                      placeholder={t.partnersPage.emailPlaceholder}
                     />
                   </div>
                   <div>
@@ -309,7 +309,7 @@ export default function PartnersPage() {
                       id="website"
                       value={formData.website}
                       onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                      placeholder="www.youragency.com"
+                      placeholder={t.partnersPage.websitePlaceholder}
                     />
                   </div>
                   <div>

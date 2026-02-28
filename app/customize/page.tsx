@@ -113,11 +113,9 @@ function CustomizerContent() {
             Home
           </Link>
           <ChevronRight className="h-3 w-3" />
-          <Link href="/tours" className="hover:underline">
-            Tours
-          </Link>
+          <Link href="/tours" className="hover:underline">{t.breadcrumb.tours}</Link>
           <ChevronRight className="h-3 w-3" />
-          <span>Customize Your Trip</span>
+          <span>{t.customizePage.title}</span>
         </div>
 
         {/* Header */}
@@ -130,9 +128,9 @@ function CustomizerContent() {
         <div className="mb-8">
           <div className="flex items-center justify-center gap-2 md:gap-4">
             {[
-              { num: 1, label: "Tour & Dates" },
-              { num: 2, label: "Hotels & Add-ons" },
-              { num: 3, label: "Contact Info" },
+              { num: 1, label: t.customizePage.step1 },
+              { num: 2, label: t.customizePage.step2 },
+              { num: 3, label: t.customizePage.step3 },
             ].map((step) => (
               <div key={step.num} className="flex items-center">
                 <div
@@ -249,7 +247,7 @@ function CustomizerContent() {
                           </Label>
                           <Input
                             id="arrivalFlight"
-                            placeholder="e.g., RJ123"
+                            placeholder={t.customizePage.flightPlaceholder}
                             value={arrivalFlight}
                             onChange={(e) => setArrivalFlight(e.target.value)}
                           />
@@ -346,7 +344,7 @@ function CustomizerContent() {
                         </Label>
                         <Input
                           id="dietary"
-                          placeholder="e.g., Vegetarian, Vegan, Allergies"
+                          placeholder={t.customizePage.dietaryPlaceholder}
                           value={dietary}
                           onChange={(e) => setDietary(e.target.value)}
                         />
@@ -359,7 +357,7 @@ function CustomizerContent() {
                         </Label>
                         <Textarea
                           id="rooming"
-                          placeholder="e.g., Twin beds, connecting rooms, etc."
+                          placeholder={t.customizePage.roomPlaceholder}
                           value={roomingNotes}
                           onChange={(e) => setRoomingNotes(e.target.value)}
                           rows={2}
@@ -423,7 +421,7 @@ function CustomizerContent() {
                         </Label>
                         <Input
                           id="name"
-                          placeholder="John Doe"
+                          placeholder={t.customizePage.namePlaceholder}
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           required
@@ -438,7 +436,7 @@ function CustomizerContent() {
                           <Input
                             id="email"
                             type="email"
-                            placeholder="john@example.com"
+                            placeholder={t.customizePage.emailPlaceholder}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -451,7 +449,7 @@ function CustomizerContent() {
                           <Input
                             id="phone"
                             type="tel"
-                            placeholder="+1 234 567 8900"
+                            placeholder={t.customizePage.phonePlaceholder}
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             required
@@ -466,7 +464,7 @@ function CustomizerContent() {
                         <Input
                           id="whatsapp"
                           type="tel"
-                          placeholder="+1 234 567 8900"
+                          placeholder={t.customizePage.phonePlaceholder}
                           value={whatsapp}
                           onChange={(e) => setWhatsapp(e.target.value)}
                         />
@@ -481,7 +479,7 @@ function CustomizerContent() {
                         </Label>
                         <Textarea
                           id="notes"
-                          placeholder="Any special requests, questions, or additional information..."
+                          placeholder={t.customizePage.specialRequestsPlaceholder}
                           value={notes}
                           onChange={(e) => setNotes(e.target.value)}
                           rows={4}
@@ -535,33 +533,33 @@ function CustomizerContent() {
 
                       <div className="border-t pt-4">
                         <div className="flex justify-between text-sm mb-2">
-                          <span>Travelers:</span>
+                          <span>{t.customizePage.travelers}</span>
                           <span className="font-medium">{totalPax} people</span>
                         </div>
                         <div className="flex justify-between text-sm mb-2">
-                          <span>Hotel Class:</span>
+                          <span>{t.customizePage.hotelClass}:</span>
                           <span className="font-medium">{hotelClass}</span>
                         </div>
                         <div className="flex justify-between text-sm mb-2">
-                          <span>Season:</span>
+                          <span>{t.customizePage.season}</span>
                           <Badge variant="outline">{priceEstimate.season}</Badge>
                         </div>
                       </div>
 
                       <div className="border-t pt-4 space-y-2">
                         <div className="flex justify-between text-sm">
-                          <span>Base Price:</span>
+                          <span>{t.customizePage.basePrice}</span>
                           <span className="font-medium">{formatPrice(priceEstimate.basePrice)}</span>
                         </div>
                         {priceEstimate.addonsPrice > 0 && (
                           <div className="flex justify-between text-sm">
-                            <span>Add-ons:</span>
+                            <span>{t.customizePage.addons}</span>
                             <span className="font-medium">{formatPrice(priceEstimate.addonsPrice)}</span>
                           </div>
                         )}
                         {priceEstimate.singleSupplement > 0 && (
                           <div className="flex justify-between text-sm">
-                            <span>Single Supplement:</span>
+                            <span>{t.customizePage.singleSupplement}</span>
                             <span className="font-medium">{formatPrice(priceEstimate.singleSupplement)}</span>
                           </div>
                         )}
@@ -603,15 +601,15 @@ function CustomizerContent() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
-                    <span>Receive a detailed quote with confirmed pricing</span>
+                    <span>{t.customizePage.detailedQuote}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
-                    <span>Make any final adjustments to your itinerary</span>
+                    <span>{t.customizePage.finalAdjustments}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
-                    <span>Confirm and secure your booking</span>
+                    <span>{t.customizePage.confirmBooking}</span>
                   </li>
                 </ul>
               </div>

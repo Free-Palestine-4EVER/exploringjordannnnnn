@@ -103,7 +103,7 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                                     <FormLabel className="text-sm font-semibold text-gray-900">{t.contactFormCard.fullName}</FormLabel>
                                     <FormControl>
                                         <Input
-                                            placeholder="John Doe"
+                                            placeholder={t.contactFormCard.namePlaceholder}
                                             className="h-11 bg-white border-gray-300"
                                             {...field}
                                         />
@@ -122,7 +122,7 @@ export default function ContactFormCard({ tourTitle }: ContactFormCardProps) {
                                     <FormControl>
                                         <Input
                                             type="email"
-                                            placeholder="john@example.com"
+                                            placeholder={t.contactFormCard.emailPlaceholder}
                                             className="h-11 bg-white border-gray-300"
                                             {...field}
                                         />
