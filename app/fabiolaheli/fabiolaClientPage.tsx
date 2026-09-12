@@ -170,7 +170,7 @@ export default function FabiolaClientPage() {
             </div>
           ) : (
             <div className="text-slate-500 text-xs text-center mb-6 h-8 flex items-center justify-center">
-              Enter 4-digit PIN (1210)
+              Enter 4-digit PIN
             </div>
           )}
 
@@ -539,12 +539,19 @@ export default function FabiolaClientPage() {
                   {/* QR Code Barcode Representation */}
                   <div className="bg-white rounded-2xl p-4 text-center space-y-2">
                     <div className="flex justify-center">
-                      <div className="w-36 h-36 border-2 border-slate-900 rounded-lg p-2 flex flex-col items-center justify-center bg-white">
-                        <QrCode className="w-28 h-28 text-slate-900" />
+                      <div className="w-40 h-40 border border-slate-200 rounded-xl p-2 flex flex-col items-center justify-center bg-white shadow-inner">
+                        <img 
+                          src="/images/fabiola-qr.svg" 
+                          alt="VIP Flight QR Code" 
+                          className="w-36 h-36 object-contain"
+                        />
                       </div>
                     </div>
-                    <div className="font-mono text-[10px] text-slate-600 font-bold tracking-wider">
+                    <div className="font-mono text-[10px] text-slate-700 font-bold tracking-wider">
                       HJ 204 · AMM ⇄ PTR · 3 SEATS
+                    </div>
+                    <div className="text-[9px] text-slate-400 font-medium">
+                      Scan to view verified VIP flight reservation
                     </div>
                   </div>
                 </div>
