@@ -4,21 +4,21 @@ import React, { useState, useEffect, useRef } from "react"
 import { 
   ShieldCheck, 
   Lock, 
-  KeyRound, 
   Plane, 
   Calendar, 
   Users, 
   Clock, 
   MapPin, 
   CheckCircle2, 
-  QrCode, 
-  ArrowRight, 
   Download, 
-  ExternalLink, 
   Sparkles,
   Info,
   LogOut,
-  ChevronRight
+  Languages,
+  Wifi,
+  Car,
+  DollarSign,
+  Check
 } from "lucide-react"
 
 const REQUIRED_PIN = "1210"
@@ -28,7 +28,6 @@ export default function FabiolaClientPage() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false)
   const [errorMsg, setErrorMsg] = useState<string>("")
   const [shake, setShake] = useState<boolean>(false)
-  const [activeTab, setActiveTab] = useState<"roundtrip" | "leg1" | "leg2">("roundtrip")
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -117,7 +116,7 @@ export default function FabiolaClientPage() {
               Helicopter Jordan
             </h1>
             <p className="text-xs text-slate-400 max-w-xs mx-auto">
-              Please enter the 4-digit security PIN to access the flight reservation and Apple Wallet passes for <span className="text-[#ddc98d] font-semibold">Fabiola Vazquez</span>.
+              Please enter your 4-digit security PIN to access the flight reservation and Apple Wallet passes for <span className="text-[#ddc98d] font-semibold">Fabiola Vazquez</span>.
             </p>
           </div>
 
@@ -246,7 +245,7 @@ export default function FabiolaClientPage() {
         <div className="relative rounded-3xl overflow-hidden border border-[#d4b877]/30 bg-gradient-to-b from-[#162d22] to-[#0f1f17] p-8 md:p-12 shadow-2xl mb-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#d4b877]/10 rounded-full blur-[100px] pointer-events-none" />
           
-          <div className="relative z-10 max-w-2xl space-y-4">
+          <div className="relative z-10 max-w-3xl space-y-4">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold uppercase tracking-wider">
                 <CheckCircle2 className="w-3.5 h-3.5" />
@@ -254,6 +253,9 @@ export default function FabiolaClientPage() {
               </span>
               <span className="px-3 py-1 rounded-full bg-[#d4b877]/20 text-[#ddc98d] border border-[#d4b877]/30 text-xs font-mono font-medium">
                 REF: HJ-AMM-PTR-20261012-FV3
+              </span>
+              <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold">
+                Flexible Date
               </span>
               <span className="px-3 py-1 rounded-full bg-white/10 text-slate-300 text-xs font-medium">
                 3 Persons Reserved
@@ -263,12 +265,12 @@ export default function FabiolaClientPage() {
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white font-serif leading-tight">
               Amman <span className="text-[#d4b877]">⇄</span> Petra
               <span className="block text-xl md:text-2xl font-light text-slate-300 mt-2 font-sans">
-                Helicopter Return Flight for <strong className="text-white font-semibold">Fabiola Vazquez</strong>
+                Private Helicopter Return Flight for <strong className="text-white font-semibold">Fabiola Vazquez</strong>
               </span>
             </h1>
 
             <p className="text-sm text-slate-300 leading-relaxed">
-              Exclusive private charter flight connecting Amman Heliport with the ancient Rose-Red City of Petra, including 5 hours of ground excursion and a scenic sunset return flight.
+              Exclusive private return helicopter flight connecting Amman Heliport with the ancient wonder of Petra. Departing Amman at 12:00 PM with a 1-hour scenic aerial journey, 3 hours of ground leisure at Petra, and a 1-hour return flight to Amman at 16:00 PM. Includes complimentary Spanish translator and complimentary high-speed eSIMs.
             </p>
           </div>
 
@@ -280,16 +282,16 @@ export default function FabiolaClientPage() {
                 Date
               </div>
               <div className="text-sm font-bold text-white">12 OCT 2026</div>
-              <div className="text-xs text-slate-400">Monday</div>
+              <div className="text-xs text-emerald-400 font-medium">Flexible Date</div>
             </div>
 
             <div className="bg-black/30 rounded-2xl p-4 border border-white/5">
               <div className="text-xs text-slate-400 uppercase font-mono flex items-center gap-1.5 mb-1">
-                <Users className="w-3.5 h-3.5 text-[#d4b877]" />
-                Party Size
+                <DollarSign className="w-3.5 h-3.5 text-[#d4b877]" />
+                Charter Price
               </div>
-              <div className="text-sm font-bold text-white">3 Passengers</div>
-              <div className="text-xs text-slate-400">Private Cabin</div>
+              <div className="text-sm font-bold text-[#faf8f2]">$4,400 USD</div>
+              <div className="text-xs text-slate-400">Total for 3 Persons</div>
             </div>
 
             <div className="bg-black/30 rounded-2xl p-4 border border-white/5">
@@ -297,17 +299,83 @@ export default function FabiolaClientPage() {
                 <Clock className="w-3.5 h-3.5 text-[#d4b877]" />
                 Flight Time
               </div>
-              <div className="text-sm font-bold text-white">~01H 15M / leg</div>
-              <div className="text-xs text-slate-400">Scenic Aerial Route</div>
+              <div className="text-sm font-bold text-white">1 Hour / leg</div>
+              <div className="text-xs text-slate-400">12:00 Dep · 16:00 Ret</div>
             </div>
 
             <div className="bg-black/30 rounded-2xl p-4 border border-white/5">
               <div className="text-xs text-slate-400 uppercase font-mono flex items-center gap-1.5 mb-1">
                 <MapPin className="w-3.5 h-3.5 text-[#d4b877]" />
-                Experience
+                Petra Ground Time
               </div>
-              <div className="text-sm font-bold text-white">Full Day Petra</div>
-              <div className="text-xs text-slate-400">Ground Stop Included</div>
+              <div className="text-sm font-bold text-white">3 Hours Free Time</div>
+              <div className="text-xs text-slate-400">Spanish Guide Included</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Highlighted VIP Inclusions & Services Cards */}
+        <div className="mb-10">
+          <div className="flex items-center gap-2 mb-4">
+            <Sparkles className="w-4 h-4 text-[#d4b877]" />
+            <h2 className="text-xl font-bold text-white font-serif">
+              VIP Package Inclusions & Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* Spanish Translator */}
+            <div className="bg-[#122219] border border-[#d4b877]/30 rounded-2xl p-5 relative overflow-hidden group hover:border-[#d4b877]/60 transition-colors">
+              <div className="flex items-start justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#d4b877]/15 border border-[#d4b877]/30 flex items-center justify-center text-[#d4b877]">
+                  <Languages className="w-5 h-5" />
+                </div>
+                <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider">
+                  Complimentary
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-white mb-1">
+                Spanish Translator in Petra
+              </h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Dedicated private Spanish-speaking translator and guide accompanying your party during your 3-hour exploration in Petra.
+              </p>
+            </div>
+
+            {/* Complimentary eSIM */}
+            <div className="bg-[#122219] border border-[#d4b877]/30 rounded-2xl p-5 relative overflow-hidden group hover:border-[#d4b877]/60 transition-colors">
+              <div className="flex items-start justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#d4b877]/15 border border-[#d4b877]/30 flex items-center justify-center text-[#d4b877]">
+                  <Wifi className="w-5 h-5" />
+                </div>
+                <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider">
+                  Complimentary
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-white mb-1">
+                High-Speed Jordan eSIM
+              </h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Instant high-speed 5G/4G connectivity for all 3 passengers. QR codes provided for instant activation on iPhone or Android.
+              </p>
+            </div>
+
+            {/* Golf Cart in Petra */}
+            <div className="bg-[#122219] border border-[#d4b877]/30 rounded-2xl p-5 relative overflow-hidden group hover:border-[#d4b877]/60 transition-colors">
+              <div className="flex items-start justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#d4b877]/15 border border-[#d4b877]/30 flex items-center justify-center text-[#d4b877]">
+                  <Car className="w-5 h-5" />
+                </div>
+                <span className="px-2.5 py-1 rounded-full bg-[#d4b877]/20 text-[#ddc98d] border border-[#d4b877]/30 text-[10px] font-bold uppercase tracking-wider font-mono">
+                  25 JOD
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-white mb-1">
+                Petra Golf Cart Service
+              </h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Electric golf cart transit through the Siq directly to the Treasury and back for comfortable exploration (25 JOD on-site).
+              </p>
             </div>
           </div>
         </div>
@@ -326,7 +394,7 @@ export default function FabiolaClientPage() {
                 Add to Apple Wallet
               </h2>
               <p className="text-xs text-slate-300 mb-6 leading-relaxed">
-                Tapping the buttons below on an iPhone will immediately open the official Apple Wallet confirmation sheet. Passes feature live gate/helipad notifications and lock screen updates on October 12, 2026.
+                Tapping the buttons below on an iPhone will immediately open the official Apple Wallet confirmation sheet with live lock screen departure updates.
               </p>
 
               {/* Master Return Flight Pass CTA */}
@@ -344,7 +412,7 @@ export default function FabiolaClientPage() {
                       Add Complete Return Pass to Apple Wallet
                     </div>
                     <div className="text-xs font-medium text-slate-800">
-                      Amman ⇄ Petra (Round Trip · 3 Persons)
+                      Amman ⇄ Petra · 12:00 Dep · $4,400 USD (3 Persons)
                     </div>
                   </div>
                 </div>
@@ -369,7 +437,7 @@ export default function FabiolaClientPage() {
                         Leg 1: AMM → PTR
                       </div>
                       <div className="text-[11px] text-slate-400 mt-0.5">
-                        Dep 09:30 · Arr 10:45
+                        Dep 12:00 · Arr 13:00 (1h)
                       </div>
                     </div>
                     <Download className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
@@ -386,7 +454,7 @@ export default function FabiolaClientPage() {
                         Leg 2: PTR → AMM
                       </div>
                       <div className="text-[11px] text-slate-400 mt-0.5">
-                        Dep 16:00 · Arr 17:15
+                        Dep 16:00 · Arr 17:00 (1h)
                       </div>
                     </div>
                     <Download className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
@@ -402,51 +470,67 @@ export default function FabiolaClientPage() {
                   Flight Schedule & Itinerary
                 </h3>
                 <span className="text-xs text-[#d4b877] font-mono">
-                  12 OCTOBER 2026
+                  12 OCTOBER 2026 (FLEXIBLE)
                 </span>
               </div>
 
               <div className="space-y-6 relative before:absolute before:inset-y-0 before:left-3 before:w-0.5 before:bg-[#d4b877]/20">
+                {/* 11:30 AM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-[#d4b877] ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-[#d4b877]">09:00 AM</div>
-                    <div className="text-sm font-bold text-white">VIP Check-in & Security Briefing</div>
+                    <div className="text-xs font-mono text-[#d4b877]">11:30 AM</div>
+                    <div className="text-sm font-bold text-white">VIP Arrival & Heliport Lounge Check-in</div>
                     <div className="text-xs text-slate-400 mt-0.5">
-                      Amman Heliport VIP Terminal. Manifest identification check and pilot briefing.
+                      Amman Heliport VIP Terminal. Welcome refreshments, manifest verification, and pre-flight captain briefing.
                     </div>
                   </div>
                 </div>
 
+                {/* 12:00 PM – 13:00 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-400 ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-emerald-400">09:30 AM – 10:45 AM</div>
+                    <div className="text-xs font-mono text-emerald-400">12:00 PM – 13:00 PM (1 Hour Flight)</div>
                     <div className="text-sm font-bold text-white">Outbound Flight: AMM → PTR (HJ 201)</div>
                     <div className="text-xs text-slate-400 mt-0.5">
-                      Low-altitude scenic routing over the Great Rift Valley, Dead Sea cliffs, and Dana Biosphere Reserve. Touchdown at Petra Helipad.
+                      Low-altitude scenic routing over the Great Rift Valley, Dead Sea cliffs, and Dana Biosphere Reserve. Touchdown at Petra Helipad at 13:00 PM.
                     </div>
                   </div>
                 </div>
 
+                {/* 13:00 PM – 16:00 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-amber-400 ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-amber-400">11:00 AM – 15:30 PM (~5 Hours)</div>
-                    <div className="text-sm font-bold text-white">Petra Ancient Wonder Excursion</div>
+                    <div className="text-xs font-mono text-amber-400">13:00 PM – 16:00 PM (3 Hours Free Time)</div>
+                    <div className="text-sm font-bold text-white">Petra Ancient City Leisure & Excursion</div>
                     <div className="text-xs text-slate-400 mt-0.5">
-                      Private ground access to Al-Khazneh (The Treasury), The Siq, and Royal Tombs. VIP ground handler assistance.
+                      3 full hours exploring Al-Khazneh (The Treasury) and the Siq. Accompanied by your <strong className="text-white">complimentary Spanish translator</strong>. Optional electric golf cart service available on-site for 25 JOD.
                     </div>
                   </div>
                 </div>
 
+                {/* 16:00 PM – 17:00 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-400 ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-emerald-400">16:00 PM – 17:15 PM</div>
+                    <div className="text-xs font-mono text-emerald-400">16:00 PM – 17:00 PM (1 Hour Flight)</div>
                     <div className="text-sm font-bold text-white">Return Flight: PTR → AMM (HJ 202)</div>
                     <div className="text-xs text-slate-400 mt-0.5">
-                      Sunset return journey over southern Jordan highlands, arriving in Amman at 17:15 PM.
+                      Afternoon return takeoff from Petra Helipad, arriving at Amman Heliport at 17:00 PM.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 17:00 PM */}
+                <div className="relative flex items-start gap-4 pl-8">
+                  <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-[#d4b877] ring-4 ring-[#122219]" />
+                  <div>
+                    <div className="text-xs font-mono text-[#d4b877]">17:00 PM</div>
+                    <div className="text-sm font-bold text-white">Touchdown in Amman & VIP Reception</div>
+                    <div className="text-xs text-slate-400 mt-0.5">
+                      Arrival at Amman Heliport VIP Terminal. Ground transfer assistance.
                     </div>
                   </div>
                 </div>
@@ -475,8 +559,8 @@ export default function FabiolaClientPage() {
                     </span>
                   </div>
                   <div className="text-right">
-                    <div className="text-[9px] uppercase tracking-wider text-[#d4b877] font-mono">CHARTER</div>
-                    <div className="text-xs font-bold text-white font-mono">HJ 204</div>
+                    <div className="text-[9px] uppercase tracking-wider text-[#d4b877] font-mono">CHARTER RATE</div>
+                    <div className="text-xs font-bold text-white font-mono">$4,400 USD</div>
                   </div>
                 </div>
 
@@ -520,19 +604,35 @@ export default function FabiolaClientPage() {
                       <div className="text-[9px] uppercase tracking-wider text-[#c6b275] font-semibold">
                         DATE
                       </div>
-                      <div className="font-bold text-white mt-0.5">12 OCT 2026</div>
+                      <div className="font-bold text-white mt-0.5">12 OCT (Flex)</div>
                     </div>
                     <div>
                       <div className="text-[9px] uppercase tracking-wider text-[#c6b275] font-semibold">
-                        SERVICE
+                        DEPARTURE
                       </div>
-                      <div className="font-bold text-white mt-0.5">Return Flight</div>
+                      <div className="font-bold text-white mt-0.5">12:00 PM</div>
                     </div>
                     <div>
                       <div className="text-[9px] uppercase tracking-wider text-[#c6b275] font-semibold">
-                        EXPERIENCE
+                        RETURN
                       </div>
-                      <div className="font-bold text-white mt-0.5">Full Day</div>
+                      <div className="font-bold text-white mt-0.5">16:00 PM</div>
+                    </div>
+                  </div>
+
+                  {/* Included Perks Summary */}
+                  <div className="p-3 rounded-xl bg-black/25 border border-white/5 space-y-1.5 text-[11px]">
+                    <div className="flex items-center gap-2 text-emerald-300 font-medium">
+                      <Check className="w-3.5 h-3.5 text-[#d4b877]" />
+                      <span>Spanish Translator in Petra (Complimentary)</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-emerald-300 font-medium">
+                      <Check className="w-3.5 h-3.5 text-[#d4b877]" />
+                      <span>High-Speed Jordan eSIM (Complimentary)</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-300 font-medium">
+                      <Check className="w-3.5 h-3.5 text-[#d4b877]" />
+                      <span>Petra Golf Cart Service (25 JOD)</span>
                     </div>
                   </div>
 
@@ -548,7 +648,7 @@ export default function FabiolaClientPage() {
                       </div>
                     </div>
                     <div className="font-mono text-[10px] text-slate-700 font-bold tracking-wider">
-                      HJ 204 · AMM ⇄ PTR · 3 SEATS
+                      HJ 204 · 12:00 DEP · 16:00 RET · $4,400
                     </div>
                     <div className="text-[9px] text-slate-400 font-medium">
                       Scan to view verified VIP flight reservation
@@ -573,7 +673,7 @@ export default function FabiolaClientPage() {
                 <ul className="space-y-1 text-slate-400 list-disc list-inside text-[11px]">
                   <li>Valid photo ID or passport is required for each passenger.</li>
                   <li>Complimentary baggage storage available at Amman Heliport.</li>
-                  <li>Ground transport in Petra is fully coordinated with your crew.</li>
+                  <li>Schedule is flexible; adjustments can be requested with your flight coordinator.</li>
                 </ul>
               </div>
             </div>
