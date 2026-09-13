@@ -270,7 +270,7 @@ export default function FabiolaClientPage() {
             </h1>
 
             <p className="text-sm text-slate-300 leading-relaxed">
-              Exclusive private return helicopter flight connecting Amman Heliport with the ancient wonder of Petra. Departing Amman at 12:00 PM with a 1-hour scenic aerial journey, 3 hours of ground leisure at Petra, and a 1-hour return flight to Amman at 16:00 PM. Includes complimentary Spanish translator and complimentary high-speed eSIMs.
+              Exclusive private return helicopter flight connecting Amman Heliport with the ancient wonder of Petra. Departing Amman at 13:00 PM with a 1-hour scenic aerial journey, 3 hours of ground leisure at Petra (14:00 – 17:00), and a 1-hour return flight to Amman at 17:00 PM. Includes complimentary Spanish translator and complimentary high-speed eSIMs.
             </p>
           </div>
 
@@ -300,7 +300,7 @@ export default function FabiolaClientPage() {
                 Flight Time
               </div>
               <div className="text-sm font-bold text-white">1 Hour / leg</div>
-              <div className="text-xs text-slate-400">12:00 Dep · 16:00 Ret</div>
+              <div className="text-xs text-slate-400">13:00 Dep · 17:00 Ret</div>
             </div>
 
             <div className="bg-black/30 rounded-2xl p-4 border border-white/5">
@@ -412,7 +412,7 @@ export default function FabiolaClientPage() {
                       Add Complete Return Pass to Apple Wallet
                     </div>
                     <div className="text-xs font-medium text-slate-800">
-                      Amman ⇄ Petra · 12:00 Dep · $4,400 USD (3 Persons)
+                      Amman ⇄ Petra · 13:00 Dep · $4,400 USD (3 Persons)
                     </div>
                   </div>
                 </div>
@@ -437,7 +437,7 @@ export default function FabiolaClientPage() {
                         Leg 1: AMM → PTR
                       </div>
                       <div className="text-[11px] text-slate-400 mt-0.5">
-                        Dep 12:00 · Arr 13:00 (1h)
+                        Dep 13:00 · Arr 14:00 (1h)
                       </div>
                     </div>
                     <Download className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
@@ -454,7 +454,7 @@ export default function FabiolaClientPage() {
                         Leg 2: PTR → AMM
                       </div>
                       <div className="text-[11px] text-slate-400 mt-0.5">
-                        Dep 16:00 · Arr 17:00 (1h)
+                        Dep 17:00 · Arr 18:00 (1h)
                       </div>
                     </div>
                     <Download className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
@@ -475,11 +475,11 @@ export default function FabiolaClientPage() {
               </div>
 
               <div className="space-y-6 relative before:absolute before:inset-y-0 before:left-3 before:w-0.5 before:bg-[#d4b877]/20">
-                {/* 11:30 AM */}
+                {/* 12:30 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-[#d4b877] ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-[#d4b877]">11:30 AM</div>
+                    <div className="text-xs font-mono text-[#d4b877]">12:30 PM</div>
                     <div className="text-sm font-bold text-white">VIP Arrival & Heliport Lounge Check-in</div>
                     <div className="text-xs text-slate-400 mt-0.5">
                       Amman Heliport VIP Terminal. Welcome refreshments, manifest verification, and pre-flight captain briefing.
@@ -487,23 +487,23 @@ export default function FabiolaClientPage() {
                   </div>
                 </div>
 
-                {/* 12:00 PM – 13:00 PM */}
+                {/* 13:00 PM – 14:00 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-400 ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-emerald-400">12:00 PM – 13:00 PM (1 Hour Flight)</div>
+                    <div className="text-xs font-mono text-emerald-400">13:00 PM – 14:00 PM (1 Hour Flight)</div>
                     <div className="text-sm font-bold text-white">Outbound Flight: AMM → PTR (HJ 201)</div>
                     <div className="text-xs text-slate-400 mt-0.5">
-                      Low-altitude scenic routing over the Great Rift Valley, Dead Sea cliffs, and Dana Biosphere Reserve. Touchdown at Petra Helipad at 13:00 PM.
+                      Low-altitude scenic routing over the Great Rift Valley, Dead Sea cliffs, and Dana Biosphere Reserve. Touchdown at Petra Helipad at 14:00 PM.
                     </div>
                   </div>
                 </div>
 
-                {/* 13:00 PM – 16:00 PM */}
+                {/* 14:00 PM – 17:00 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-amber-400 ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-amber-400">13:00 PM – 16:00 PM (3 Hours Free Time)</div>
+                    <div className="text-xs font-mono text-amber-400">14:00 PM – 17:00 PM (3 Hours Free Time)</div>
                     <div className="text-sm font-bold text-white">Petra Ancient City Leisure & Excursion</div>
                     <div className="text-xs text-slate-400 mt-0.5">
                       3 full hours exploring Al-Khazneh (The Treasury) and the Siq. Accompanied by your <strong className="text-white">complimentary Spanish translator</strong>. Optional electric golf cart service available on-site for 25 JOD.
@@ -511,24 +511,24 @@ export default function FabiolaClientPage() {
                   </div>
                 </div>
 
-                {/* 16:00 PM – 17:00 PM */}
+                {/* 17:00 PM – 18:00 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-400 ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-emerald-400">16:00 PM – 17:00 PM (1 Hour Flight)</div>
+                    <div className="text-xs font-mono text-emerald-400">17:00 PM – 18:00 PM (1 Hour Flight)</div>
                     <div className="text-sm font-bold text-white">Return Flight: PTR → AMM (HJ 202)</div>
                     <div className="text-xs text-slate-400 mt-0.5">
-                      Afternoon return takeoff from Petra Helipad, arriving at Amman Heliport at 17:00 PM.
+                      Late afternoon return takeoff from Petra Helipad, arriving at Amman Heliport at 18:00 PM.
                     </div>
                   </div>
                 </div>
 
-                {/* 17:00 PM */}
+                {/* 18:00 PM */}
                 <div className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-[#d4b877] ring-4 ring-[#122219]" />
                   <div>
-                    <div className="text-xs font-mono text-[#d4b877]">17:00 PM</div>
-                    <div className="text-sm font-bold text-white">Touchdown in Amman & VIP Reception</div>
+                    <div className="text-xs font-mono text-[#d4b877]">18:00 PM</div>
+                    <div className="text-sm font-bold text-white">Sunset Touchdown in Amman & VIP Reception</div>
                     <div className="text-xs text-slate-400 mt-0.5">
                       Arrival at Amman Heliport VIP Terminal. Ground transfer assistance.
                     </div>
@@ -610,13 +610,13 @@ export default function FabiolaClientPage() {
                       <div className="text-[9px] uppercase tracking-wider text-[#c6b275] font-semibold">
                         DEPARTURE
                       </div>
-                      <div className="font-bold text-white mt-0.5">12:00 PM</div>
+                      <div className="font-bold text-white mt-0.5">13:00 PM</div>
                     </div>
                     <div>
                       <div className="text-[9px] uppercase tracking-wider text-[#c6b275] font-semibold">
                         RETURN
                       </div>
-                      <div className="font-bold text-white mt-0.5">16:00 PM</div>
+                      <div className="font-bold text-white mt-0.5">17:00 PM</div>
                     </div>
                   </div>
 
@@ -648,7 +648,7 @@ export default function FabiolaClientPage() {
                       </div>
                     </div>
                     <div className="font-mono text-[10px] text-slate-700 font-bold tracking-wider">
-                      HJ 204 · 12:00 DEP · 16:00 RET · $4,400
+                      HJ 204 · 13:00 DEP · 17:00 RET · $4,400
                     </div>
                     <div className="text-[9px] text-slate-400 font-medium">
                       Scan to view verified VIP flight reservation
